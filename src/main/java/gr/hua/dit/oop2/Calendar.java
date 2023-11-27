@@ -15,7 +15,7 @@ public class Calendar {
         ArrayList<Event> events;
         icsParse parse = new icsParse("greece.ics");
         icsStore store = new icsStore("greece.ics");
-        eventManagement interaction;
+        eventList interaction;
         
 
         if(!parse.checkFile()){
@@ -25,9 +25,13 @@ public class Calendar {
         parse.extractAll();
         events = parse.getEvents();
 
-        interaction = new eventManagement(events);
-        interaction.decideAction();
+        interaction = new eventList();
+ 
+        interaction.sort(events);
+        interaction.showEventsFromNow(events);
 
+        
+        
         if(!store.checkFile()){
             store.createFile();
         }

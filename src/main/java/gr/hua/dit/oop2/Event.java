@@ -1,6 +1,11 @@
 package gr.hua.dit.oop2;
 
-public class Event{
+import java.lang.Comparable;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+
+public class Event implements Comparable<Event> {
     private String title;
     private String description;
     private EventDate date;
@@ -133,9 +138,44 @@ public class Event{
 
     @Override
     public String toString(){
-        String start = getStartYear() + "/" + getStartMonth() + "/" + getStartDay() + " " + getStartDay() + ":" + getStartMinute();
+        String start = getStartYear() + "/" + getStartMonth() + "/" + getStartDay() + " " + getStartHour() + ":" + getStartMinute();
         
         return start;
     }
 
+    public long calculateEpochOfStart(){
+        long epoch;
+        
+        LocalDateTime date = LocalDateTime.of(this.getStartYear(), this.getStartMonth(), this.getStartDay(), this.getStartHour(), this.getStartMinute(), 0);
+
+        epoch = date.atZone(ZoneId.systemDefault()).toEpochSecond();
+        
+        return epoch;
+    }
+
+    public long calculateEpochOfEnd(){
+        long epoch;
+        
+        LocalDateTime date = LocalDateTime.of(this.getEndYear(), this.getEndMonth(), this.getEndDay(), this.getEndHour(), this.getEndMinute(), 0);
+
+        epoch = date.atZone(ZoneId.systemDefault()).toEpochSecond();
+        
+        return epoch;
+    }
+
+    public int compareTo(Event e){
+        //Time in milliseconds since epoch
+        long time1 = 0, time2 = 0;
+        
+        time1 = this.calculateEpochOfStart();
+        time2 = e.calculateEpochOfStart();
+        
+        if(time1 > time2){
+            return 1;
+        }else if(time1 < time2){
+            return -1;
+        }else{
+            return 0;
+        }
+    }
 }
