@@ -90,9 +90,16 @@ public class icsStore extends icsOperations{
         todo.setSummary(t.getTitle());
         todo.setDescription(t.getDescription());
         
+        //todo.setDateStart(new Date(t.getStartYear(), t.getStartMonth(), t.getStartDay(), t.getStartHour(), t.getStartMinute()));
+        //todo.setDateDue(new Date(t.getEndYear(), t.getEndMonth(), t.getEndDay(), t.getEndHour(), t.getEndMinute()));
+
+        localDateTime = LocalDateTime.of(t.getStartYear(), t.getStartMonth(), t.getStartDay(), t.getStartHour(), t.getStartMinute());
+        startDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        todo.setDateStart(startDate);
         
-        todo.setDateStart(new Date(t.getStartYear(), t.getStartMonth(), t.getStartDay(), t.getStartHour(), t.getStartMinute()));
-        todo.setDateDue(new Date(t.getEndYear(), t.getEndMonth(), t.getEndDay(), t.getEndHour(), t.getEndMinute()));
+        localDateTime = LocalDateTime.of(t.getEndYear(), t.getEndMonth(), t.getEndDay(), t.getEndHour(), t.getEndMinute());
+        endDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        todo.setDateDue(endDate);
 
         if(t.getCompleteTask().equals("COMPLETED")){
             todo.setStatus(Status.completed());

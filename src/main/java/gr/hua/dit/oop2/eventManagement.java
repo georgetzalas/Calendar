@@ -4,28 +4,28 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class eventManagement extends userInteraction{
-    private Scanner input;
-    //private int option;
 
     public eventManagement(ArrayList<Event> events){ 
         super(events); 
-        input = new Scanner(System.in);
+        
     }
-
     
     public void decideAction(){
-        this.printMenu();
+        boolean running = true;
+        while(running){
+            this.printMenu();
 
-        int option = this.getOption(4);
+            int option = this.getOption(4);
 
-        if(option == 1){
-            addCalendar();
-        }else if(option == 2){
-            editCalendar();
-        }else if(option == 3){
-            editTodoStatus();
-        }else{
-            System.exit(0);
+            if(option == 1){
+                addCalendar();
+            }else if(option == 2){
+                editCalendar();
+            }else if(option == 3){
+                editTodoStatus();
+            }else{
+                running = false;
+            }
         }
     }
     
@@ -35,26 +35,6 @@ public class eventManagement extends userInteraction{
         System.out.println("2.Make changes to an existing event!");
         System.out.println("3.To change the task-status!");
         System.out.println("4.To exit!");
-    }
-
-    private int getOption(int bound){
-        int num = -1;
-        
-        while(num < 1 || num > bound){
-        
-            while(!input.hasNextInt()){
-                System.out.println("Please provide a valid integer");
-                input.next();
-            }
-        
-            num = input.nextInt();
-            
-            if(num < 1 || num > bound){
-                System.out.println("Please provide a number between 1 - " + bound);
-            }
-        }
-        
-        return num;
     }
 
     private void addCalendar(){
@@ -92,31 +72,32 @@ public class eventManagement extends userInteraction{
                 found = true;
                    
                 System.out.println("If you don't want to change the day give '0' ,else give the new entrance:");
-                Integer day = input.nextInt(); 
+                Integer day = this.getOption(31);
+                
                 if(!day.equals(0)){
                     event.setStartDay(day);
                 }
                 
                 System.out.println("If you don't want to change the month give '0' ,else give the new entrance:");
-                Integer month = input.nextInt();
+                Integer month = this.getOption(12);
                 if(!month.equals(0)){
                     event.setStartMonth(month);
                 }
                 
                 System.out.println("If you don't want to change the year give '0' ,else give the new entrance:");
-                Integer year = input.nextInt();
+                Integer year = this.getOption(2030);
                 if(!year.equals(0)){
                     event.setStartYear(year);
                 }
                 
                 System.out.println("If you don't want to change the hour give '0' ,else give the new entrance:");
-                Integer hour = input.nextInt();
+                Integer hour = this.getOption(24);
                 if(!hour.equals(0)){
                     event.setStartHour(hour);
                 }
                 
                 System.out.println("If you don't want to change the minute give '0' ,else give the new entrance:");
-                Integer minute = input.nextInt();
+                Integer minute = this.getOption(60);
                 if(!minute.equals(0)){
                     event.setStartMinute(minute);
                 }
@@ -146,31 +127,32 @@ public class eventManagement extends userInteraction{
 
                 
                     System.out.println("If you don't want to change the last-day give '0' ,else give the new entrance:");
-                    Integer endday=input.nextInt(); 
+                    Integer endday=this.getOption(31); 
                     if(!endday.equals(0)){
                         event.setEndDay(endday);
                     }
                     
                     System.out.println("If you don't want to change the last-month give '0' ,else give the new entrance:");
-                    Integer endmonth=input.nextInt();
+                    Integer endmonth=this.getOption(12);
                     if(!endmonth.equals(0)){
                         event.setEndMonth(endmonth);
                     }
 
                     System.out.println("If you don't want to change the last-year give '0' ,else give the new entrance:");
-                    Integer endyear = input.nextInt();
+                    Integer endyear = this.getOption(2030);
                     if(!endyear.equals(0)){
                         event.setEndYear(endyear);
                     }
                     
                     System.out.println("If you don't want to change the last-hour give '0' ,else give the new entrance:");
-                    Integer endhour = input.nextInt();
+                    Integer endhour = this.getOption(24);
                     if(!endhour.equals(0)){
                         event.setEndHour(endhour);
                     }
                     
                     System.out.println("If you don't want to change the last-minute give '0' ,else give the new entrance:");
-                    Integer endminute = input.nextInt();
+                    Integer endminute = this.getOption(60);
+
                     if(!endminute.equals(0)){
                         event.setEndMinute(endminute);
                     }
@@ -194,19 +176,19 @@ public class eventManagement extends userInteraction{
         System.out.println("To enter a new event you need to give specific data!");
         
         System.out.println("Day:");
-        day = input.nextInt();
+        day = this.getOption(31);
         
         System.out.println("Month:");
-        month = input.nextInt();
+        month = this.getOption(12);
         
         System.out.println("Year:");
-        year = input.nextInt();
+        year = this.getOption(2030);
         
         System.out.println("Hour:");
-        hour = input.nextInt();
+        hour = this.getOption(24);
         
         System.out.println("Minutes:");
-        minute = input.nextInt();
+        minute = this.getOption(60);
         
         System.out.println("Title:");
         input.nextLine();
@@ -217,19 +199,19 @@ public class eventManagement extends userInteraction{
         input.nextLine();
 
         System.out.println("Last-Day:");
-        endday = input.nextInt();
+        endday = this.getOption(31);
         
         System.out.println("Last-Month:");
-        endmonth = input.nextInt();
+        endmonth = this.getOption(12);
         
         System.out.println("Last-Year:");
-        endyear = input.nextInt();
+        endyear = this.getOption(12);
         
         System.out.println("Last-Hour:");
-        endhour = input.nextInt();
+        endhour = this.getOption(24);
         
         System.out.println("Last-Minutes:");
-        endminute = input.nextInt();
+        endminute = this.getOption(60);
 
         events.add(new Event(title, description, day, month, year, hour, minute, 
         endday, endmonth, endyear, endhour, endminute));
@@ -243,19 +225,19 @@ public class eventManagement extends userInteraction{
         System.out.println("To enter a new event you need to give specific data!");
         
         System.out.println("Day:"); 
-        day = input.nextInt();
+        day = this.getOption(31);
         
         System.out.println("Month:");
-        month = input.nextInt();
+        month = this.getOption(12);
         
         System.out.println("Year:");
-        year = input.nextInt();
+        year = this.getOption(2030);
         
         System.out.println("Hour:");
-        hour = input.nextInt();
+        hour = this.getOption(24);
         
         System.out.println("Minutes:");
-        minute = input.nextInt();
+        minute = this.getOption(60);
         
         System.out.println("Title:");
         input.nextLine();
@@ -266,7 +248,7 @@ public class eventManagement extends userInteraction{
         input.nextLine();
         
         System.out.println("Duration:");
-        duration = input.nextInt();
+        duration = this.getOption(460);
 
         events.add(new Appointements(title, description, day, month, year, hour, minute, 
         0, 0, 0, 0, 0, duration));
@@ -281,19 +263,19 @@ public class eventManagement extends userInteraction{
         System.out.println("To enter a new event you need to give specific data!");
         
         System.out.println("Day:");
-        day = input.nextInt();
+        day = this.getOption(31);
         
         System.out.println("Month:");
-        month = input.nextInt();
+        month = this.getOption(12);
         
         System.out.println("Year:");
-        year = input.nextInt();
+        year = this.getOption(2030);
         
         System.out.println("Hour:");
-        hour = input.nextInt();
+        hour = this.getOption(24);
         
         System.out.println("Minutes:");
-        minute = input.nextInt();
+        minute = this.getOption(60);
         
         System.out.println("Title:");
         input.nextLine();
@@ -304,19 +286,19 @@ public class eventManagement extends userInteraction{
         input.nextLine();
 
         System.out.println("Last-Day:");
-        endday = input.nextInt();
+        endday = this.getOption(31);
         
         System.out.println("Last-Month:");
-        endmonth = input.nextInt();
+        endmonth = this.getOption(12);
         
         System.out.println("Last-Year:");
-        endyear = input.nextInt();
+        endyear = this.getOption(2030);
         
         System.out.println("Last-Hour:");
-        endhour = input.nextInt();
+        endhour = this.getOption(24);
         
         System.out.println("Last-Minutes:");
-        endminute = input.nextInt();
+        endminute = this.getOption(60);
         
         System.out.println("To enter a Task you need to give the");
         System.out.println(":Status(YES/NO)");
@@ -362,3 +344,4 @@ public class eventManagement extends userInteraction{
     }
 
 }
+	
