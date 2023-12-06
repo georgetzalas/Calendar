@@ -24,7 +24,6 @@ public class icsStore extends icsOperations{
     private VEvent event;
     private VTodo todo;
 
-
     private LocalDateTime localDateTime;
     private Date startDate;
     private Date endDate;
@@ -32,28 +31,6 @@ public class icsStore extends icsOperations{
     public icsStore(String fileName){
         super(fileName);
         ical = new ICalendar();
-    }
-    
-    public void addEvent(Event e){
-        
-        //Create a new VEvent component
-        event = new VEvent();
-
-        //Set properties to the component
-        event.setSummary(e.getTitle());
-        event.setDescription(e.getDescription());
-
-
-        localDateTime = LocalDateTime.of(e.getStartYear(), e.getStartMonth(), e.getStartDay(), e.getStartHour(), e.getStartMinute());
-        startDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
-        event.setDateStart(startDate);
-        
-        localDateTime = LocalDateTime.of(e.getEndYear(), e.getEndMonth(), e.getEndDay(), e.getEndHour(), e.getEndMinute());
-        endDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
-        event.setDateEnd(endDate);
-        
-        //Add component to the iCalendar object
-        ical.addEvent(event);
     }
     
     public void addAppointment(Appointements e){
@@ -65,20 +42,21 @@ public class icsStore extends icsOperations{
         event.setSummary(e.getTitle());
         event.setDescription(e.getDescription());
 
-
         localDateTime = LocalDateTime.of(e.getStartYear(), e.getStartMonth(), e.getStartDay(), e.getStartHour(), e.getStartMinute());
         startDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
         event.setDateStart(startDate);
         
-        //localDateTime = LocalDateTime.of(e.getEndYear(), e.getEndMonth(), e.getEndDay(), e.getEndHour(), e.getEndMinute());
-        //endDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
-        
-        Duration duration = Duration.builder().minutes(e.getDuration()).build();
-        event.setDuration(duration);
+        if(e.getDuration() == -1){
+            localDateTime = LocalDateTime.of(e.getEndYear(), e.getEndMonth(), e.getEndDay(), e.getEndHour(), e.getEndMinute());
+            endDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+            event.setDateEnd(endDate);
+        }else{
+            Duration duration = Duration.builder().minutes(e.getDuration()).build();
+            event.setDuration(duration);
+        }
         
         //Add component to the iCalendar object
         ical.addEvent(event);
-        
     }
 
 
@@ -90,21 +68,18 @@ public class icsStore extends icsOperations{
         todo.setSummary(t.getTitle());
         todo.setDescription(t.getDescription());
         
-        //todo.setDateStart(new Date(t.getStartYear(), t.getStartMonth(), t.getStartDay(), t.getStartHour(), t.getStartMinute()));
-        //todo.setDateDue(new Date(t.getEndYear(), t.getEndMonth(), t.getEndDay(), t.getEndHour(), t.getEndMinute()));
-
-        localDateTime = LocalDateTime.of(t.getStartYear(), t.getStartMonth(), t.getStartDay(), t.getStartHour(), t.getStartMinute());
-        startDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
-        todo.setDateStart(startDate);
-        
         localDateTime = LocalDateTime.of(t.getEndYear(), t.getEndMonth(), t.getEndDay(), t.getEndHour(), t.getEndMinute());
         endDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
         todo.setDateDue(endDate);
 
         if(t.getCompleteTask().equals("COMPLETED")){
-            todo.setStatus(Status.completed());
-        }else if(t.getCompleteTask().equals("IN-PROGRESS")){
-            todo.setStatus(Status.inProgress());
+            todo.setStatus(Status.create("COMPLETED"));
+        }else if(t.getCompleteTask().equals("NEEDS-ACTION")){
+            todo.setStatus(Status.create("NEEDS-ACTION"));
+        }else if(t.getCompleteTask().equals("IN-PROCESS")){
+            todo.setStatus(Status.create("IN-PROCESS"));
+        }else if(t.getCompleteTask().equals("CANCELLED")){
+            todo.setStatus(Status.create("CANCELLED"));
         }
 
         //Add component to the iCalendar object

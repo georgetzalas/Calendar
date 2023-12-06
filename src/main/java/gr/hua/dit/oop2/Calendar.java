@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Calendar {
     public static void main (String[] args){
-        ArrayList<Event> events;
+        ArrayList<Event> events = new ArrayList();
         icsParse parse = null;
         icsStore store = null;
         eventList list = null;
@@ -41,9 +41,7 @@ public class Calendar {
         }
 
         for(Event event : events){
-            if(event.getClass() == Event.class){
-                store.addEvent(event);
-            }else if(event.getClass() == Appointements.class){
+            if(event.getClass() == Appointements.class){
                 store.addAppointment((Appointements)event);            
             }else{
                 store.addTodo((Task)event);

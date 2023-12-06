@@ -143,7 +143,7 @@ public class Event implements Comparable<Event> {
         return start;
     }
 
-    public long calculateEpochOfStart(){
+    /*public long calculateEpochOfStart(){
         long epoch;
         
         LocalDateTime date = LocalDateTime.of(this.getStartYear(), this.getStartMonth(), this.getStartDay(), this.getStartHour(), this.getStartMinute(), 0);
@@ -161,14 +161,23 @@ public class Event implements Comparable<Event> {
         epoch = date.atZone(ZoneId.systemDefault()).toEpochSecond();
         
         return epoch;
+    }*/
+
+    public long calculateEpoch(){
+        long epoch;
+        
+        LocalDateTime date = LocalDateTime.of(this.getStartYear(), this.getStartMonth(), this.getStartDay(), this.getStartHour(), this.getStartMinute(), 0);
+
+        epoch = date.atZone(ZoneId.systemDefault()).toEpochSecond();
+        
+        return epoch;
     }
 
     public int compareTo(Event e){
         //Time in milliseconds since epoch
         long time1 = 0, time2 = 0;
-        
-        time1 = this.calculateEpochOfStart();
-        time2 = e.calculateEpochOfStart();
+        time1 = this.calculateEpoch();
+        time2 = e.calculateEpoch();
         
         if(time1 > time2){
             return 1;

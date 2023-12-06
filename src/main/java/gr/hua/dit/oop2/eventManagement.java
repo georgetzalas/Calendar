@@ -58,7 +58,7 @@ public class eventManagement extends userInteraction{
         System.out.println("To alter event/task you need to give specific data!"); 
         
         for(Event event : events){
-            System.out.println(event.getTitle());
+            System.out.println(event.getTitle() + " " + event.toString());
         }
         
         System.out.println("You need to give the title of the event/task you want to update:");
@@ -68,7 +68,6 @@ public class eventManagement extends userInteraction{
         String tilte = input.nextLine();
         for(Event event : events){
             if(event.getTitle().equals(tilte)){
-                //System.out.println(event.getTitle());
                 found = true;
                    
                 System.out.println("If you don't want to change the day give '0' ,else give the new entrance:");
@@ -262,7 +261,7 @@ public class eventManagement extends userInteraction{
  
         System.out.println("To enter a new event you need to give specific data!");
         
-        System.out.println("Day:");
+        /*System.out.println("Day:");
         day = this.getOption(31);
         
         System.out.println("Month:");
@@ -275,7 +274,7 @@ public class eventManagement extends userInteraction{
         hour = this.getOption(24);
         
         System.out.println("Minutes:");
-        minute = this.getOption(60);
+        minute = this.getOption(60);*/
         
         System.out.println("Title:");
         input.nextLine();
@@ -306,7 +305,7 @@ public class eventManagement extends userInteraction{
         status = input.next();
         input.nextLine();
     
-        events.add(new Task(title, description, day, month, year, hour, minute, 
+        events.add(new Task(title, description, 0, 0, 0, 0, 0, 
         endday, endmonth, endyear, endhour, endminute, status));
     }
 

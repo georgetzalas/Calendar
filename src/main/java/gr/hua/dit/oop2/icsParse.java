@@ -33,10 +33,9 @@ public class icsParse extends icsOperations{
 
     public void extractAll(){
         try{
-
-            Event eve;
             Task task;
             Appointements apo;
+            
             //Parses iCalendar objects from the text file
             reader = new ICalReader(file); 
 
@@ -47,7 +46,6 @@ public class icsParse extends icsOperations{
                 for(VEvent event : ical.getEvents()){
                     
                     apo  = new Appointements();
-                    eve = new Event();
                     
                     //Get current events tilte
                     String title;
@@ -75,37 +73,34 @@ public class icsParse extends icsOperations{
                         dateStartStr = "";
                     }
 
-                    //Get current events ending date
-                    ICalDate dateEnd; 
-                    String dateEndStr;
-                    if(event.getDateEnd() != null){
-                        dateEnd = event.getDateEnd().getValue();
-                        dateEndStr = df.format(dateEnd);
-                    }else{
-                        dateEndStr = "";
-                    }
 
+                    //If duration exists
+                
                     Duration duration;
-                    //If Duration property is set in VEVENT
-                    //that means that the Event is an Appointment 
-                    if(event.getDuration() != null){//APPOINTMENT
+                    if(event.getDuration() != null){
                         duration = event.getDuration().getValue();
-                        
-                        apo.setTitle(title);
-                        apo.setDescription(desc);
-                        apo.strToEventDateStart(dateStartStr);
                         apo.setDuration(duration.getMinutes());
-                        events.add(apo);
-                    }else{//EVENT
-                        eve.setTitle(title);
-                        eve.setDescription(desc);
-                        eve.strToEventDateStart(dateStartStr);
-                        eve.strToEventDateEnd(dateEndStr);
-                        events.add(eve);
-                    }
-
+                    }else{
+                        apo.setDuration(-1);
+                            
+                        //Get current events ending date
+                        ICalDate dateEnd; 
+                        String dateEndStr;
+                        if(event.getDateEnd() != null){
+                            dateEnd = event.getDateEnd().getValue();
+                            dateEndStr = df.format(dateEnd);
+                        }else{
+                            dateEndStr = "";
+                        }
                         
-
+                        apo.strToEventDateEnd(dateEndStr);
+                    }
+               
+                    apo.setTitle(title);
+                    apo.setDescription(desc);
+                    apo.strToEventDateStart(dateStartStr);
+                    
+                    events.add(apo);
                 }
 
                 //For every iCalendar object extract all of its todos and get the necessary info
@@ -127,18 +122,25 @@ public class icsParse extends icsOperations{
                         desc = "";
                     }
                     
-                    ICalDate dueStart = (todo.getDateStart()) == null ? null : todo.getDateStart().getValue();
-                    String dueStartStr = df.format(dueStart);
-
-                    ICalDate dueEnd = (todo.getDateDue()) == null ? null : todo.getDateDue().getValue();
-                    String dueEndStr = df.format(dueEnd);
+                    ICalDate due;
+                    String dueStr;
+                    if(todo.getDateDue() != null){
+                        due = todo.getDateDue().getValue();
+                        dueStr = df.format(due);
+                    }else{
+                        dueStr = ""; 
+                    }
               
-                    String stat = (todo.getStatus()) == null ? null : todo.getStatus().getValue();
-                
+                    String stat;
+                    if(todo.getStatus() != null){
+                        stat = todo.getStatus().getValue();
+                    }else{
+                        stat = "IN-PROCESS";
+                    }
+                    
                     task.setTitle(title);
                     task.setDescription(desc);
-                    task.strToEventDateStart(dueStartStr);
-                    task.strToEventDateEnd(dueEndStr);
+                    task.strToEventDateEnd(dueStr);
                     task.setCompleteTask(stat);
 
                     events.add(task);

@@ -1,5 +1,9 @@
 package gr.hua.dit.oop2;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+
 public class Task extends Event{
     private String completetask;
     
@@ -19,9 +23,20 @@ public class Task extends Event{
     }
     
     public String setCompleteTask(String completetask){
-        return this.completetask=completetask;
+        return this.completetask = completetask;
     }
-    
+
+    @Override
+    public long calculateEpoch(){
+        long epoch;
+        
+        LocalDateTime date = LocalDateTime.of(this.getEndYear(), this.getEndMonth(), this.getEndDay(), this.getEndHour(), this.getEndMinute(), 0);
+
+        epoch = date.atZone(ZoneId.systemDefault()).toEpochSecond();
+        
+        return epoch;
+    }
+
     @Override
     public String toString(){
         return super.toString() + "Status: " + completetask;

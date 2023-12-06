@@ -12,7 +12,7 @@ public class icsOperations{
     public icsOperations(String fileName){
         this.fileName = fileName;
         file = new File(this.fileName);
-        events = new ArrayList<>();
+        events = new ArrayList();
     }
 
     public boolean checkFile(){

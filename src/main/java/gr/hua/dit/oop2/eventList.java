@@ -8,6 +8,8 @@ import java.time.ZoneOffset;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 import java.time.temporal.TemporalAdjusters;
+import gr.hua.dit.oop2.calendar.TimeService;
+import gr.hua.dit.oop2.calendar.TimeTeller;
 
 public class eventList extends userInteraction{
 
@@ -16,40 +18,31 @@ public class eventList extends userInteraction{
     }
 
     public void choose(String action){
+
+        System.out.println("All the upcoming events sorted");
+
+        this.sort();
+        this.showEventsFromNow();
         
-        //this.sort();
-        //this.showEventsFromNow();
-        
-        switch(action){
-            case "day":
-                this.day();
-                break;
-            case "week":
-                this.week();
-                break;
-            case "month":
-                this.month();
-                break;
-            case "pastday":
-                this.pastday();
-                break;
-            case "pastweek":
-                this.pastweek();
-                break;
-            case "pastmonth":
-                this.pastmonth();
-                break;
-            case "todo":
-                this.todo();
-                break;
-            case "due":
-                this.due();
-                break;
-            default:
-                System.out.println("Please provide a valid action");
-                System.exit(0);
-                break;
-            
+        if(action.equals("day")){
+            this.day();
+        }else if(action.equals("week")){
+            this.week();
+        }else if(action.equals("month")){
+            this.month();
+        }else if(action.equals("pastday")){
+            this.pastday();
+        }else if(action.equals("pastweek")){
+            this.pastweek();
+        }else if(action.equals("pastmonth")){
+            this.pastmonth();
+        }else if(action.equals("todo")){
+            this.todo();
+        }else if(action.equals("due")){
+            this.due();
+        }else{
+            System.out.println("Please provide a valid action");
+            System.exit(0);
         }
     }
 
@@ -57,7 +50,7 @@ public class eventList extends userInteraction{
         for (int i = 0; i < events.size() - 1; i++){
             for (int j = 0; j < events.size() - i - 1; j++) {
                 if(events.get(j).compareTo(events.get(j + 1)) > 0){
-                    swap(j, j+1);
+                        swap(j, j+1);
                 }
             }
         }
@@ -67,8 +60,10 @@ public class eventList extends userInteraction{
         LocalDateTime endOfDay = getCurrentTime().toLocalDate().atTime(LocalTime.MAX);
         long epoch = endOfDay.toEpochSecond(ZoneOffset.UTC);
 
+        System.out.println("Remaining events today");
+
         for(Event e : events){
-            long eventSeconds = e.calculateEpochOfStart();
+            long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             if(eventSeconds > timeSinceEpoch && eventSeconds < epoch){
                     System.out.println(e.getTitle() + " " + e.toString());
@@ -80,8 +75,10 @@ public class eventList extends userInteraction{
         LocalDateTime endOfDay = getCurrentTime().toLocalDate().atTime(LocalTime.MIN);
         long epoch = endOfDay.toEpochSecond(ZoneOffset.UTC);
         
+        System.out.println("Finished events today");
+
         for(Event e : events){
-            long eventSeconds = e.calculateEpochOfStart();
+            long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             if(eventSeconds < timeSinceEpoch && eventSeconds >= epoch){
                 System.out.println(e.getTitle() + " " + e.toString());
@@ -93,8 +90,10 @@ public class eventList extends userInteraction{
         LocalDateTime endOfWeek = getCurrentTime().with(TemporalAdjusters.next(DayOfWeek.SUNDAY)).withHour(23).withMinute(59).withSecond(59);
         long epoch = endOfWeek.toEpochSecond(ZoneOffset.UTC);
 
+        System.out.println("Remaining events in this week");
+
         for(Event e : events){
-            long eventSeconds = e.calculateEpochOfStart();
+            long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             if(eventSeconds > timeSinceEpoch && eventSeconds < epoch){
                     System.out.println(e.getTitle() + " " + e.toString());
@@ -107,8 +106,10 @@ public class eventList extends userInteraction{
         LocalDateTime startOfWeek = getCurrentTime().with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY)).toLocalDate().atStartOfDay();
         long epoch = startOfWeek.toInstant(ZoneOffset.UTC).getEpochSecond();
         
+        System.out.println("Finished events in this week");
+
         for(Event e : events){
-            long eventSeconds = e.calculateEpochOfStart();
+            long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             if(eventSeconds < timeSinceEpoch && eventSeconds >= epoch){
                     System.out.println(e.getTitle() + " " + e.toString());
@@ -121,8 +122,10 @@ public class eventList extends userInteraction{
         LocalDateTime endOfMonth = getCurrentTime().with(TemporalAdjusters.lastDayOfMonth()).withHour(23).withMinute(59).withSecond(59);
         long epoch = endOfMonth.toEpochSecond(ZoneOffset.UTC);
         
+        System.out.println("Remaining events in this week");
+
         for(Event e : events){
-            long eventSeconds = e.calculateEpochOfStart();
+            long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             if(eventSeconds > timeSinceEpoch && eventSeconds < epoch){
                     System.out.println(e.getTitle() + " " + e.toString());
@@ -134,8 +137,10 @@ public class eventList extends userInteraction{
         LocalDateTime startOfMonth = getCurrentTime().with(TemporalAdjusters.firstDayOfMonth()).toLocalDate().atStartOfDay();
         long epoch = startOfMonth.toInstant(ZoneOffset.UTC).getEpochSecond();
 
+        System.out.println("Remaining events in this month");
+
         for(Event e : events){
-            long eventSeconds = e.calculateEpochOfStart();
+            long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             if(eventSeconds < timeSinceEpoch && eventSeconds >= epoch){
                     System.out.println(e.getTitle() + " " + e.toString());
@@ -144,11 +149,14 @@ public class eventList extends userInteraction{
     }
 
     private void todo(){
+        
+        System.out.println("The task is still within the deadline and its not finished");
+        
         for(Event t : events){
             if(t.getClass() == Task.class){
                 long timeSinceEpoch = this.getTimeSinceEpoch();
                 Task e = (Task)t;
-                if(e.calculateEpochOfEnd() >= timeSinceEpoch && e.getCompleteTask().equals("IN-PROGRESS")){
+                if(e.calculateEpoch() >= timeSinceEpoch && !e.getCompleteTask().equals("COMPLETED")){
                     System.out.println(e.getTitle() + " " + e.toString());
                 }
             }
@@ -156,11 +164,14 @@ public class eventList extends userInteraction{
     }
 
     private void due(){
+        
+        System.out.println("The task is not within the deadline and its not finished");
+
         for(Event t : events){
             if(t.getClass() == Task.class){
                 long timeSinceEpoch = this.getTimeSinceEpoch();
                 Task e = (Task)t;
-                if(e.calculateEpochOfEnd() < timeSinceEpoch && e.getCompleteTask().equals("IN-PROGRESS")){
+                if(e.calculateEpoch() < timeSinceEpoch && !e.getCompleteTask().equals("COMPLETED")){
                     System.out.println(e.getTitle() + " " + e.toString());
                 }
             }
@@ -170,10 +181,10 @@ public class eventList extends userInteraction{
     private void showEventsFromNow(){
         for(Event e : events){
             long timeSinceEpoch = this.getTimeSinceEpoch();
-            
-            if(e.calculateEpochOfEnd() >= timeSinceEpoch){
+            if(e.calculateEpoch() >= timeSinceEpoch){
                 System.out.println(e.getTitle() + " " + e.toString());
             }
+
         }
     }
     
@@ -184,7 +195,9 @@ public class eventList extends userInteraction{
     }
 
     private LocalDateTime getCurrentTime(){
-        return LocalDateTime.now();
+        TimeTeller teller = TimeService.getTeller();
+        TimeService.stop();
+        return teller.now();
     }
 
     private long getTimeSinceEpoch(){

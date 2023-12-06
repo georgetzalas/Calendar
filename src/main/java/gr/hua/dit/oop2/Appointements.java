@@ -24,6 +24,6 @@ public class Appointements extends Event{
     
     @Override
     public String toString(){
-        return super.toString() +"Duration: "+ duration;
+        return super.toString() + " Duration: " + duration;
     }
 }
