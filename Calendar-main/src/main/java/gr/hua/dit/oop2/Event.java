@@ -11,7 +11,7 @@ public class Task extends Event{
     public Task(){
         super();
     }
-    //CONSTRACTOR
+    //CONSTRUCTOR
     public Task(String title, String description, int startDay, int startMonth, int startYear, int startHour, int startMinute,
     int endDay, int endMonth, int endYear, int endHour, int endMinute, String completetask){
         super(title, description, startDay, startMonth, startYear, startHour, startMinute,

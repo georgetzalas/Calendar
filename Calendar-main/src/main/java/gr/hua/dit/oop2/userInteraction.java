@@ -12,11 +12,12 @@ public class userInteraction{
         this.input = new Scanner(System.in);
     }
 
+    //METHOD THAT CKECKS IF THE INPUT FROM THE USER IS VALID
     public int getOption(int bound){
         int num = -1;
         
         while(num < 1 || num > bound){
-        
+            
             while(!input.hasNextInt()){
                 System.out.println("Please provide a valid integer");
                 input.next();
@@ -32,6 +33,4 @@ public class userInteraction{
         return num;
     }
     
-
-
 }

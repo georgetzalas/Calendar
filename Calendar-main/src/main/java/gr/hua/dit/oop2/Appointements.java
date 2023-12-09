@@ -10,7 +10,7 @@ public class Appointements extends Event{
     public Appointements(){
         super();
     }
-    //CONSTRACTOR
+    //CONSTRUCTOR
     public Appointements(String title, String description, int startDay, int startMonth, int startYear, int startHour, int startMinute,
     int endDay, int endMonth, int endYear, int endHour, int endMinute, int duration){
         super(title, description, startDay, startMonth, startYear, startHour, startMinute,
