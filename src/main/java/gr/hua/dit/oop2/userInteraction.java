@@ -14,6 +14,7 @@ public class userInteraction{
         this.input = new Scanner(System.in);
     }
 
+    //CKECKS IF THE INPUT THAT THE USER GAVE IS BETWEEN VALID NUMBERS
     public int getOption(int base ,int bound){
         int num = -1;
         
@@ -34,6 +35,7 @@ public class userInteraction{
         return num;
     }
     
+    //CKECKS IF THE INPUT THAT THE USER GAVE IS INTEGER
     public int ValidInteger(){
     Integer num=-1;
     while(!input.hasNextInt()){
@@ -43,6 +45,8 @@ public class userInteraction{
     num=input.nextInt();
     return num;    
     }
+
+    //RETURNS AN OBJECT LOCALDATETIME
     public LocalDateTime getDateTimeFromUser(int year, int month, int day, int hour, int minute) {
         try {
             return LocalDateTime.of(year,month,day,hour,minute);
