@@ -31,6 +31,13 @@ public class icsParse extends icsOperations{
         df = new SimpleDateFormat("dd/MM/yyyy HH:mm");
     }
 
+    private void componentError(){
+        System.out.println("Something went wrong with the file structure");
+        System.exit(1);
+    }
+
+
+
     public void extractAll(){
         try{
             Task task;
@@ -48,29 +55,29 @@ public class icsParse extends icsOperations{
                     apo  = new Appointements();
                     
                     //Get current events tilte
-                    String title;
+                    String title = null;
                     if(event.getSummary() != null){
                         title = event.getSummary().getValue();
                     }else{
-                        title = "";
+                        componentError();
                     }
 
                     //Get current events description
-                    String desc;
+                    String desc = null;
                     if(event.getDescription() != null){
                         desc = event.getDescription().getValue();
                     }else{
-                        desc = "";
+                        componentError();
                     }
       
                     //Get current events starting date
-                    ICalDate dateStart;
-                    String dateStartStr;
+                    ICalDate dateStart = null;
+                    String dateStartStr = null;
                     if(event.getDateStart() != null){
                         dateStart = event.getDateStart().getValue();
                         dateStartStr = df.format(dateStart);
                     }else{
-                        dateStartStr = "";
+                        componentError();
                     }
 
 
@@ -84,13 +91,13 @@ public class icsParse extends icsOperations{
                         apo.setDuration(-1);
                             
                         //Get current events ending date
-                        ICalDate dateEnd; 
-                        String dateEndStr;
+                        ICalDate dateEnd = null; 
+                        String dateEndStr = null;
                         if(event.getDateEnd() != null){
                             dateEnd = event.getDateEnd().getValue();
                             dateEndStr = df.format(dateEnd);
                         }else{
-                            dateEndStr = "";
+                            componentError();
                         }
                         
                         apo.strToEventDateEnd(dateEndStr);
@@ -108,27 +115,27 @@ public class icsParse extends icsOperations{
                     
                     task = new Task();
                     
-                    String title;
+                    String title = null;
                     if(todo.getSummary() != null){
                         title = todo.getSummary().getValue();
                     }else{
-                        title = "";
+                        componentError();
                     }
                     
-                    String desc;
+                    String desc = null;
                     if(todo.getDescription() != null){
                         desc = todo.getDescription().getValue();
                     }else{
-                        desc = "";
+                        componentError();
                     }
                     
-                    ICalDate due;
-                    String dueStr;
+                    ICalDate due = null;
+                    String dueStr = null;
                     if(todo.getDateDue() != null){
                         due = todo.getDateDue().getValue();
                         dueStr = df.format(due);
                     }else{
-                        dueStr = ""; 
+                        componentError();
                     }
               
                     String stat;

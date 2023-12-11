@@ -1,20 +1,17 @@
 package gr.hua.dit.oop2;
 
-import biweekly.io.text.ICalReader;
-import biweekly.ICalendar; 
-import biweekly.component.VEvent;
-import biweekly.component.VTodo;
-import biweekly.property.Status;
-import biweekly.ICalVersion;
-import biweekly.Biweekly; 
-import biweekly.util.Duration;
-
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
-import java.io.File;
 
-import java.io.IOException;
+import biweekly.Biweekly;
+import biweekly.ICalendar;
+import biweekly.component.VEvent;
+import biweekly.component.VTodo;
+import biweekly.io.text.ICalReader;
+import biweekly.property.Status;
+import biweekly.util.Duration;
 
 public class icsStore extends icsOperations{
     
