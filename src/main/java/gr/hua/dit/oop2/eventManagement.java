@@ -38,7 +38,7 @@ public class eventManagement extends userInteraction {
         while (running) {
             this.printMenu();
 
-            int option = this.getOption(0, 4);
+            int option = this.getOption(1, 4);
 
             if (option == 1) {
                 addCalendar();
@@ -326,6 +326,10 @@ public class eventManagement extends userInteraction {
         input.nextLine();
         System.out.println("Duration:give 1 if you want(else if you don't want to give it ,write '0')");
         Integer choiceduration = this.ValidInteger();
+        while(!(choiceduration==1 || choiceduration==0)){
+            System.out.println("Your input was wrong ,please try again!");
+            choiceduration = this.ValidInteger();
+        }
         //OPTION:IF USER WANTS TO ADD DURATION
         if (choiceduration == 1) {
             System.out.println("Give the new duration,else give '0':");
@@ -377,7 +381,7 @@ public class eventManagement extends userInteraction {
     }
     else{
         //ELSE PRINT THE WRITE MESSAGE END GET BACK TO THE TOP OF THE LOOP
-        System.out.println("You gave wrong input(enddate>startdate),please try again!");
+        System.out.println("You gave wrong input(enddate<startdate),please try again!");
     }
     }while(validcomp==false);
 

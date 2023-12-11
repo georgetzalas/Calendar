@@ -34,16 +34,32 @@ public class userInteraction{
         
         return num;
     }
-    
-    //CKECKS IF THE INPUT THAT THE USER GAVE IS INTEGER
+    /* 
     public int ValidInteger(){
     Integer num=-1;
-    while(!input.hasNextInt()){
+    while(!(input.hasNextInt()&& input.nextInt()>=0)){
                 System.out.println("Please provide a valid integer");
                 input.next();
             }
     num=input.nextInt();
     return num;    
+    }*/
+    //CKECKS IF THE INPUT THAT THE USER GAVE IS INTEGER
+    public  int ValidInteger() {
+        int num;
+
+        do {
+            while (!input.hasNextInt()) {
+                System.out.println("Please provide a valid integer.");
+                input.next(); // consume invalid input
+            }
+            num = input.nextInt();
+            if (num < 0) {
+                System.out.println("Please provide a non-negative integer.");
+            }
+        } while (num < 0);
+
+        return num;
     }
 
     //RETURNS AN OBJECT LOCALDATETIME
@@ -57,4 +73,3 @@ public class userInteraction{
     }
     
 }
-        
