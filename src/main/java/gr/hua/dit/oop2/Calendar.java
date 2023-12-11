@@ -31,9 +31,7 @@ public class Calendar {
         //Extract all the events from the file and save them into the events List
         parse.extractAll();
         events = parse.getEvents();
-        for(Event e : events){
-            System.out.println(e.getTitle());
-        }
+
         list = new eventList(events);
         manage = new eventManagement(events);
 
