@@ -51,7 +51,7 @@ public class eventManagement extends userInteraction {
     }
     //METHOD THAT PRINTS THE MENU
     private void printMenu() {
-        System.out.println("Make your choice,give a number between 1-4 !");
+        System.out.println("Make your choice,give a number between 1-3!");
         System.out.println("1.Make a new event to your calendar!");
         System.out.println("2.To change the task-status!");
         System.out.println("3.To exit!");
@@ -70,6 +70,9 @@ public class eventManagement extends userInteraction {
             addTodo();
         }
     }
+
+    String tilte;
+
     
     //CHOICE OF ADDING APPOINTMENTS
     private void addApointment() {
@@ -148,7 +151,7 @@ public class eventManagement extends userInteraction {
 
             
         }
-    //GET THE END-DATE AND START-DATE INTO A LONG INTEGER NUMPER
+    //GET THE END-DATE AND START-DATE INTO A LONG INTEGER NUMBER
     long compenddate2=compareDates(endyear,endmonth,endday,endhour,endminute);
     long compstartdate=compareDates(year,month,day,hour,minute);
     //MAKE THE COMPARISON
@@ -156,12 +159,12 @@ public class eventManagement extends userInteraction {
         //MAKE THE APPOINTMENT AS SOON AS THE COMPARISON IS CORRECT
         Appointements Ap1 = new Appointements(title, description, day, month, year, hour, minute, endday, endmonth,endyear, endhour, endminute, duration);
             events.add(Ap1);
-            // ΕΚΤΥΠΩΣΗ ΤΟΥ NEOY ΑΝΤΙΚΕΙΜΕΝΟΥ
+            // PRINT THE NEW OBJECT
             System.out.printf("%s\t\n", Ap1.getTitle());
             validcomp=true;
     }
     else{
-        //ELSE PRINT THE WRITE MESSAGE END GET BACK TO THE TOP OF THE LOOP
+        //ELSE PRINT THE MESSAGE AND GET BACK TO THE TOP OF THE LOOP
         System.out.println("You gave wrong input(enddate<startdate),please try again!");
     }
     }while(validcomp==false);
@@ -220,7 +223,7 @@ public class eventManagement extends userInteraction {
                 System.out.println(t.getTitle() + " " + t.getCompleteTask());
             }
         }
-        //SEARCHING BAZED TO THE TITLE THAT USER GAVE
+        //SEARCHING BASED TO THE TITLE THAT USER GAVE
         System.out.println("Give the title of the task you want to change the status!");
         input.nextLine();
         String title = input.nextLine();
