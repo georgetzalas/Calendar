@@ -38,13 +38,11 @@ public class eventManagement extends userInteraction {
         while (running) {
             this.printMenu();
 
-            int option = this.getOption(1, 4);
+            int option = this.getOption(1, 3);
 
             if (option == 1) {
                 addCalendar();
-           // } else if (option == 2) {
-           //     editCalendar();
-            } else if (option == 3) {
+            } else if (option == 2) {
                 editTodoStatus();
             } else {
                 running = false;
@@ -55,9 +53,8 @@ public class eventManagement extends userInteraction {
     private void printMenu() {
         System.out.println("Make your choice,give a number between 1-4 !");
         System.out.println("1.Make a new event to your calendar!");
-        System.out.println("2.Make changes to an existing event!");
-        System.out.println("3.To change the task-status!");
-        System.out.println("4.To exit!");
+        System.out.println("2.To change the task-status!");
+        System.out.println("3.To exit!");
     }
 
     private void addCalendar() {
@@ -73,222 +70,6 @@ public class eventManagement extends userInteraction {
             addTodo();
         }
     }
-
-    String tilte;
-/* 
-    private void editCalendar() {
-        System.out.println("To alter appointement/task you need to give specific data!");
-
-        for (Event event : events) {
-            System.out.println(event.getTitle() + " " + event.toString());
-        }
-
-        System.out.println("You need to give the title of the appointement/task you want to update:");
-
-        boolean found = false;
-        input.nextLine();
-        tilte = input.nextLine();
-        Integer day, year, month, hour, minute;
-        for (Event event : events) {
-            if (event.getClass() == Appointements.class && (event.getTitle().equals(tilte))) {
-                found = true;
-                LocalDateTime dateTime2 = null;
-                do {
-                    System.out.println("If you don't want to change the day give '0' ,else give the new entrance:");
-                    day = this.ValidInteger();
-
-                    if (!day.equals(0)) {
-                        event.setStartDay(day);
-                    }
-
-                    System.out.println("If you don't want to change the month give '0' ,else give the new entrance:");
-                    month = this.ValidInteger();
-                    if (!month.equals(0)) {
-                        event.setStartMonth(month);
-                    }
-
-                    System.out.println("If you don't want to change the year give '0' ,else give the new entrance:");
-                    year = this.ValidInteger();
-                    if (!year.equals(0)) {
-                        event.setStartYear(year);
-                    }
-
-                    System.out.println("If you don't want to change the hour give '0' ,else give the new entrance:");
-                    hour = this.ValidInteger();
-                    if (!hour.equals(0)) {
-                        event.setStartHour(hour);
-                    }
-
-                    System.out.println("If you don't want to change the minute give '0' ,else give the new entrance:");
-                    minute = this.ValidInteger();
-                    if (!minute.equals(0)) {
-                        event.setStartMinute(minute);
-                    }
-                    dateTime2 = this.getDateTimeFromUser(event.getStartYear(), event.getStartMonth(),
-                            event.getStartDay(), event.getStartHour(), event.getStartMinute());
-                    System.out.println(dateTime2);
-                } while (dateTime2.equals(null));
-
-                System.out.println("Created LocalDateTime: " + dateTime);
-                // scanner.close();
-
-                System.out.println("If you don't want to change the title give '-' ,else give the new entrance:");
-                String title = input.nextLine();
-                input.nextLine();
-                if (title.equals("-")) {
-                    event.setTitle(title);
-                }
-
-                System.out.println("If you don't want to change the description give '-' ,else give the new entrance:");
-                String desc = input.nextLine();
-                if (!desc.equals("-")) {
-                    event.setDescription(desc);
-                }
-                System.out.println(
-                        "If you want to change the end-date give '0',else if you want to change duration give '1':");
-
-                Integer duration = input.nextInt();
-                if (((Appointements) event).getDuration() == (-1) && duration == 0) {
-                    do {
-                        System.out.println(
-                                "If you don't want to change the last-day give '0' ,else give the new entrance:");
-                        Integer endday = this.ValidInteger();
-                        if (!endday.equals(0)) {
-                            event.setEndDay(endday);
-                        }
-
-                        System.out.println(
-                                "If you don't want to change the last-month give '0' ,else give the new entrance:");
-                        Integer endmonth = this.ValidInteger();
-                        if (!endmonth.equals(0)) {
-                            event.setEndMonth(endmonth);
-                        }
-
-                        System.out.println(
-                                "If you don't want to change the last-year give '0' ,else give the new entrance:");
-                        Integer endyear = this.ValidInteger();
-                        if (!endyear.equals(0)) {
-                            event.setEndYear(endyear);
-                        }
-
-                        System.out.println(
-                                "If you don't want to change the last-hour give '0' ,else give the new entrance:");
-                        Integer endhour = this.ValidInteger();
-                        if (!endhour.equals(0)) {
-                            event.setEndHour(endhour);
-                        }
-
-                        System.out.println(
-                                "If you don't want to change the last-minute give '0' ,else give the new entrance:");
-                        Integer endminute = this.ValidInteger();
-
-                        if (!endminute.equals(0)) {
-                            event.setEndMinute(endminute);
-                        }
-                        dateTime = getDateTimeFromUser(endyear, endmonth, endday, endhour, endminute);
-                    } while (dateTime == null);
-                    // ΕΚΤΥΠΩΣΗ ΤΟΥ ΑΝΑΝΕΩΜΕΝΟΥ ΑΝΤΙΚΕΙΜΕΝΟΥ
-                    System.out.printf("%s\t", event.getTitle());
-                    System.out.println(event);
-                    break;
-
-                }
-                if (duration == 1) {
-                    System.out.println("Give the new duration,else give '0':");
-                    duration = this.ValidInteger();
-                    ((Appointements) event).setDuration(duration);
-                    System.out.print(event.getStartDay());
-                    LocalDateTime APP = this.plusDure(event.getStartDay(), event.getStartMonth(), event.getStartYear(),
-                            event.getStartHour(), event.getStartMinute(), duration);
-                    Integer endday, endmonth, endyear, endhour, endminute;
-                    endday = APP.getDayOfMonth();
-                    endmonth = APP.getMonthValue();
-                    endyear = APP.getYear();
-                    endhour = APP.getHour();
-                    endminute = APP.getMinute();
-
-                    Appointements Ap3 = new Appointements(title, desc, day, month, year, hour, minute,
-                            endday, endmonth, endyear, endhour, endminute, duration);
-                    events.add(Ap3);
-                    // ΕΚΤΥΠΩΣΗ ΤΟΥ ΑΝΑΝΕΩΜΕΝΟΥ ΑΝΤΙΚΕΙΜΕΝΟΥ
-                    System.out.printf("%s\t", event.getTitle());
-                    // System.out.println(event);
-                }
-                break;
-            }
-            if (event.getClass() == Task.class && event.getTitle().equals(tilte)) {
-                found = true;
-                Task t = (Task) event;
-                System.out.println("If you don't want to change the title give '-' ,else give the new entrance:");
-                String title = input.nextLine();
-
-                if (!title.equals("-")) {
-                    t.setTitle(title);
-                }
-                System.out.println("If you don't want to change the description give '-' ,else give the new entrance:");
-                String desc = input.nextLine();
-                if (!desc.equals("-")) {
-                    t.setDescription(desc);
-                }
-                do {
-                    System.out
-                            .println("If you don't want to change the last-day give '0' ,else give the new entrance:");
-                    Integer endday = this.ValidInteger();
-                    if (!endday.equals(0)) {
-                        t.setEndDay(endday);
-                    }
-                    System.out.println(
-                            "If you don't want to change the last-month give '0' ,else give the new entrance:");
-                    Integer endmonth = this.ValidInteger();
-                    if (!endmonth.equals(0)) {
-                        t.setEndMonth(endmonth);
-                    }
-                    System.out
-                            .println("If you don't want to change the last-year give '0' ,else give the new entrance:");
-                    Integer endyear = this.ValidInteger();
-                    if (!endyear.equals(0)) {
-                        t.setEndYear(endyear);
-                    }
-                    System.out
-                            .println("If you don't want to change the last-hour give '0' ,else give the new entrance:");
-                    Integer endhour = this.ValidInteger();
-                    if (!endhour.equals(0)) {
-                        t.setEndHour(endhour);
-                    }
-
-                    System.out.println(
-                            "If you don't want to change the last-minute give '0' ,else give the new entrance:");
-                    Integer endminute = this.ValidInteger();
-
-                    if (!endminute.equals(0)) {
-                        t.setEndMinute(endminute);
-                    }
-                    dateTime = getDateTimeFromUser(endyear, endmonth, endday, endhour, endminute);
-                } while (dateTime == null);
-                System.out.println("Give the new status(NEEDS-ACTION/IN-PROCESS/CANCELLED/COMPLETED)!");
-
-                String status = input.next();
-                while (!(status.equals("IN-PROCESS") || status.equals("COMPLETED") || status.equals("CANCELLED")
-                        || status.equals("NEEDS-ACTION"))) {
-                    input.next();
-                    System.out.println("Your entrance was wrong ,try again!");
-                    status = input.next();
-
-                }
-
-                t.setCompleteTask(status);
-                // ΕΚΤΥΠΩΣΗ ΤΟΥ ΑΝΑΝΕΩΜΕΝΟΥ ΑΝΤΙΚΕΙΜΕΝΟΥ
-                // System.out.printf("%s\t",t.getTitle());
-                System.out.println(t);
-                break;
-            }
-        }
-        if (found == false) {
-            System.out.println("Event with this title not found");
-        }
-
-    }
-*/
     
     //CHOICE OF ADDING APPOINTMENTS
     private void addApointment() {

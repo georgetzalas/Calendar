@@ -152,7 +152,7 @@ public class eventList extends userInteraction{
         //CONVERTS THE TIME END OF THE MONTH TO A NUMBER OF SECONDS FROM THE EPOCH TO ZERO
         long epoch = endOfMonth.toEpochSecond(ZoneOffset.UTC);
         
-        System.out.println("Remaining events in this week");
+        System.out.println("Remaining events in this month");
 
         for(Event e : events){
             long eventSeconds = e.calculateEpoch();
