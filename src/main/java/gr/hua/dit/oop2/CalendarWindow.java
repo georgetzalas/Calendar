@@ -8,11 +8,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class CalendarWindow {
-    public JFrame frame = new JFrame("Test");
-    public MainPanel mainPanel = new MainPanel();
-    public FunctionsPanel functionsPanel = new FunctionsPanel();
-    public ViewPanel viewPanel = new ViewPanel();
-
+    private JFrame frame = new JFrame("Test");
+    private MainPanel mainPanel = new MainPanel();
+    private FunctionsPanel functionsPanel = new FunctionsPanel();
+    private ViewPanel viewPanel = new ViewPanel();
 
     public CalendarWindow(){
         frame.add(mainPanel);
@@ -20,10 +19,13 @@ public class CalendarWindow {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
         frame.setVisible(true);
+        createMenuBar();
+    }
+
+    private void createMenuBar(){
         MenuBar mBar = new MenuBar();
         Menu m1 = new Menu("File");
         m1.add(new MenuItem("Open"));
-        m1.add(new MenuItem("Save"));
         mBar.add(m1);
         frame.setMenuBar(mBar);    
     }
