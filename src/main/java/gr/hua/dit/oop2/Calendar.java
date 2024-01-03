@@ -3,6 +3,7 @@ package gr.hua.dit.oop2;
 import java.util.ArrayList;
 
 public class Calendar {
+    public static CalendarWindow calendarWindow;
     public static void main (String[] args){
         //Stores all the events
         ArrayList<Event> events = new ArrayList();
@@ -10,6 +11,7 @@ public class Calendar {
         icsStore store = null;
         eventList list = null;
         eventManagement manage = null;
+        calendarWindow = new CalendarWindow();
 
         //Check if the user provided the right num of args
         if(args.length == 1){
