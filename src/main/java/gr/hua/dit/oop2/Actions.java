@@ -15,10 +15,14 @@ public class Actions implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         panel.setVisible(false);
 
-        if(e.getActionCommand().equals("Add/Edit Events")){
+        if(e.getActionCommand().equals("Add Events")){
+            Calendar.calendarWindow.setAddPanelVis(true, panel);
+        }else if(e.getActionCommand().equals("Edit Events")){
             Calendar.calendarWindow.setFunctionPanelVis(true, panel);
         }else if(e.getActionCommand().equals("View Events")){
             Calendar.calendarWindow.setViewPanel(true, panel);
+        }else if(e.getActionCommand().equals("Change Status of Task")){
+            Calendar.calendarWindow.setStatPanelVis(true, panel);
         }else if(e.getActionCommand().equals("Back")){
             Calendar.calendarWindow.setMainPanelVis(true, panel);
         }
