@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Calendar {
     public static CalendarWindow calendarWindow;
+
+    public static eventList list;
     public static void main (String[] args){
         //Stores all the events
         ArrayList<Event> events = new ArrayList();
         icsParse parse = null;
         icsStore store = null;
-        eventList list = null;
         eventManagement manage = null;
-        calendarWindow = new CalendarWindow();
 
         //Check if the user provided the right num of args
         if(args.length == 1){
@@ -36,6 +36,8 @@ public class Calendar {
 
         list = new eventList(events);
         manage = new eventManagement(events);
+
+        calendarWindow = new CalendarWindow();
 
         if(args.length == 1)
             manage.decideAction();

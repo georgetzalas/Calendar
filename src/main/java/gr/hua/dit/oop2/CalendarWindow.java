@@ -13,14 +13,16 @@ import javax.swing.ImageIcon;
 
 public class CalendarWindow {
     private JFrame frame = new JFrame("Calendar");
-    private MainPanel mainPanel = new MainPanel();
-    private AddPanel addPanel = new AddPanel();
-    private FunctionsPanel functionsPanel = new FunctionsPanel();
-    private ViewPanel viewPanel = new ViewPanel();
-    private StatPanel statPanel = new StatPanel();
+    private MainPanel mainPanel;
+    private AddPanel addPanel;
+    private FunctionsPanel functionsPanel;
+    private ViewPanel viewPanel;
+    private StatPanel statPanel;
     private ImageIcon mainimage = new ImageIcon("mainpic.png");
 
     public CalendarWindow(){
+        mainPanel = new MainPanel();
+
         frame.add(mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 700);
@@ -40,29 +42,39 @@ public class CalendarWindow {
     }
 
     public void setMainPanelVis(boolean visible, JPanel panel){
+        mainPanel = new MainPanel();
+
         frame.remove(panel);
         mainPanel.setVisible(visible);
         frame.add(mainPanel);
     }
 
     public void setAddPanelVis(boolean visible, JPanel panel){
+        addPanel = new AddPanel();
+
         frame.remove(panel);
-        mainPanel.setVisible(visible);
+        addPanel.setVisible(visible);
         frame.add(addPanel);
     }
     public void setFunctionPanelVis(boolean visible, JPanel panel){
+        functionsPanel = new FunctionsPanel();
+
         frame.remove(panel);
         functionsPanel.setVisible(visible);
         frame.add(functionsPanel);
     }
 
     public void setViewPanel(boolean visible, JPanel panel){
+        viewPanel = new ViewPanel();
+
         frame.remove(panel);
         viewPanel.setVisible(visible);
         frame.add(viewPanel);
     }
 
     public void setStatPanelVis(boolean visible, JPanel panel){
+        statPanel = new StatPanel();
+
         frame.remove(panel);
         statPanel.setVisible(visible);
         frame.add(statPanel);

@@ -13,9 +13,14 @@ import gr.hua.dit.oop2.calendar.TimeTeller;
 
 public class eventList extends userInteraction{
 
+    private ArrayList<String> data;
+
     public eventList(ArrayList<Event> events){
         super(events);
+        data = new ArrayList();
     }
+    
+
     //USER CHOOSES WHAT EVENTS HE WANTS TO SEE
     public void choose(String action){
 
@@ -67,13 +72,11 @@ public class eventList extends userInteraction{
     }
 
     //METHOD THAT FINDS THE EVENTS BY THE END OF THE DAY
-    private void day(){
+    public void day(){
         //THE END OF THE DAY
         LocalDateTime endOfDay = getCurrentTime().toLocalDate().atTime(LocalTime.MAX);
         //CONVERTS THE TIME END OF THE DAY TO A NUMBER OF SECONDS FROM THE EPOCH TO ZERO
         long epoch = endOfDay.toEpochSecond(ZoneOffset.UTC);
-
-        System.out.println("Remaining events today");
 
         for(Event e : events){
             long eventSeconds = e.calculateEpoch();
@@ -81,97 +84,87 @@ public class eventList extends userInteraction{
 
             //IF THE TIME OF THE EVENT IS BIGGER THAN THE TIME THAT HAS PASSED SINCE THE SEASON AND LESS THAN THE END OF THE DAY (epoch)
             if(eventSeconds > timeSinceEpoch && eventSeconds < epoch){
-                    System.out.println(e.getTitle() + " " + e.toString());
+                data.add(e.getTitle() + " " + e.toString());
             }
         }
     }
 
     //METHOD THAT FINDS THE EVENTS FROM THE BEGINNING OF THE DAY UNTIL NOW 
-    private void pastday(){
+    public void pastday(){
         //THE START OF THE DAY
         LocalDateTime endOfDay = getCurrentTime().toLocalDate().atTime(LocalTime.MIN);
         //CONVERTS THE TIME START OF THE DAY TO A NUMBER OF SECONDS FROM THE EPOCH TO ZERO
         long epoch = endOfDay.toEpochSecond(ZoneOffset.UTC);
-        
-        System.out.println("Finished events today");
 
         for(Event e : events){
             long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             //IF THE TIME OF THE EVENT IS LESS THAN THE TIME THAT HAS PASSED SINCE THE SEASON AND BIGGER THAN OR EQUAL THAN THE BEGINNING OF THE DAY (epoch)
             if(eventSeconds < timeSinceEpoch && eventSeconds >= epoch){
-                System.out.println(e.getTitle() + " " + e.toString());
+                data.add(e.getTitle() + " " + e.toString());
             }
         }
     }
 
     //METHOD THAT FINDS THE EVENTS BY THE END OF THE WEEK
-    private void week(){
+    public void week(){
         //THE END OF THE WEEK
         LocalDateTime endOfWeek = getCurrentTime().with(TemporalAdjusters.next(DayOfWeek.SUNDAY)).withHour(23).withMinute(59).withSecond(59);
         //CONVERTS THE TIME END OF THE WEEK TO A NUMBER OF SECONDS FROM THE EPOCH TO ZERO
         long epoch = endOfWeek.toEpochSecond(ZoneOffset.UTC);
-
-        System.out.println("Remaining events in this week");
 
         for(Event e : events){
             long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             //IF THE TIME OF THE EVENT IS BIGGER THAN THE TIME THAT HAS PASSED SINCE THE SEASON AND LESS THAN THE END OF THE WEEK (epoch)
             if(eventSeconds > timeSinceEpoch && eventSeconds < epoch){
-                    System.out.println(e.getTitle() + " " + e.toString());
+                data.add(e.getTitle() + " " + e.toString());
             }
         }
         
     }
 
     //METHOD THAT FINDS THE EVENTS FROM THE BEGINNING OF THE WEEK UNTIL NOW
-    private void pastweek(){
+    public void pastweek(){
         //THE START OF THE WEEK
         LocalDateTime startOfWeek = getCurrentTime().with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY)).toLocalDate().atStartOfDay();
         //CONVERTS THE TIME START OF THE WEEK TO A NUMBER OF SECONDS FROM THE EPOCH TO ZERO
         long epoch = startOfWeek.toInstant(ZoneOffset.UTC).getEpochSecond();
         
-        System.out.println("Finished events in this week");
-
         for(Event e : events){
             long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             //IF THE TIME OF THE EVENT IS LESS THAN THE TIME THAT HAS PASSED SINCE THE SEASON AND BIGGER THAN OR EQUAL THAN THE BEGINNING OF THE WEEK (epoch)
             if(eventSeconds < timeSinceEpoch && eventSeconds >= epoch){
-                    System.out.println(e.getTitle() + " " + e.toString());
+                data.add(e.getTitle() + " " + e.toString());
             }
         }
     
     }
 
     //METHOD THAT FINDS THE EVENTS BY THE END OF THE MONTH
-    private void month(){
+    public void month(){
         //THE END OF THE MONTH
         LocalDateTime endOfMonth = getCurrentTime().with(TemporalAdjusters.lastDayOfMonth()).withHour(23).withMinute(59).withSecond(59);
         //CONVERTS THE TIME END OF THE MONTH TO A NUMBER OF SECONDS FROM THE EPOCH TO ZERO
         long epoch = endOfMonth.toEpochSecond(ZoneOffset.UTC);
         
-        System.out.println("Remaining events in this month");
-
         for(Event e : events){
             long eventSeconds = e.calculateEpoch();
             long timeSinceEpoch = this.getTimeSinceEpoch();
             //IF THE TIME OF THE EVENT IS BIGGER THAN THE TIME THAT HAS PASSED SINCE THE SEASON AND LESS THAN THE END OF THE MONTH (epoch)
             if(eventSeconds > timeSinceEpoch && eventSeconds < epoch){
-                    System.out.println(e.getTitle() + " " + e.toString());
+                data.add(e.getTitle() + " " + e.toString());
             }
         }   
     }
 
     //METHOD THAT FINDS THE EVENTS FROM THE BEGINNING OF THE MONTH UNTIL NOW
-    private void pastmonth(){
+    public void pastmonth(){
         //THE START OF THE MONTH
         LocalDateTime startOfMonth = getCurrentTime().with(TemporalAdjusters.firstDayOfMonth()).toLocalDate().atStartOfDay();
         //CONVERTS THE TIME START OF THE MONTH TO A NUMBER OF SECONDS FROM THE EPOCH TO ZERO
         long epoch = startOfMonth.toInstant(ZoneOffset.UTC).getEpochSecond();
-
-        System.out.println("Remaining events in this month");
 
         for(Event e : events){
             long eventSeconds = e.calculateEpoch();
@@ -179,15 +172,13 @@ public class eventList extends userInteraction{
              //IF THE TIME OF THE EVENT IS LESS THAN THE TIME THAT HAS PASSED SINCE THE SEASON AND BIGGER THAN OR EQUAL THAN THE BEGINNING OF THE MONTH (epoch)
             if(eventSeconds < timeSinceEpoch && eventSeconds >= epoch){
                 if(eventSeconds < timeSinceEpoch && eventSeconds >= epoch){
-                    System.out.println(e.getTitle() + " " + e.toString());
+                    data.add(e.getTitle() + " " + e.toString());
                 }
             } 
         }
     }
     //METHOD THAT FINDS THE TASKS THAT WERE NOT COMPLETED AND THE DEADLINE HAS NOT PASSED
-    private void todo(){
-        
-        System.out.println("The task is still within the deadline and its not finished");
+    public void todo(){
         
         for(Event t : events){
             if(t.getClass() == Task.class){
@@ -196,17 +187,15 @@ public class eventList extends userInteraction{
                 Task e = (Task)t;
                 //IF THE TASK IS WITHIN ITS DEADLINE AND HAS NOT BEEN COMPELETED
                 if(e.calculateEpoch() >= timeSinceEpoch && !e.getCompleteTask().equals("COMPLETED")){
-                    System.out.println(e.getTitle() + " " + e.toString());
+                    data.add(e.getTitle() + " " + e.toString());
                 }
             }
         }
     }
 
     //METHOD THAT FINDS THE TASKS THAT WERE NOT COMPELTED AND THE DEADLINE HAS PASSED
-    private void due(){
+    public void due(){
         
-        System.out.println("The task is not within the deadline and its not finished");
-
         for(Event t : events){
             if(t.getClass() == Task.class){
                 //CALCULATES ITS TIME IN SECONDS FROM THE EPOCH
@@ -214,20 +203,19 @@ public class eventList extends userInteraction{
                 Task e = (Task)t;
                 //IF THE TASK HAS EXCEEDED ITS DEADLINE AND HAS NOT BEEN COMPLETED
                 if(e.calculateEpoch() < timeSinceEpoch && !e.getCompleteTask().equals("COMPLETED")){
-                    System.out.println(e.getTitle() + " " + e.toString());
+                    data.add(e.getTitle() + " " + e.toString());
                 }
             }
         }
     }
 
     //METHOD THAT PRINTS THE FUTURE EVENTS 
-    private void showEventsFromNow(){
+    public void showEventsFromNow(){
         for(Event e : events){
             long timeSinceEpoch = this.getTimeSinceEpoch();
             if(e.calculateEpoch() >= timeSinceEpoch){
-                System.out.println(e.getTitle() + " " + e.toString());
+                data.add(e.getTitle() + " " + e.toString());
             }
-
         }
     }
 
@@ -252,5 +240,13 @@ public class eventList extends userInteraction{
         //APPENDS THE ZONE TO THE CURRENT LOCAL TIME OBTAINED FROM getCurrentTime() AND CONVERTS THAT TIME TO SECONDS FROM EPOCH
         long timeSinceEpoch = getCurrentTime().atZone(defaultZone).toEpochSecond();
         return timeSinceEpoch;
+    }
+
+    public String[] getData(){
+        return data.toArray(new String[0]);
+    }
+
+    public void clearData(){
+        data = new ArrayList();
     }
 }
