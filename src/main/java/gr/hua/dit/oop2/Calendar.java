@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 public class Calendar {
     public static CalendarWindow calendarWindow;
-
     public static eventList list;
+    public static ArrayList<Event> events = new ArrayList();
     public static void main (String[] args){
         //Stores all the events
-        ArrayList<Event> events = new ArrayList();
         icsParse parse = null;
         icsStore store = null;
         eventManagement manage = null;

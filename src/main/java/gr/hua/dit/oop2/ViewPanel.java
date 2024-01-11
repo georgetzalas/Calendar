@@ -40,8 +40,8 @@ public class ViewPanel extends JPanel{
         back.addActionListener(new Actions(this));
 
         backButtonPanel.setBackground(new Color(123,50,250));
-        backButtonPanel.setLayout(new BorderLayout());
-        backButtonPanel.add(back, BorderLayout.SOUTH);
+        //backButtonPanel.setLayout(new BorderLayout());
+        backButtonPanel.add(back);
     }
 
     private void createOptionButtons(){

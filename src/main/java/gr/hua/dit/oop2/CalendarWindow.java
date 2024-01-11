@@ -3,13 +3,13 @@ package gr.hua.dit.oop2;
 import java.awt.Menu;
 import java.awt.MenuBar;
 import java.awt.MenuItem;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
-
-
 
 public class CalendarWindow {
     private JFrame frame = new JFrame("Calendar");
@@ -18,7 +18,7 @@ public class CalendarWindow {
     private FunctionsPanel functionsPanel;
     private ViewPanel viewPanel;
     private StatPanel statPanel;
-    private ImageIcon mainimage = new ImageIcon("mainpic.png");
+    private ImageIcon mainimage;
 
     public CalendarWindow(){
         mainPanel = new MainPanel();
@@ -28,6 +28,7 @@ public class CalendarWindow {
         frame.setSize(800, 700);
         frame.setResizable(false);
         frame.setVisible(true);
+        mainimage = new ImageIcon("mainpic.png");
         frame.setIconImage(mainimage.getImage());
         createMenuBar();
         
@@ -36,7 +37,16 @@ public class CalendarWindow {
     private void createMenuBar(){
         MenuBar mBar = new MenuBar();
         Menu m1 = new Menu("File");
-        m1.add(new MenuItem("Open"));
+        MenuItem open = new MenuItem("Open");
+        open.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new FileViewer();
+            }
+            
+        });
+        m1.add(open);
         mBar.add(m1);
         frame.setMenuBar(mBar);    
     }
