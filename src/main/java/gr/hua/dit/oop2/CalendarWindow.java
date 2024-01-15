@@ -88,5 +88,5 @@ public class CalendarWindow {
         frame.remove(panel);
         statPanel.setVisible(visible);
         frame.add(statPanel);
-    } 
+    }
 }

@@ -2,7 +2,10 @@ package gr.hua.dit.oop2;
 
 import java.util.ArrayList;
 
-public class Calendar {
+public class Calendar{
+
+    public static String filePath;
+    public static volatile boolean proceed = false;
     public static CalendarWindow calendarWindow;
     public static eventList list;
     public static ArrayList<Event> events = new ArrayList();
@@ -12,8 +15,9 @@ public class Calendar {
         icsStore store = null;
         eventManagement manage = null;
 
+        calendarWindow = new CalendarWindow();
         //Check if the user provided the right num of args
-        if(args.length == 1){
+        /*if(args.length == 1){
             parse = new icsParse(args[0]);
             store = new icsStore(args[0]);
         }else if(args.length == 2){
@@ -22,13 +26,17 @@ public class Calendar {
         }else{
             System.out.println("Please provide the right number of arguments");
             System.exit(0);   
-        }
+        }*/
 
+        //Gets true when user enters a file
+        while(!proceed);
+
+        parse = new icsParse(filePath);
+        store = new icsStore(filePath);
         //Check if the file exists
         if(!parse.checkFile()){
             parse.createFile();
         }    
-
         //Extract all the events from the file and save them into the events List
         parse.extractAll();
         events = parse.getEvents();
@@ -36,13 +44,12 @@ public class Calendar {
         list = new eventList(events);
         manage = new eventManagement(events);
 
-        calendarWindow = new CalendarWindow();
 
-        if(args.length == 1)
+        /*if(args.length == 1)
             manage.decideAction();
         else
             list.choose(args[0]);
-
+        */
         //Check if the file exists(maybe user deleted it during runtime) 
         if(!store.checkFile()){
             store.createFile();

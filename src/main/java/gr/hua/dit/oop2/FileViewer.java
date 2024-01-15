@@ -29,7 +29,8 @@ public class FileViewer {
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File f = fc.getSelectedFile();
             if (f != null) {
-                String a = f.getAbsolutePath();
+                Calendar.filePath = f.getAbsolutePath();
+                Calendar.proceed = true;
             }
             frame.removeAll();
         }

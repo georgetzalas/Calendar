@@ -89,10 +89,18 @@ public class ViewPanel extends JPanel{
     }
 
     private void loadEvents(){
-        Calendar.list.showEventsFromNow();
-        data = Calendar.list.getData();
+        eventList eventList= Calendar.list;
+        if(eventList == null){
+            System.out.println("Please provide a file before entering the View Panel");
+            System.exit(1);
+            //throw new NullPointerException("Please provide a file before entering the View Panel");
+        }
+        eventList.showEventsFromNow();
+        data = eventList.getData();
+
         list.setListData(data);
-        Calendar.list.clearData();
+
+        eventList.clearData();
     }
 
     private class ButtonActions implements ActionListener{
