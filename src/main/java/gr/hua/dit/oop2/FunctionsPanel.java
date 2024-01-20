@@ -408,6 +408,7 @@ public class FunctionsPanel extends JPanel{
 
             JButton saveButton = new JButton("Save");
             saveButton.addActionListener(new ActionListener() {
+
                 public void actionPerformed(ActionEvent e) {
                 String newTitle = titleTextField.getText();
                 String newDescription = descriptionTextField.getText();
@@ -437,6 +438,7 @@ public class FunctionsPanel extends JPanel{
                 event.setEndYear(newEndYear);
                 event.setEndHour(newEndHour);
                 event.setEndMinute(newEndMinutes);
+                gr.hua.dit.oop2.Calendar.store.storeIcs();
                 //event.setDuration(newduration);
                 frame.dispose();
                 }
@@ -486,7 +488,7 @@ public class FunctionsPanel extends JPanel{
                 Task taskevent = (Task) event;
 
                 JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-                JLabel statusLabel = new JLabel("Duration:");
+                JLabel statusLabel = new JLabel("Status:");
                 JComboBox statusComboBox = new JComboBox<>(options);
                 statusComboBox.setSelectedItem(taskevent.getCompleteTask());
                 statusLabel.setFont(dateFont1);

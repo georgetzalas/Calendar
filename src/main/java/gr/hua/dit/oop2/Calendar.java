@@ -8,11 +8,11 @@ public class Calendar{
     public static volatile boolean proceed = false;
     public static CalendarWindow calendarWindow;
     public static eventList list;
+    public static icsStore store;
     public static ArrayList<Event> events = new ArrayList();
     public static void main (String[] args){
         //Stores all the events
         icsParse parse = null;
-        icsStore store = null;
         eventManagement manage = null;
 
         calendarWindow = new CalendarWindow();
@@ -38,8 +38,8 @@ public class Calendar{
             parse.createFile();
         }    
         //Extract all the events from the file and save them into the events List
-        parse.extractAll();
-        events = parse.getEvents();
+        //parse.extractAll();
+        //events = parse.getEvents();
 
         list = new eventList(events);
         manage = new eventManagement(events);
@@ -56,7 +56,7 @@ public class Calendar{
         }
 
         //Save all the events back to the ics file
-        for(Event event : events){
+        /*for(Event event : events){
             if(event.getClass() == Appointements.class){
                 store.addAppointment((Appointements)event);            
             }else{
@@ -64,7 +64,7 @@ public class Calendar{
             }
         }
 
-        store.storeIcs();
+        store.storeIcs();*/
     }
 }
 

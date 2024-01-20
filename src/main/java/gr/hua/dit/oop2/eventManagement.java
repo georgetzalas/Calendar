@@ -25,7 +25,7 @@ public class eventManagement extends userInteraction {
 
     LocalDateTime dateTime = null;
     //METHOD THAT RETURNS THE END-DATE(START-DATE+DURATION)
-    public LocalDateTime plusDure(Integer dayx, Integer monthx, Integer yearx, Integer hourx, Integer minutex,
+    public static LocalDateTime plusDure(Integer dayx, Integer monthx, Integer yearx, Integer hourx, Integer minutex,
             Integer Duration) {
         LocalDateTime dt1 = LocalDateTime.of(yearx, monthx, dayx, hourx, minutex);
 

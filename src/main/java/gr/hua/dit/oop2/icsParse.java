@@ -29,6 +29,8 @@ public class icsParse extends icsOperations{
         
         //Date format is used to convert ICalDate object into String
         df = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        
+        extractAll();
     }
 
     private void componentError(){

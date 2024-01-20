@@ -85,6 +85,17 @@ public class icsStore extends icsOperations{
 
     public void storeIcs(){
         try{
+            for(Event event : events){
+                System.out.println("HELLO");
+                if(event.getClass() == Appointements.class){
+                    if(event instanceof Appointements)
+                        addAppointment((Appointements)event);            
+                }else{
+                    if(event instanceof Task)
+                        addTodo((Task)event);
+                }
+            }
+
             //Write iCalendar object to the .ics file
             Biweekly.write(ical).go(file);
         }catch(IOException e){

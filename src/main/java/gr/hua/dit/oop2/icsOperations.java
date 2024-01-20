@@ -11,9 +11,8 @@ public class icsOperations{
 
     public icsOperations(String fileName){
         this.fileName = fileName;
-        System.out.println(this.fileName);
         file = new File(this.fileName);
-        events = new ArrayList();
+        events = Calendar.events;
     }
 
     public boolean checkFile(){
