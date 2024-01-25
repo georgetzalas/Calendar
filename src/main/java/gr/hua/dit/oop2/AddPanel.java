@@ -179,28 +179,23 @@ public class AddPanel extends JPanel {
     }
 
     private void displayEvents(int day) {
-        //eventsText = "Events for " + monthComboBox.getSelectedItem() + " " + day + ", " + yearComboBox.getSelectedItem() + ":\n";
-        
         String selectedMonth = (String) monthComboBox.getSelectedItem();
         int month = getMonthNumber(selectedMonth);
         int year = Integer.parseInt((String) yearComboBox.getSelectedItem());
 
     }
-
+    //Constractor of Add
     private void AddEvents(int day,String selectedMonth,int year) {
+        //Create the main frame
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(800, 700);
         frame.setResizable(false);
+        //Create the main panel
+        JPanel addPanel = new JPanel();
 
-        // JLabel titleLabel = new JLabel("Title: " + event.getTitle());
-        // JLabel descriptionLabel = new JLabel("Description: " +
-        // event.getDescription())
-
-        JPanel editPanel = new JPanel();
-
-        editPanel.setLayout(new BoxLayout(editPanel, BoxLayout.Y_AXIS));
-
+        addPanel.setLayout(new BoxLayout(addPanel, BoxLayout.Y_AXIS));
+        //Create the textfields of title and description
         JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JLabel titleLabel = new JLabel("Title:");
         JTextField titleTextField = new JTextField("               ");
@@ -216,13 +211,10 @@ public class AddPanel extends JPanel {
                 .setMaximumSize(new Dimension(Integer.MAX_VALUE, descriptionTextField.getPreferredSize().height));
         descriptionPanel.add(descriptionLabel);
         descriptionPanel.add(descriptionTextField);
-
+        //Creating the panels and the comboboxes of the needed data that the user must fill(start-date)
         JPanel startDatePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JLabel startDayLabel = new JLabel("Start Day:");
-        // JComboBox<Integer> startDayComboBox = new JComboBox<>();
-        // for (int i = 1; i <= 31; i++) {
-        // startDayComboBox.addItem(i);
-        // }
+        
         JComboBox<Integer> startDayComboBox = new JComboBox<>(new DefaultComboBoxModel<>(
                 generateNumberArray(1, calendar.getActualMaximum(Calendar.DAY_OF_MONTH))));
         startDayComboBox.setSelectedItem(day);
@@ -267,7 +259,7 @@ public class AddPanel extends JPanel {
         }
         startMinutesPanel.add(startMinutesLabel);
         startMinutesPanel.add(startMinutesComboBox);
-
+        // Customize font properties
         Font largeFont = new Font("Arial", Font.PLAIN, 16);
         titleLabel.setFont(largeFont);
         descriptionLabel.setFont(largeFont);
@@ -278,16 +270,13 @@ public class AddPanel extends JPanel {
         startYearLabel.setFont(dateFont);
         startHourLabel.setFont(dateFont);
         startMinutesLabel.setFont(dateFont);
-
+        
         JPanel endDatePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JLabel endDayLabel = new JLabel("End Day:");
         JComboBox<Integer> endDayComboBox = new JComboBox<>();
         for (int i = 1; i <= 31; i++) {
             endDayComboBox.addItem(i);
         }
-        // JComboBox<Integer> endDayComboBox = new JComboBox<>(new
-        // DefaultComboBoxModel<>(
-        // generateNumberArray(1, calendar.getActualMaximum(Calendar.DAY_OF_MONTH))));
         endDatePanel.add(endDayLabel);
         endDatePanel.add(endDayComboBox);
 
@@ -328,57 +317,51 @@ public class AddPanel extends JPanel {
         }
         endMinutesPanel.add(endMinutesLabel);
         endMinutesPanel.add(endMinutesComboBox);
-
-        /*
-         * JPanel durationPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-         * JLabel durationLabel = new JLabel("Duration:");
-         * JComboBox<Integer> durationComboBox = new JComboBox<>();
-         * for(int i=1; i<=20000; i++){
-         * durationComboBox.addItem(i);
-         * }
-         * durationComboBox.setSelectedItem(event.getDuration());
-         * durationPanel.add(durationLabel);
-         * durationPanel.add(durationComboBox);
-         */
-
-        Font dateFont1 = new Font("Arial", Font.PLAIN, 14); // Customize font properties
-        endDayLabel.setFont(dateFont1);
+        // Customize font properties
+        Font dateFont1 = new Font("Arial", Font.PLAIN, 14); endDayLabel.setFont(dateFont1);
         endMonthLabel.setFont(dateFont1);
         endYearLabel.setFont(dateFont1);
         endHourLabel.setFont(dateFont1);
         endMinutesLabel.setFont(dateFont1);
-        // durationLabel.setFont(dateFont1);
-
         frame.dispose();
-
-        editPanel.add(titlePanel);
-        editPanel.add(descriptionPanel);
+        //Add the panels of the title and description in the window 
+        addPanel.add(titlePanel);
+        addPanel.add(descriptionPanel);
+        //Get the choice of user if they want to add ,task or appointment
         int choice = JOptionPane.showOptionDialog(null, "What do you want to add", "Give us your choice!",
                 JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, null);
-        if (choice == 0) {
-            editPanel.add(startDatePanel);
-            editPanel.add(startMonthPanel);
-            editPanel.add(startYearPanel);
-            editPanel.add(startHourPanel);
-            editPanel.add(startMinutesPanel);
+        //if they chooses appointment
+            if (choice == 0) {
+            //add the start-date panels 
+            addPanel.add(startDatePanel);
+            addPanel.add(startMonthPanel);
+            addPanel.add(startYearPanel);
+            addPanel.add(startHourPanel);
+            addPanel.add(startMinutesPanel);
 
-            // if he chooses duration
+            //Get the choice of the user if they want to add duration or end-date
             int userChoice = JOptionPane.showOptionDialog(null, "What do you want to edit", "Give us your choice!",
                     JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, responces, null);
+            // if he chooses duration
             if (userChoice == 0) { // Assuming YES_OPTION corresponds to 0
+                //Creates the duration panel and Combobox
                 JPanel durationPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
                 JLabel durationLabel = new JLabel("Duration:");
                 JComboBox<Integer> durationComboBox = new JComboBox<>();
                 for (int i = 1; i <= 20000; i++) {
                     durationComboBox.addItem(i);
                 }
+                //add it to the panel
                 durationLabel.setFont(dateFont1);
                 durationPanel.add(durationLabel);
                 durationPanel.add(durationComboBox);
                 
-                editPanel.add(durationPanel);
+                addPanel.add(durationPanel);
+                //Create the actions of the save button
+                //THIS WAS COMMENTED 
                 saveButton.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
+                        //Save the selected options
                         String newTitle = titleTextField.getText();
                         String newDescription = descriptionTextField.getText();
 
@@ -401,74 +384,180 @@ public class AddPanel extends JPanel {
                                 newStartYear,
                                 newStartHour, newStartMinutes, endday, endmonth, endyear, endhour, endminute,
                                 newduration);
+                        //save the new object to the public static list event
+
                         events.add(ev);
-                        gr.hua.dit.oop2.Calendar.store.storeIcs(); 
+
+                        
+                        //Create the new object
+                        
+                        gr.hua.dit.oop2.Calendar.store.storeIcs();
+                        frame.dispose();
                     }
                 });
-            } else if (userChoice == 1) {
+                // ...
 
-                editPanel.add(endDatePanel);
-                editPanel.add(endMonthPanel);
-                editPanel.add(endYearPanel);
-                editPanel.add(endHourPanel);
-                editPanel.add(endMinutesPanel);
+saveButton.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        try {
+            // Save the selected options
+            String newTitle = titleTextField.getText();
+            String newDescription = descriptionTextField.getText();
+
+            int newStartDay = (int) startDayComboBox.getSelectedItem();
+            String newStartMonth = (String) startMonthComboBox.getSelectedItem();
+            int newStartYear = (int) startYearComboBox.getSelectedItem();
+            int newStartHour = (int) startHourComboBox.getSelectedItem();
+            int newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
+
+            // Check if the selected start day and month combination is valid
+            if (newStartDay>gr.hua.dit.oop2.eventManagement.errorMonth(getMonthNumber(newStartMonth),newStartYear)) {
+                throw new IllegalArgumentException("Invalid combination of start day and month.");
+            }
+
+            int newduration = (int) durationComboBox.getSelectedItem();
+            LocalDateTime APP = gr.hua.dit.oop2.eventManagement.plusDure(newStartDay,
+                    getMonthNumber(newStartMonth), newStartYear, newStartHour, newStartMinutes,
+                    newduration);
+            Integer endday = APP.getDayOfMonth();
+            Integer endmonth = APP.getMonthValue();
+            Integer endyear = APP.getYear();
+            Integer endhour = APP.getHour();
+            Integer endminute = APP.getMinute();
+            gr.hua.dit.oop2.Appointements ev = new Appointements(newTitle, newDescription,
+                    newStartDay, getMonthNumber(newStartMonth),
+                    newStartYear, newStartHour, newStartMinutes, endday, endmonth, endyear, endhour, endminute,
+                    newduration);
+            // Save the new object to the public static list event
+            events.add(ev);
+
+            // Create the new object
+            gr.hua.dit.oop2.Calendar.store.storeIcs();
+            frame.dispose();
+        } catch (Exception ex) {
+            // Handle the exception (e.g., display an error message)
+            ex.printStackTrace(); // Print the stack trace for debugging
+            JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+});
+
+// ...
+
+            //if the user choose the end-date option
+            } else if (userChoice == 1) {
+                //add the end-date panels to the frame
+                addPanel.add(endDatePanel);
+                addPanel.add(endMonthPanel);
+                addPanel.add(endYearPanel);
+                addPanel.add(endHourPanel);
+                addPanel.add(endMinutesPanel);
+                //create the save button and set the actions of it
                 saveButton.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
+                        try {
+                            // Save the selected options
+                            String newTitle = titleTextField.getText();
+                            String newDescription = descriptionTextField.getText();
+                
+                            int newStartDay = (int) startDayComboBox.getSelectedItem();
+                            String newStartMonth = (String) startMonthComboBox.getSelectedItem();
+                            int newStartYear = (int) startYearComboBox.getSelectedItem();
+                            int newStartHour = (int) startHourComboBox.getSelectedItem();
+                            int newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
+                            int newEndDay = (int) endDayComboBox.getSelectedItem();
+                            String newEndMonth = (String) endMonthComboBox.getSelectedItem();
+                            int newEndYear = (int) endYearComboBox.getSelectedItem();
+                            int newEndHour = (int) endHourComboBox.getSelectedItem();
+                            int newEndMinutes = (int) endMinutesComboBox.getSelectedItem();
+                
+                            long compenddate2 = gr.hua.dit.oop2.eventManagement.compareDates(newEndYear, getMonthNumber(newEndMonth), newEndDay, newEndHour, newEndMinutes);
+                            long compstartdate = gr.hua.dit.oop2.eventManagement.compareDates(newStartYear, getMonthNumber(newStartMonth), newStartDay, newStartHour, newStartMinutes);
+                
+                            // MAKE THE COMPARISON
+                            if (compstartdate < compenddate2) {
+                                // MAKE THE APPOINTMENT AS SOON AS THE COMPARISON IS CORRECT
+                                gr.hua.dit.oop2.Appointements ev = new Appointements(newTitle, newDescription,
+                                        //(String) startMonthComboBox.getSelectedItem()
+                                        newStartDay, getMonthNumber(newStartMonth),
+                                        newStartYear,
+                                        newStartHour, newStartMinutes, newEndDay, getMonthNumber(newEndMonth), newEndYear, newEndHour, newEndMinutes,
+                                        -1);
+                                // save the new object to the public static list event
+                                events.add(ev);
+                                gr.hua.dit.oop2.Calendar.store.storeIcs();
+                                // PRINT THE NEW OBJECT
+                                System.out.printf("%s\t\n", ev.getTitle());
+                            } else {
+                                // ELSE PRINT THE MESSAGE AND GET BACK TO THE TOP OF THE LOOP
+                                JOptionPane.showMessageDialog(null, "The end-date is before the start-date!", "ERROR", JOptionPane.ERROR_MESSAGE);
+                                return; // Exit the method to avoid executing the remaining code
+                            }
+                
+                            // close the frame
+                            frame.dispose();
+                        } catch (Exception ex) {
+                            // Handle other exceptions if necessary
+                            ex.printStackTrace();
+                            JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                        }
+                    }
+                });
+                
+            }
+        }
+        //if the user chooses the option Task
+        if (choice == 1) {
+            //set the 
+            endDayComboBox.setSelectedItem(day);
+            endMonthComboBox.setSelectedItem(selectedMonth);
+            endYearComboBox.setSelectedItem(year);
+            //add the end-date panels
+            addPanel.add(endDatePanel);
+            addPanel.add(endMonthPanel);
+            addPanel.add(endYearPanel);
+            addPanel.add(endHourPanel);
+            addPanel.add(endMinutesPanel);
+            //Create the save button and set the actions of it
+            saveButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    try {
+                        // Get the selected options and save them to variables
                         String newTitle = titleTextField.getText();
                         String newDescription = descriptionTextField.getText();
-
-                        int newStartDay = (int) startDayComboBox.getSelectedItem();
-                        String newStartMonth = (String) startMonthComboBox.getSelectedItem();
-                        int newStartYear = (int) startYearComboBox.getSelectedItem();
-                        int newStartHour = (int) startHourComboBox.getSelectedItem();
-                        int newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
                         int newEndDay = (int) endDayComboBox.getSelectedItem();
                         String newEndMonth = (String) endMonthComboBox.getSelectedItem();
                         int newEndYear = (int) endYearComboBox.getSelectedItem();
                         int newEndHour = (int) endHourComboBox.getSelectedItem();
                         int newEndMinutes = (int) endMinutesComboBox.getSelectedItem();
-                        Appointements ev = new Appointements(newTitle, newDescription,
-                                newStartDay, getMonthNumber(newStartMonth),
-                                newStartYear,
-                                newStartHour, newStartMinutes, newEndDay, newEndYear,
-                                getMonthNumber(newEndMonth), newEndHour, newEndMinutes,
-                                -1);
-                        events.add(ev);
+                        // Check if the selected start day and month combination is valid
+                        if (newEndDay>gr.hua.dit.oop2.eventManagement.errorMonth(getMonthNumber(newEndMonth),newEndYear)) {
+                            throw new IllegalArgumentException("Invalid combination of start day and month.");
+                        }
+                        // Create the new object - Task
+                        Task task = new Task(newTitle, newDescription, 0, 0, 0, 0, 0, newEndDay,
+                                getMonthNumber(newEndMonth), newEndYear, newEndHour, newEndMinutes, "IN-PROCESS");
+            
+                        // Add the new object to the public static list events
+                        events.add(task);
+            
                         gr.hua.dit.oop2.Calendar.store.storeIcs();
+                        // Close the frame
                         frame.dispose();
+                    } catch (Exception ex) {
+                        // Handle exceptions if necessary
+                        ex.printStackTrace();
+                        JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                     }
-                });
-            }
-        }
-        if (choice == 1) {
-            endDayComboBox.setSelectedItem(day);
-            endMonthComboBox.setSelectedItem(selectedMonth);
-            endYearComboBox.setSelectedItem(year);
-            editPanel.add(endDatePanel);
-            editPanel.add(endMonthPanel);
-            editPanel.add(endYearPanel);
-            editPanel.add(endHourPanel);
-            editPanel.add(endMinutesPanel);
-            saveButton.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    String newTitle = titleTextField.getText();
-                    String newDescription = descriptionTextField.getText();
-                    int newEndDay = (int) endDayComboBox.getSelectedItem();
-                    String newEndMonth = (String) endMonthComboBox.getSelectedItem();
-                    int newEndYear = (int) endYearComboBox.getSelectedItem();
-                    int newEndHour = (int) endHourComboBox.getSelectedItem();
-                    int newEndMinutes = (int) endMinutesComboBox.getSelectedItem();
-                    Task evt = new Task(newTitle, newDescription, 0, 0, 0, 0, 0, newEndDay,
-                            getMonthNumber((String) newEndMonth), newEndYear, newEndHour, newEndMinutes, "IN-PROCESS");
-                    events.add(evt);
-                    gr.hua.dit.oop2.Calendar.store.storeIcs();
-                    frame.dispose();
                 }
             });
+            
         }
-        editPanel.add(saveButton);
-
-        frame.add(editPanel);
+        //add the save button to the panel
+        addPanel.add(saveButton);
+        //add the addpanel to the frame 
+        frame.add(addPanel);
+        //set visible the frame
         frame.setVisible(true);
 
     }
@@ -492,7 +581,7 @@ public class AddPanel extends JPanel {
         }
         return ""; // Return empty string if the month number is out of range
     }
-
+    // Helper method to get the number of the month day
     private static Integer[] generateNumberArray(int start, int end) {
         Integer[] array = new Integer[end - start + 1];
         for (int i = start; i <= end; i++) {

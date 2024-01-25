@@ -6,6 +6,8 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class eventManagement extends userInteraction {
 
     public eventManagement(ArrayList<Event> events) {
@@ -13,7 +15,7 @@ public class eventManagement extends userInteraction {
 
     }
     //METHOD THAT RETURN THE DATE INTO A LONG INTEGER
-    private long compareDates(int year, int month, int day, int hour, int minute){
+    public static long compareDates(int year, int month, int day, int hour, int minute){
         long epoch;
         
         LocalDateTime date = LocalDateTime.of(year, month, day, hour, minute);
@@ -29,7 +31,7 @@ public class eventManagement extends userInteraction {
             Integer Duration) {
         LocalDateTime dt1 = LocalDateTime.of(yearx, monthx, dayx, hourx, minutex);
 
-        System.out.println("LocalDateTime with duration minutes added(end-date): " + dt1.plusMinutes(Duration));
+        //System.out.println("LocalDateTime with duration minutes added(end-date): " + dt1.plusMinutes(Duration));
         return dt1.plusMinutes(Duration);
     }
     //METHOD TO MAKE SURE THAT THE OPTION THAT THE USER GAVE IS INTO LIMITS
@@ -248,4 +250,32 @@ public class eventManagement extends userInteraction {
             }
         }
     }
+    public static int errorMonth(int month,int year){
+        int maxdays=0;
+        if(month==2){
+            if(((year%4==0)&&(year%100!=0))|| (year%400==0)){
+                maxdays=29;
+            }
+            else{
+                maxdays=28;
+            }
+        }
+        else if(month==4 || month==6 || month==9 || month==11 ){
+           maxdays=30;
+        }
+        else if(month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12 ){
+            maxdays=31;
+        }
+        return maxdays;
+        
+                    
+    }
+    public static void errorMessag(int days,int maxdays){
+        if(days>maxdays){
+            JOptionPane.showMessageDialog(null,"Wrong input!","ERROR",JOptionPane.ERROR_MESSAGE);
+     
+        }
+        
+    }
+       
 }

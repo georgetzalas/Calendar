@@ -1,36 +1,58 @@
 package gr.hua.dit.oop2;
 
 import java.util.ArrayList;
-
 import javax.swing.JOptionPane;
 
+import biweekly.util.Duration;
+
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
+import gr.hua.dit.oop2.calendar.TimeService;
+import gr.hua.dit.oop2.calendar.TimeTeller;
+import gr.hua.dit.oop2.calendar.TimeListener;
+import gr.hua.dit.oop2.calendar.TimeEvent;
 
 public class Reminder {
 
-    public static ArrayList<Event> events = gr.hua.dit.oop2.Calendar.events;;
-    private LocalDateTime now1 = LocalDateTime.now();
-
-    private Integer currentyear = now1.getYear();
-    private Integer currentmonth = now1.getMonthValue();
-    private Integer currentday = now1.getDayOfMonth();
-    private Integer currenthour = now1.getHour();
-    private Integer currentminute = now1.getMinute();
+    private ArrayList<Event> events = gr.hua.dit.oop2.Calendar.events;;
+    private TimeTeller teller;
 
     public Reminder() {
-        for (Event event : events) {
-            if (event.getClass().equals(Appointements.class)) {
-                Appointements appointmentsEvent = (Appointements) event;
-                if(currentyear.equals(appointmentsEvent.getStartYear())&& currentmonth.equals(appointmentsEvent.getStartMonth())&& currentday.equals(appointmentsEvent.getStartDay())&& currenthour.equals(appointmentsEvent.getStartHour())&& currentminute.equals(appointmentsEvent.getStartMinute())){
-                    JOptionPane.showMessageDialog(null, "The Appointment: "+ appointmentsEvent.getTitle() + "it's starting now", "WARNING", JOptionPane.PLAIN_MESSAGE);
-                }
-            }else if(event.getClass().equals(Task.class)){
-                Task taskev = (Task) event;
-                if(currentyear.equals(taskev.getEndYear())&& currentmonth.equals(taskev.getEndMonth())&& currentday.equals(taskev.getEndDay())&& currenthour.equals(taskev.getEndHour())&& currentminute.equals(taskev.getEndMinute())){
-                    JOptionPane.showMessageDialog(null, "The Task: "+ taskev.getTitle() + "it's starting now", "WARNING", JOptionPane.PLAIN_MESSAGE);
-                }
-            }
-        }
+        teller = TimeService.getTeller();
+        teller.addTimeListener(new Listener());
     }
+
+    private class Listener implements TimeListener{
+
+        @Override
+        public void timeChanged(TimeEvent e) {
+            LocalDateTime now = e.getDateTime();
+            calculateTimeDiff(now);
+        }
+
+        private void calculateTimeDiff(LocalDateTime now){
+            LocalDateTime eventTime;
+
+            for (Event event : events) {
+                if (event.getClass().equals(Task.class)){
+                    eventTime = LocalDateTime.of(event.getEndYear(), event.getEndMonth(), event.getEndDay(), event.getEndHour(), event.getEndMinute());
+                }else{
+                    eventTime = LocalDateTime.of(event.getStartYear(), event.getStartMonth(), event.getStartDay(), event.getStartHour(), event.getStartMinute());
+                }
+
+                long minutes = ChronoUnit.MINUTES.between(now, eventTime);
+
+                if(minutes >= 0 && minutes < 5 && !event.getIsPoppedUp()){
+                    System.out.println(minutes);
+                    JOptionPane.showMessageDialog(null, "The event: " + event.getTitle() + " it's starting now", "WARNING", JOptionPane.PLAIN_MESSAGE);
+                    event.setIsPoppedUp(true);
+                }
+            }    
+        }
+    
+    }
+
+
 
 }

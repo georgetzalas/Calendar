@@ -5,8 +5,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.Time;
 import java.util.*;
-import javax.swing.JPanel;
-import javax.swing.JButton;
 import java.util.Calendar;
 import java.text.DateFormatSymbols;
 import java.time.LocalDateTime;
@@ -407,24 +405,29 @@ public class FunctionsPanel extends JPanel{
             //durationLabel.setFont(dateFont1);
 
             JButton saveButton = new JButton("Save");
-            saveButton.addActionListener(new ActionListener() {
+saveButton.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        try {
+            // Get the selected options and save them to variables
+            String newTitle = titleTextField.getText();
+            String newDescription = descriptionTextField.getText();
+            int newStartDay = (int) startDayComboBox.getSelectedItem();
+            String newStartMonth = (String) startMonthComboBox.getSelectedItem();
+            int newStartYear = (int) startYearComboBox.getSelectedItem();
+            int newStartHour = (int) startHourComboBox.getSelectedItem();
+            int newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
+            int newEndDay = (int) endDayComboBox.getSelectedItem();
+            String newEndMonth = (String) endMonthComboBox.getSelectedItem();
+            int newEndYear = (int) endYearComboBox.getSelectedItem();
+            int newEndHour = (int) endHourComboBox.getSelectedItem();
+            int newEndMinutes = (int) endMinutesComboBox.getSelectedItem();
 
-                public void actionPerformed(ActionEvent e) {
-                String newTitle = titleTextField.getText();
-                String newDescription = descriptionTextField.getText();
+            // Perform date comparison
+            long compEndDate2 = gr.hua.dit.oop2.eventManagement.compareDates(newEndYear, getMonthNumber(newEndMonth), newEndDay, newEndHour, newEndMinutes);
+            long compStartDate = gr.hua.dit.oop2.eventManagement.compareDates(newStartYear, getMonthNumber(newStartMonth), newStartDay, newStartHour, newStartMinutes);
 
-                int newStartDay = (int) startDayComboBox.getSelectedItem();
-                String newStartMonth = (String) startMonthComboBox.getSelectedItem();
-                int newStartYear = (int) startYearComboBox.getSelectedItem();
-                int newStartHour = (int) startHourComboBox.getSelectedItem();
-                int newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
-                int newEndDay = (int) endDayComboBox.getSelectedItem();
-                String newEndMonth = (String) endMonthComboBox.getSelectedItem();
-                int newEndYear = (int) endYearComboBox.getSelectedItem();
-                int newEndHour = (int) endHourComboBox.getSelectedItem();
-                int newEndMinutes = (int) endMinutesComboBox.getSelectedItem();
-                //int newduration = (int) durationComboBox.getSelectedItem();
-
+            // Make the comparison
+            if (compStartDate < compEndDate2) {
                 // Update the event object with the new values
                 event.setTitle(newTitle);
                 event.setDescription(newDescription);
@@ -438,11 +441,21 @@ public class FunctionsPanel extends JPanel{
                 event.setEndYear(newEndYear);
                 event.setEndHour(newEndHour);
                 event.setEndMinute(newEndMinutes);
+
+                // Store the updated event
                 gr.hua.dit.oop2.Calendar.store.storeIcs();
-                //event.setDuration(newduration);
-                frame.dispose();
-                }
-            });
+            } else {
+                // Display an error message if the date comparison fails
+                JOptionPane.showMessageDialog(null, "The end-date is before the start-date!", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception ex) {
+            // Handle exceptions if necessary
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+});
+
 
             editPanel.add(titlePanel);
             editPanel.add(descriptionPanel);

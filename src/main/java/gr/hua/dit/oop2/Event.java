@@ -10,6 +10,7 @@ public class Event implements Comparable<Event> {
     private String title;
     private String description;
     private EventDate date;
+    private boolean isPoppedUp = false;
 
     private class EventDate{
         int startDay;
@@ -112,6 +113,11 @@ public class Event implements Comparable<Event> {
     public void setEndMinute(int endMinute){
         this.date.endMinute = endMinute;
     }
+    
+    public void setIsPoppedUp(boolean popped){
+        this.isPoppedUp = popped;
+    }
+
     //GETTERS
     public String getTitle(){ return this.title; }
 
@@ -136,6 +142,9 @@ public class Event implements Comparable<Event> {
     public int getEndHour(){ return this.date.endHour; }
 
     public int getEndMinute(){ return this.date.endMinute; }
+    
+    public boolean getIsPoppedUp(){ return this.isPoppedUp; }
+
     //METHOD TOSTRING
     @Override
     public String toString(){
