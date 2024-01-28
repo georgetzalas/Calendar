@@ -21,8 +21,6 @@ public class Actions implements ActionListener{
             Calendar.calendarWindow.setFunctionPanelVis(true, panel);
         }else if(e.getActionCommand().equals("View Events")){
             Calendar.calendarWindow.setViewPanel(true, panel);
-        }else if(e.getActionCommand().equals("Change Status of Task")){
-            Calendar.calendarWindow.setStatPanelVis(true, panel);
         }else if(e.getActionCommand().equals("Back")){
             Calendar.calendarWindow.setMainPanelVis(true, panel);
         }

@@ -17,7 +17,6 @@ public class CalendarWindow {
     private AddPanel addPanel;
     private FunctionsPanel functionsPanel;
     private ViewPanel viewPanel;
-    private StatPanel statPanel;
     private ImageIcon mainimage;
 
     public CalendarWindow(){
@@ -82,11 +81,4 @@ public class CalendarWindow {
         frame.add(viewPanel);
     }
 
-    public void setStatPanelVis(boolean visible, JPanel panel){
-        statPanel = new StatPanel();
-
-        frame.remove(panel);
-        statPanel.setVisible(visible);
-        frame.add(statPanel);
-    }
 }

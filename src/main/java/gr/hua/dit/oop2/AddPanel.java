@@ -388,12 +388,10 @@ public class AddPanel extends JPanel {
                                 newduration);
                         // save the new object to the public static list event
 
-                        System.out.println("Save 1");
                         events.add(ev);
 
                         // Create the new object
 
-                        System.out.println("Store 1");
                         gr.hua.dit.oop2.Calendar.store.storeIcs();
                         frame.dispose();
                     }
@@ -497,13 +495,10 @@ public class AddPanel extends JPanel {
                                         newEndYear, newEndHour, newEndMinutes,
                                         -1);
                                 // save the new object to the public static list event
-                                System.out.println("Save 3");
                                 events.add(ev);
 
-                                System.out.println("Store 3");
                                 gr.hua.dit.oop2.Calendar.store.storeIcs();
                                 // PRINT THE NEW OBJECT
-                                System.out.printf("%s\t\n", ev.getTitle());
                             } else {
                                 // ELSE PRINT THE MESSAGE AND GET BACK TO THE TOP OF THE LOOP
                                 JOptionPane.showMessageDialog(null, "The end-date is before the start-date!", "ERROR",
@@ -559,11 +554,8 @@ public class AddPanel extends JPanel {
                                 getMonthNumber(newEndMonth), newEndYear, newEndHour, newEndMinutes, "IN-PROCESS");
 
                         // Add the new object to the public static list events
-                        System.out.println("Task add");
                         events.add((Task) task);
 
-                        System.out.println("Task Store");
-                        System.out.println(events.size());
                         gr.hua.dit.oop2.Calendar.store.storeIcs();
 
                         // Close the frame

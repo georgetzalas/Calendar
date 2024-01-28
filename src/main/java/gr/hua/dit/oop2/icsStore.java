@@ -87,7 +87,6 @@ public class icsStore extends icsOperations{
         ical = new ICalendar();
         try{
             for(Event event : events){
-                System.out.println("HELLO");
                 if(event.getClass() == Appointements.class){
                     if(event instanceof Appointements)
                         addAppointment((Appointements)event);            

@@ -19,7 +19,6 @@ public class MainPanel extends JPanel{
         b0 = new JButton("Add Events");
         b1 = new JButton("Edit Events");
         b2 = new JButton("View Events");
-        b3 = new JButton("Change Status of Task");
         
         b0.setHorizontalTextPosition(JButton.CENTER);
         b0.setVerticalTextPosition(JButton.BOTTOM);
@@ -33,19 +32,13 @@ public class MainPanel extends JPanel{
         b2.setVerticalTextPosition(JButton.BOTTOM);
         b2.setIconTextGap(-20);
 
-        b3.setHorizontalTextPosition(JButton.CENTER);
-        b3.setVerticalTextPosition(JButton.BOTTOM);
-        b3.setIconTextGap(-20);
-
         add(b0);
         add(b1);
         add(b2);
-        add(b3);
 
         b0.addActionListener(new Actions(this));
         b1.addActionListener(new Actions(this));
         b2.addActionListener(new Actions(this));
-        b3.addActionListener(new Actions(this));
         
         ImageIcon imageIcon = new ImageIcon("mainpic.png");
         Image image = imageIcon.getImage().getScaledInstance(500, 500, Image.SCALE_SMOOTH); 
