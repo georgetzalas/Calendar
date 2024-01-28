@@ -2,8 +2,8 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Michael Angstadt//biweekly 0.6.7//EN
 BEGIN:VEVENT
-UID:582dfec3-0936-45a9-932d-a92b2f32ece6
-DTSTAMP:20240125T190747Z
+UID:934e1fff-ff96-46f7-a807-f3bd2b34c81d
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: New Year's Day
 DESCRIPTION:New Year's Day is a public holiday in all countries that observ
  e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
@@ -12,8 +12,8 @@ DTSTART:20221231T220000Z
 DTEND:20230101T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:e2502a8d-7276-4d03-ab36-4bbe95e28f62
-DTSTAMP:20240125T190747Z
+UID:1904ce72-2eb7-48f2-8d2d-330beefdf558
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Epiphany
 DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
  Jordan.\n\n\n\nInformation provided by www.officeholidays.com
@@ -21,8 +21,8 @@ DTSTART:20230105T220000Z
 DTEND:20230106T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:601e1fbb-4a84-4445-8ceb-bc5eac4946ac
-DTSTAMP:20240125T190747Z
+UID:fc27656f-fdcc-453d-8c8e-258553d0bd72
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Clean Monday
 DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
  at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
@@ -31,8 +31,8 @@ DTSTART:20230226T220000Z
 DTEND:20230227T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:c2925ea0-5e81-45be-a244-17f11c520fc3
-DTSTAMP:20240125T190747Z
+UID:dca41e4d-68bc-4ee6-b307-44cf1771724d
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Greek Independence Day
 DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
  d over time with an older festival - the feast of the Annunciation\n\n\n\n
@@ -41,8 +41,8 @@ DTSTART:20230324T220000Z
 DTEND:20230325T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:9fc45b14-dc53-47eb-9b82-bf8a807c04a0
-DTSTAMP:20240125T190747Z
+UID:507a9bb3-9e32-4d45-a01d-85963c122e0f
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Good Friday
 DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
  rch\n\n\n\nInformation provided by www.officeholidays.com
@@ -50,8 +50,8 @@ DTSTART:20230413T210000Z
 DTEND:20230414T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:2919e4e9-a2e9-44de-9a45-a3b02dc5d108
-DTSTAMP:20240125T190747Z
+UID:67b48332-58e4-4c85-9322-09fcc0cf0db0
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Great Saturday
 DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
  aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
@@ -60,8 +60,8 @@ DTSTART:20230414T210000Z
 DTEND:20230415T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:9c2d9903-9a34-43b1-952d-24b4f83d7800
-DTSTAMP:20240125T190747Z
+UID:003bbf1f-c857-41ef-a1c1-49f8ac5d83e4
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Easter Day
 DESCRIPTION:Easter is the most significant religious holiday for the world'
  s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
@@ -72,8 +72,8 @@ DTSTART:20230415T210000Z
 DTEND:20230416T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:51004b1e-0bbd-4937-b137-87d0a9adb7dd
-DTSTAMP:20240125T190747Z
+UID:badc8a9f-14bb-4f35-900f-e217d59042e8
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Easter Monday
 DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
  n of Easter\, which can often mean that Orthodox Easter falls later than E
@@ -83,8 +83,8 @@ DTSTART:20230416T210000Z
 DTEND:20230417T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:64d054d8-1a4c-47a3-9643-5900ff6b0749
-DTSTAMP:20240125T190747Z
+UID:c60d7375-63ba-4a91-ac03-e865bb9afb41
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Protomagia
 DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
  associated with the custom of Protomagia\, a celebration of the awakening 
@@ -94,8 +94,8 @@ DTSTART:20230430T210000Z
 DTEND:20230501T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fa51239-8dd6-4adc-b09a-6f7e787c22d7
-DTSTAMP:20240125T190747Z
+UID:0f3d2697-9274-4e96-a105-cab31b9cce06
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Holy Spirit Monday
 DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
  is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
@@ -104,8 +104,8 @@ DTSTART:20230604T210000Z
 DTEND:20230605T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:c2d9ae63-35cc-4c06-8e53-7a89805b6e3a
-DTSTAMP:20240125T190747Z
+UID:9f1e6dc4-5c44-4b2e-b0d6-dc871046a886
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Dormition of the Virgin Mary
 DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
  ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
@@ -114,8 +114,8 @@ DTSTART:20230814T210000Z
 DTEND:20230815T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:3e534f24-715a-4d82-879d-750c27abe361
-DTSTAMP:20240125T190747Z
+UID:57ef692c-8722-4eb8-9195-10ecd3cf3d65
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: National Anniversary Day
 DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
  lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
@@ -124,8 +124,8 @@ DTSTART:20231027T210000Z
 DTEND:20231028T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:fde66243-c097-4ed5-a046-182ae0e9a9cd
-DTSTAMP:20240125T190747Z
+UID:638ae0ad-5095-4464-a203-00403deaba77
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Christmas Day
 DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
  radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
@@ -134,8 +134,8 @@ DTSTART:20231224T220000Z
 DTEND:20231225T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:5fb2cf45-3bc6-4284-afa6-1e9cb0452330
-DTSTAMP:20240125T190747Z
+UID:88a7fc53-5c74-4c15-8ea5-7cceafd1aa80
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Synaxis of the Mother of God
 DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
  to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
@@ -143,8 +143,8 @@ DTSTART:20231225T220000Z
 DTEND:20231226T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:ac3aa2a6-f135-43f7-9b57-be0f9c2900c8
-DTSTAMP:20240125T190747Z
+UID:97d4b5e3-e444-44b2-8ed5-a6fe7d1f52a4
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: New Year's Day
 DESCRIPTION:New Year's Day is a public holiday in all countries that observ
  e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
@@ -153,8 +153,8 @@ DTSTART:20231231T220000Z
 DTEND:20240101T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:2194d23e-3df8-47a3-86ab-53a0d814e391
-DTSTAMP:20240125T190747Z
+UID:28438b3a-6f42-4ee5-b801-d19796ffef2f
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Epiphany
 DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
  Jordan.\n\n\n\nInformation provided by www.officeholidays.com
@@ -162,8 +162,8 @@ DTSTART:20240105T220000Z
 DTEND:20240106T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:d90a889f-0637-4367-80d8-b2397e0be2f5
-DTSTAMP:20240125T190747Z
+UID:4de8a94e-017f-4ad3-b056-4f930965c159
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Clean Monday
 DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
  at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
@@ -172,8 +172,8 @@ DTSTART:20240317T220000Z
 DTEND:20240318T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:8064dc16-a1bf-4967-96df-f45f1b280356
-DTSTAMP:20240125T190747Z
+UID:04c007df-db55-4f29-9c67-a6e406205d1f
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Greek Independence Day
 DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
  d over time with an older festival - the feast of the Annunciation\n\n\n\n
@@ -182,8 +182,8 @@ DTSTART:20240324T220000Z
 DTEND:20240325T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:8b89c853-34c3-44f3-838e-631d4c9c0f1d
-DTSTAMP:20240125T190747Z
+UID:6c0bfa78-dedc-4b54-886d-8d621ac85ccb
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Protomagia
 DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
  associated with the custom of Protomagia\, a celebration of the awakening 
@@ -193,8 +193,8 @@ DTSTART:20240430T210000Z
 DTEND:20240501T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:a5bba591-653b-4302-bb9a-db889abe50f7
-DTSTAMP:20240125T190747Z
+UID:5df9aaee-20e8-40f3-9abf-8b476cc2662d
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Good Friday
 DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
  rch\n\n\n\nInformation provided by www.officeholidays.com
@@ -202,8 +202,8 @@ DTSTART:20240502T210000Z
 DTEND:20240503T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:eb5bf785-e19b-48cf-8bae-0e0a541f2276
-DTSTAMP:20240125T190747Z
+UID:a5fd21d7-8fec-4cee-b828-c84917b45dfe
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Great Saturday
 DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
  aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
@@ -212,8 +212,8 @@ DTSTART:20240503T210000Z
 DTEND:20240504T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:afeaaec9-1169-45da-90ff-f699efa43ca6
-DTSTAMP:20240125T190747Z
+UID:d6be50d3-df35-49ff-922b-6ae98ece5924
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Easter Day
 DESCRIPTION:Easter is the most significant religious holiday for the world'
  s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
@@ -224,8 +224,8 @@ DTSTART:20240504T210000Z
 DTEND:20240505T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:4de3d27f-7aab-4fe6-8478-48cb97450be8
-DTSTAMP:20240125T190747Z
+UID:26b615ad-f723-4f98-a715-4d40dfc442a3
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Easter Monday
 DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
  n of Easter\, which can often mean that Orthodox Easter falls later than E
@@ -235,8 +235,8 @@ DTSTART:20240505T210000Z
 DTEND:20240506T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:518239a7-7260-406c-a13b-e9330dd4b098
-DTSTAMP:20240125T190747Z
+UID:00c952e5-154f-406a-8c7c-d563bdb5e7cf
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Holy Spirit Monday
 DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
  is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
@@ -245,8 +245,8 @@ DTSTART:20240623T210000Z
 DTEND:20240624T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:7bf56afa-6765-4704-86c1-dfbaad208881
-DTSTAMP:20240125T190747Z
+UID:2d5b5918-c829-470a-a556-d5086514e6ac
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Dormition of the Virgin Mary
 DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
  ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
@@ -255,8 +255,8 @@ DTSTART:20240814T210000Z
 DTEND:20240815T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:e2a48c39-a1d5-42be-b570-75058e732a76
-DTSTAMP:20240125T190747Z
+UID:9808efe2-23ba-4387-8cef-0ca7b11723fb
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: National Anniversary Day
 DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
  lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
@@ -265,8 +265,8 @@ DTSTART:20241027T220000Z
 DTEND:20241028T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:ecac650f-c636-4081-b12d-be3e5d040fba
-DTSTAMP:20240125T190747Z
+UID:8b3fd5de-2ae6-4255-8e79-6275a358b861
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Christmas Day
 DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
  radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
@@ -275,8 +275,8 @@ DTSTART:20241224T220000Z
 DTEND:20241225T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:1ba75cd0-411c-40ed-bb9c-8eeaea2d0e74
-DTSTAMP:20240125T190747Z
+UID:2d28855b-a792-425c-bb4a-5c51ecb718f7
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Synaxis of the Mother of God
 DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
  to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
@@ -284,8 +284,8 @@ DTSTART:20241225T220000Z
 DTEND:20241226T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:90e86a68-ccf0-4eae-a27f-7836d2ca4eef
-DTSTAMP:20240125T190747Z
+UID:d737e95c-83a7-440c-9879-6d37a4d30956
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: New Year's Day
 DESCRIPTION:New Year's Day is a public holiday in all countries that observ
  e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
@@ -294,8 +294,8 @@ DTSTART:20241231T220000Z
 DTEND:20250101T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:a1bf38f9-7642-4512-b9ae-7dfda3ec4318
-DTSTAMP:20240125T190747Z
+UID:1dcd4df5-90dc-4c1b-88b9-4ec06e3f8f16
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Epiphany
 DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
  Jordan.\n\n\n\nInformation provided by www.officeholidays.com
@@ -303,8 +303,8 @@ DTSTART:20250105T220000Z
 DTEND:20250106T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:a8d8f841-926f-4b19-b9dd-b60c37edbb31
-DTSTAMP:20240125T190747Z
+UID:ff48ff2a-7eb6-44af-9036-2c846747da16
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Clean Monday
 DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
  at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
@@ -313,8 +313,8 @@ DTSTART:20250302T220000Z
 DTEND:20250303T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:d62b80d2-877e-4cb2-b540-17fd5b4c6826
-DTSTAMP:20240125T190747Z
+UID:6aecc83c-7ac9-4ef8-aa39-9113b615811e
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Greek Independence Day
 DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
  d over time with an older festival - the feast of the Annunciation\n\n\n\n
@@ -323,8 +323,8 @@ DTSTART:20250324T220000Z
 DTEND:20250325T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:7d11500e-364d-4314-a2de-acb5ea106293
-DTSTAMP:20240125T190747Z
+UID:80de906d-74c9-4cd9-85a5-3c6762a84a6e
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Good Friday
 DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
  rch\n\n\n\nInformation provided by www.officeholidays.com
@@ -332,8 +332,8 @@ DTSTART:20250417T210000Z
 DTEND:20250418T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:30b7a305-000e-41da-a912-fa372499cd39
-DTSTAMP:20240125T190747Z
+UID:dabb3b2e-cc15-4369-b1a1-744c093a6700
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Great Saturday
 DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
  aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
@@ -342,8 +342,8 @@ DTSTART:20250418T210000Z
 DTEND:20250419T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:293edf13-7d49-405d-8038-20218b88b2e3
-DTSTAMP:20240125T190747Z
+UID:3b3aa429-04cb-4baf-b147-8f2e3ec4b3c3
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Easter Day
 DESCRIPTION:Easter is the most significant religious holiday for the world'
  s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
@@ -354,8 +354,8 @@ DTSTART:20250419T210000Z
 DTEND:20250420T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:107ee689-df12-4f41-a166-0b3dfd46d96b
-DTSTAMP:20240125T190747Z
+UID:fc614429-7f01-4acf-99be-dba3dbdcbc71
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Orthodox Easter Monday
 DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
  n of Easter\, which can often mean that Orthodox Easter falls later than E
@@ -365,8 +365,8 @@ DTSTART:20250420T210000Z
 DTEND:20250421T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:8a8c9773-71b2-41e2-b94e-a8aaa35b56db
-DTSTAMP:20240125T190747Z
+UID:845b65f3-d577-41f7-89b0-f03b6f3ca804
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Protomagia
 DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
  associated with the custom of Protomagia\, a celebration of the awakening 
@@ -376,8 +376,8 @@ DTSTART:20250430T210000Z
 DTEND:20250501T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:056307b5-eb8c-4d6b-a141-6111def2c938
-DTSTAMP:20240125T190747Z
+UID:f82d70c9-1c79-4b14-847b-b512355fef41
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Holy Spirit Monday
 DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
  is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
@@ -386,8 +386,8 @@ DTSTART:20250608T210000Z
 DTEND:20250609T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:149fcba0-8070-4e00-ac9a-c9e71f94bb37
-DTSTAMP:20240125T190747Z
+UID:2b9f6ef3-c867-4839-a685-d4aebe670364
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Dormition of the Virgin Mary
 DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
  ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
@@ -396,8 +396,8 @@ DTSTART:20250814T210000Z
 DTEND:20250815T210000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:9c81acb3-e75d-480e-a01a-a7b2bafdfb55
-DTSTAMP:20240125T190747Z
+UID:d716f3e1-3c01-4156-9587-7c7e422bc176
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: National Anniversary Day
 DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
  lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
@@ -406,8 +406,8 @@ DTSTART:20251027T220000Z
 DTEND:20251028T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:a87abe18-e4de-4515-8d0c-45028d79ed22
-DTSTAMP:20240125T190747Z
+UID:7a5e3e41-7aca-48f1-9edd-8dbb95d91ffa
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Christmas Day
 DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
  radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
@@ -416,8 +416,8 @@ DTSTART:20251224T220000Z
 DTEND:20251225T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:3c2d2991-b0ec-46c9-b162-3b96f9218383
-DTSTAMP:20240125T190747Z
+UID:570a07df-18c6-41dd-96c6-8b3be569998b
+DTSTAMP:20240128T184309Z
 SUMMARY:Greece: Synaxis of the Mother of God
 DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
  to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
@@ -425,43 +425,490 @@ DTSTART:20251225T220000Z
 DTEND:20251226T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:b8c05e5e-1691-4634-a7b8-e68c8b785a82
-DTSTAMP:20240125T190747Z
-SUMMARY:qwer    
-DESCRIPTION:qwer         
-DTSTART:20240123T114000Z
+UID:2ec800e0-db31-4d1c-ba98-72607b99dcdb
+DTSTAMP:20240128T184309Z
+SUMMARY: asasas              
+DESCRIPTION:   sasasasa             
+DTSTART:20240128T191700Z
 DURATION:PT1M
 END:VEVENT
 BEGIN:VEVENT
-UID:d210d4f2-2fb1-47b2-b13e-4c0a1f8e2a8e
-DTSTAMP:20240125T190747Z
-SUMMARY:AAAA
-DESCRIPTION:AAAA     
-DTSTART:20240124T220000Z
+UID:fa5e3320-3ea6-4495-a6bc-bc780fcf8d20
+DTSTAMP:20240128T184309Z
+SUMMARY:qqqqq       
+DESCRIPTION:            qqqqqq     
+DTSTART:20240128T200400Z
+DURATION:PT3M
+END:VEVENT
+BEGIN:VEVENT
+UID:8667da01-86e7-4a51-af55-be04be8f5739
+DTSTAMP:20240128T184309Z
+SUMMARY:popopopopop
+DESCRIPTION:popopopopop
+DTSTART:20240128T200600Z
 DURATION:PT1M
 END:VEVENT
 BEGIN:VEVENT
-UID:d398f934-a6c2-48a0-9e98-355e0e5a340d
-DTSTAMP:20240125T190747Z
-SUMMARY:VVVVV      
-DESCRIPTION:VVVVVV         
-DTSTART:20240127T220000Z
-DTEND:20240128T220000Z
+UID:fc1fd758-6136-45d6-b099-157d3c8a888e
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: New Year's Day
+DESCRIPTION:New Year's Day is a public holiday in all countries that observ
+ e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
+ provided by www.officeholidays.com
+DTSTART:20221231T220000Z
+DTEND:20230101T220000Z
 END:VEVENT
 BEGIN:VEVENT
-UID:cbbea28a-fd7b-4513-a575-27b3f653aeb1
-DTSTAMP:20240125T190747Z
-SUMMARY:AAAA          
-DESCRIPTION:AAAA
-DTSTART:20240125T191000Z
-DTEND:20240125T195300Z
+UID:494c232b-bdb2-4939-85a6-def95d5b19d5
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Epiphany
+DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
+ Jordan.\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20230105T220000Z
+DTEND:20230106T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:76188f67-7847-461b-bf0a-fcc3fc8e2e5a
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Clean Monday
+DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
+ at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
+ ion provided by www.officeholidays.com
+DTSTART:20230226T220000Z
+DTEND:20230227T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:b9172492-9ff5-41b1-9eb2-666b6382933a
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Greek Independence Day
+DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
+ d over time with an older festival - the feast of the Annunciation\n\n\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20230324T220000Z
+DTEND:20230325T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:5a14fed6-ab33-4e03-883b-343023b82999
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Good Friday
+DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
+ rch\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20230413T210000Z
+DTEND:20230414T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:9b74660d-cfbb-4b24-a9a8-4bedc6d2888c
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Great Saturday
+DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
+ aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
+ days.com
+DTSTART:20230414T210000Z
+DTEND:20230415T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:bd812866-58d6-433d-ae4c-61d81510a039
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Easter Day
+DESCRIPTION:Easter is the most significant religious holiday for the world'
+ s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
+ en Mary Magdalene found that an empty tomb in the cave in which Jesus has 
+ been placed after his crucifixion.\n\n\n\nInformation provided by www.offi
+ ceholidays.com
+DTSTART:20230415T210000Z
+DTEND:20230416T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:8feed999-ece0-4506-b6f1-5fe7d62a5a28
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Easter Monday
+DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
+ n of Easter\, which can often mean that Orthodox Easter falls later than E
+ aster observed elsewhere\n\n\n\nInformation provided by www.officeholidays
+ .com
+DTSTART:20230416T210000Z
+DTEND:20230417T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:bf6bafa7-4c20-4d71-958b-0fa14fa25979
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Protomagia
+DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
+ associated with the custom of Protomagia\, a celebration of the awakening 
+ of nature after a long period of winter.\n\nInternational Workers' Day\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20230430T210000Z
+DTEND:20230501T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:02cea954-103e-4e0e-be5b-24361affe4c0
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Holy Spirit Monday
+DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
+ is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
+ nInformation provided by www.officeholidays.com
+DTSTART:20230604T210000Z
+DTEND:20230605T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:79fa0182-2362-4a39-822c-703625cd6880
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Dormition of the Virgin Mary
+DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
+ ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
+ \n\nInformation provided by www.officeholidays.com
+DTSTART:20230814T210000Z
+DTEND:20230815T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fb7b49f6-b36a-4160-a15a-139ab73d2583
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: National Anniversary Day
+DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
+ lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
+ day\n\nInformation provided by www.officeholidays.com
+DTSTART:20231027T210000Z
+DTEND:20231028T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:c1ec6d3d-c22b-4ebe-a128-ca40401113e5
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Christmas Day
+DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
+ radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
+ ww.officeholidays.com
+DTSTART:20231224T220000Z
+DTEND:20231225T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:21cc6fca-6363-4c70-958d-2850911ca599
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Synaxis of the Mother of God
+DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
+ to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20231225T220000Z
+DTEND:20231226T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:81702d43-6457-4f5a-9a2d-f64b0088ffb5
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: New Year's Day
+DESCRIPTION:New Year's Day is a public holiday in all countries that observ
+ e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
+ provided by www.officeholidays.com
+DTSTART:20231231T220000Z
+DTEND:20240101T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:d37fa931-540a-41ce-8dbf-3d3c419a6bb7
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Epiphany
+DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
+ Jordan.\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20240105T220000Z
+DTEND:20240106T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:4d36fbcb-231a-46d4-845c-67f9e6863cde
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Clean Monday
+DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
+ at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
+ ion provided by www.officeholidays.com
+DTSTART:20240317T220000Z
+DTEND:20240318T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:4942a07b-8abf-4d51-b798-ea5f0ba2786c
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Greek Independence Day
+DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
+ d over time with an older festival - the feast of the Annunciation\n\n\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20240324T220000Z
+DTEND:20240325T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:996a1fd1-4b97-4889-a590-9aa1e935393d
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Protomagia
+DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
+ associated with the custom of Protomagia\, a celebration of the awakening 
+ of nature after a long period of winter.\n\nInternational Workers' Day\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20240430T210000Z
+DTEND:20240501T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:eb2440c3-d18c-4fa5-8cc8-ba5994ffe764
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Good Friday
+DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
+ rch\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20240502T210000Z
+DTEND:20240503T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:1a46fa5e-120a-41f7-a710-c85020fbe8f1
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Great Saturday
+DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
+ aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
+ days.com
+DTSTART:20240503T210000Z
+DTEND:20240504T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:54e6fd77-2881-4dd6-831f-ba2d816c10c9
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Easter Day
+DESCRIPTION:Easter is the most significant religious holiday for the world'
+ s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
+ en Mary Magdalene found that an empty tomb in the cave in which Jesus has 
+ been placed after his crucifixion.\n\n\n\nInformation provided by www.offi
+ ceholidays.com
+DTSTART:20240504T210000Z
+DTEND:20240505T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:0a9691fc-de7d-428d-9d03-627b8be88653
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Easter Monday
+DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
+ n of Easter\, which can often mean that Orthodox Easter falls later than E
+ aster observed elsewhere\n\n\n\nInformation provided by www.officeholidays
+ .com
+DTSTART:20240505T210000Z
+DTEND:20240506T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6700658d-17f8-4c7f-ac88-3d93604edb7f
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Holy Spirit Monday
+DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
+ is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
+ nInformation provided by www.officeholidays.com
+DTSTART:20240623T210000Z
+DTEND:20240624T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:47806503-1a4e-4206-b573-ed94fc8681a4
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Dormition of the Virgin Mary
+DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
+ ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
+ \n\nInformation provided by www.officeholidays.com
+DTSTART:20240814T210000Z
+DTEND:20240815T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:d7afc797-604e-4814-bf68-6e73b5b7510f
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: National Anniversary Day
+DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
+ lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
+ day\n\nInformation provided by www.officeholidays.com
+DTSTART:20241027T220000Z
+DTEND:20241028T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:3a19939f-d728-4e2a-8733-e82aaea90d4b
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Christmas Day
+DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
+ radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
+ ww.officeholidays.com
+DTSTART:20241224T220000Z
+DTEND:20241225T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:4ab9a543-7cd9-478e-bb28-68aabc1e4a64
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Synaxis of the Mother of God
+DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
+ to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20241225T220000Z
+DTEND:20241226T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:f1ad4a97-401b-47f9-8e96-be8c630cc8fc
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: New Year's Day
+DESCRIPTION:New Year's Day is a public holiday in all countries that observ
+ e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
+ provided by www.officeholidays.com
+DTSTART:20241231T220000Z
+DTEND:20250101T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6b6ebb5f-fe0f-42f8-b4cf-cc14c77c6d63
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Epiphany
+DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
+ Jordan.\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20250105T220000Z
+DTEND:20250106T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:b45cfc03-61b1-40fb-bcaa-2a2198d88e2b
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Clean Monday
+DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
+ at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
+ ion provided by www.officeholidays.com
+DTSTART:20250302T220000Z
+DTEND:20250303T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:cddeef49-5134-4e63-82d1-0941a6a8009d
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Greek Independence Day
+DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
+ d over time with an older festival - the feast of the Annunciation\n\n\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20250324T220000Z
+DTEND:20250325T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:4fcd38b8-76d1-42e9-92e6-61d2a1ed7dc8
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Good Friday
+DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
+ rch\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20250417T210000Z
+DTEND:20250418T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:777ef683-9c43-40d6-9605-a779c4d329f0
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Great Saturday
+DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
+ aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
+ days.com
+DTSTART:20250418T210000Z
+DTEND:20250419T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:0e77aecb-a9fd-4590-9d10-abd984f95afa
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Easter Day
+DESCRIPTION:Easter is the most significant religious holiday for the world'
+ s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
+ en Mary Magdalene found that an empty tomb in the cave in which Jesus has 
+ been placed after his crucifixion.\n\n\n\nInformation provided by www.offi
+ ceholidays.com
+DTSTART:20250419T210000Z
+DTEND:20250420T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:a1960aec-8d99-429c-bafb-1c317a691193
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Orthodox Easter Monday
+DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
+ n of Easter\, which can often mean that Orthodox Easter falls later than E
+ aster observed elsewhere\n\n\n\nInformation provided by www.officeholidays
+ .com
+DTSTART:20250420T210000Z
+DTEND:20250421T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:037072a4-ee8c-4a08-94e4-749789878a82
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Protomagia
+DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
+ associated with the custom of Protomagia\, a celebration of the awakening 
+ of nature after a long period of winter.\n\nInternational Workers' Day\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20250430T210000Z
+DTEND:20250501T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:6b3b7cdb-02bc-49cc-a7f2-62f8c5fd93d7
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Holy Spirit Monday
+DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
+ is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
+ nInformation provided by www.officeholidays.com
+DTSTART:20250608T210000Z
+DTEND:20250609T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:f0524e38-699e-45ad-b968-512c19c5bb8a
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Dormition of the Virgin Mary
+DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
+ ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
+ \n\nInformation provided by www.officeholidays.com
+DTSTART:20250814T210000Z
+DTEND:20250815T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:e5496c02-072a-4ced-9a57-eadd71e8b599
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: National Anniversary Day
+DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
+ lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
+ day\n\nInformation provided by www.officeholidays.com
+DTSTART:20251027T220000Z
+DTEND:20251028T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:ab2f543e-a916-4cdc-aa53-90047b3f55bf
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Christmas Day
+DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
+ radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
+ ww.officeholidays.com
+DTSTART:20251224T220000Z
+DTEND:20251225T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:4ed42e48-bdea-4359-b059-d7c8df3b4528
+DTSTAMP:20240128T184444Z
+SUMMARY:Greece: Synaxis of the Mother of God
+DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
+ to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20251225T220000Z
+DTEND:20251226T220000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:676c3366-e016-4b2e-8a5f-4bc6c82130f8
+DTSTAMP:20240128T184444Z
+SUMMARY: asasas              
+DESCRIPTION:   sasasasa             
+DTSTART:20240128T191700Z
+DURATION:PT1M
+END:VEVENT
+BEGIN:VEVENT
+UID:c2b7b27f-6b39-4863-a32c-157aa39f29eb
+DTSTAMP:20240128T184444Z
+SUMMARY:qqqqq       
+DESCRIPTION:            qqqqqq     
+DTSTART:20240128T200400Z
+DURATION:PT3M
+END:VEVENT
+BEGIN:VEVENT
+UID:c1c7d99a-db82-4a88-947d-aff24e190373
+DTSTAMP:20240128T184444Z
+SUMMARY:popopopopop
+DESCRIPTION:popopopopop
+DTSTART:20240128T200600Z
+DURATION:PT1M
+END:VEVENT
+BEGIN:VEVENT
+UID:396944c9-0c77-41f6-93a1-5a649f214080
+DTSTAMP:20240128T184444Z
+SUMMARY:1212
+DESCRIPTION:1212
+DTSTART:20240128T200300Z
+DTEND:20240130T210400Z
 END:VEVENT
 BEGIN:VTODO
-UID:8a1552c6-84ad-470d-b314-f97cec83f163
-DTSTAMP:20240125T190747Z
-SUMMARY:BBBB               
-DESCRIPTION:BBBB
-DUE:20240126T000100Z
+UID:df401914-50a4-4dac-88cc-6bb70637ac6d
+DTSTAMP:20240128T184444Z
+SUMMARY:         assasaasasa      
+DESCRIPTION:         sasaassaassaasas        
+DUE:20240128T200600Z
 STATUS:IN-PROCESS
 END:VTODO
 END:VCALENDAR

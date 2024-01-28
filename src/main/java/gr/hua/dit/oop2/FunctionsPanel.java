@@ -227,13 +227,11 @@ public class FunctionsPanel extends JPanel{
     private ArrayList<Event> getEventsForDay(int day,int month,int year) {
         ArrayList<Event> eventsForDay = new ArrayList<>();
         for (Event event : events) {
-            
             if (event.getStartDay() == day && event.getStartMonth() == month && event.getStartYear() == year) {    
                 eventsForDay.add(event);
             }else{
                 eventsTextArea.setText("");
             }
-
         }
 
         return eventsForDay;
@@ -444,6 +442,7 @@ saveButton.addActionListener(new ActionListener() {
 
                 // Store the updated event
                 gr.hua.dit.oop2.Calendar.store.storeIcs();
+                frame.dispose();
             } else {
                 // Display an error message if the date comparison fails
                 JOptionPane.showMessageDialog(null, "The end-date is before the start-date!", "ERROR", JOptionPane.ERROR_MESSAGE);
@@ -460,7 +459,7 @@ saveButton.addActionListener(new ActionListener() {
             editPanel.add(titlePanel);
             editPanel.add(descriptionPanel);
 
-            if (event instanceof Appointements) {
+            if (event.getClass().equals(Appointements.class)) {
                 Appointements appointmentsEvent = (Appointements) event;
 
                 editPanel.add(startDatePanel);
@@ -497,7 +496,7 @@ saveButton.addActionListener(new ActionListener() {
                 //editPanel.add(Box.createVerticalStrut(1));
                 }
             }
-            if (event instanceof Task) {
+            if (event.getClass().equals(Task.class)) {
                 Task taskevent = (Task) event;
 
                 JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
