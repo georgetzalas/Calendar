@@ -227,12 +227,25 @@ public class FunctionsPanel extends JPanel{
     private ArrayList<Event> getEventsForDay(int day,int month,int year) {
         ArrayList<Event> eventsForDay = new ArrayList<>();
         for (Event event : events) {
-            if (event.getStartDay() == day && event.getStartMonth() == month && event.getStartYear() == year) {    
-                eventsForDay.add(event);
+            System.out.println(event.getTitle());
+            
+            if(event.getClass().equals(Task.class)){
+                if (event.getEndDay() == day && event.getEndMonth() == month && event.getEndYear() == year) {    
+                    eventsForDay.add(event);
+                }else{
+                    eventsTextArea.setText("");
+                }
             }else{
-                eventsTextArea.setText("");
+                if (event.getStartDay() == day && event.getStartMonth() == month && event.getStartYear() == year) {    
+                    eventsForDay.add(event);
+                }else{
+                    eventsTextArea.setText("");
+                }
             }
-        }
+
+
+
+       }
 
         return eventsForDay;
     }
