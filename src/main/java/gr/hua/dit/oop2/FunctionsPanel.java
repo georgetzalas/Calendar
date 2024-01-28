@@ -520,6 +520,7 @@ saveButton.addActionListener(new ActionListener() {
                 statusPanel.add(statusLabel);
                 statusPanel.add(statusComboBox);
                 String newstatus = (String) statusComboBox.getSelectedItem();
+                System.out.println(newstatus);
                 taskevent.setCompleteTask(newstatus);
 
                 editPanel.add(statusPanel);

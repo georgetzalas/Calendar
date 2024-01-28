@@ -84,6 +84,7 @@ public class icsStore extends icsOperations{
     }
 
     public void storeIcs(){
+        ical = new ICalendar();
         try{
             for(Event event : events){
                 System.out.println("HELLO");
