@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JList;
 import java.awt.Color;
 
+// Panel for viewing events
 public class ViewPanel extends JPanel{
     private JPanel backButtonPanel, optionButtonsPanel, listPanel;
     private JButton back;
@@ -17,6 +18,7 @@ public class ViewPanel extends JPanel{
     private JScrollPane scroll;
     private String[] data;
 
+    // Constructor
     public ViewPanel(){
         setLayout(new BorderLayout());
 
@@ -33,6 +35,7 @@ public class ViewPanel extends JPanel{
         setVisible(false);
     }
 
+    // Method to create the back button
     private void createBackButton(){
         backButtonPanel = new JPanel();
 
@@ -44,9 +47,11 @@ public class ViewPanel extends JPanel{
         backButtonPanel.add(back);
     }
 
+    // Method to create option buttons
     private void createOptionButtons(){
         optionButtonsPanel = new JPanel();
-    
+        
+        // Initialize option buttons
         day = new JButton("Day");
         week = new JButton("Week");
         month = new JButton("Month");
@@ -56,6 +61,7 @@ public class ViewPanel extends JPanel{
         todo = new JButton("Todo");
         due = new JButton("Due");
 
+        // ActionListener for each option button
         day.addActionListener(new ButtonActions());
         week.addActionListener(new ButtonActions());
         month.addActionListener(new ButtonActions());
@@ -65,6 +71,7 @@ public class ViewPanel extends JPanel{
         todo.addActionListener(new ButtonActions());
         due.addActionListener(new ButtonActions());
         
+        // Add option buttons to the panel
         optionButtonsPanel.add(day);
         optionButtonsPanel.add(week);
         optionButtonsPanel.add(month);
@@ -77,6 +84,7 @@ public class ViewPanel extends JPanel{
         optionButtonsPanel.setBackground(new Color(123,50,250));
     }
 
+     // Method to create the list panel
     private void createListPanel(){
         listPanel = new JPanel();
         
@@ -88,26 +96,35 @@ public class ViewPanel extends JPanel{
         listPanel.setBackground(new Color(123,50,250));
     }
 
+    // Method to load events into the list
     private void loadEvents(){
         eventList eventList= Calendar.list;
         if(eventList == null){
             System.out.println("Please provide a file before entering the View Panel");
+            // Exit if no event list is available
             System.exit(1);
             //throw new NullPointerException("Please provide a file before entering the View Panel");
         }
+        // Show events
         eventList.showEventsFromNow();
+
+        // Get event data
         data = eventList.getData();
 
+        // Set data to list
         list.setListData(data);
 
+        // Clear data after loading
         eventList.clearData();
     }
 
+    // ActionListener for option buttons
     private class ButtonActions implements ActionListener{
         private eventList elist = Calendar.list;
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            // Perform action based on the button clicked
 
             if(e.getActionCommand().equals("Day")) elist.day();
                            
@@ -125,8 +142,13 @@ public class ViewPanel extends JPanel{
 
             if(e.getActionCommand().equals("Due")) elist.due();
              
+             // Get updated data
             data = elist.getData();
+
+            // Set data to list
             list.setListData(data);
+
+            // Clear data
             elist.clearData();
         }
     }

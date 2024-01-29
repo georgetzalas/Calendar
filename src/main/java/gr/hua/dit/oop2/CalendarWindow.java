@@ -9,7 +9,7 @@ import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
-import javax.swing.ImageIcon;
+import javax.swing.ImageIcon; // ImageIcon for the main window icon
 
 public class CalendarWindow {
     private JFrame frame = new JFrame("Calendar");
@@ -19,6 +19,7 @@ public class CalendarWindow {
     private ViewPanel viewPanel;
     private ImageIcon mainimage;
 
+    // Constructor
     public CalendarWindow(){
         mainPanel = new MainPanel();
 
@@ -27,12 +28,15 @@ public class CalendarWindow {
         frame.setSize(800, 700);
         frame.setResizable(false);
         frame.setVisible(true);
+        // Load the main window icon
         mainimage = new ImageIcon("mainpic.png");
+        // Set the icon for the frame
         frame.setIconImage(mainimage.getImage());
+        // Create the menu bar
         createMenuBar();
         
     }
-
+    // Method to create the menu bar
     private void createMenuBar(){
         MenuBar mBar = new MenuBar();
         Menu m1 = new Menu("File");
@@ -41,7 +45,7 @@ public class CalendarWindow {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                new FileViewer();
+                new FileViewer(); //Open a file viewer when "Open" is clicked
             }
             
         });
@@ -50,6 +54,7 @@ public class CalendarWindow {
         frame.setMenuBar(mBar);    
     }
 
+    // Method to set the visibility of the main panel
     public void setMainPanelVis(boolean visible, JPanel panel){
         mainPanel = new MainPanel();
 
@@ -57,7 +62,7 @@ public class CalendarWindow {
         mainPanel.setVisible(visible);
         frame.add(mainPanel);
     }
-
+    //Method to set the visibility of the panel for adding events
     public void setAddPanelVis(boolean visible, JPanel panel){
         addPanel = new AddPanel();
 
@@ -65,6 +70,7 @@ public class CalendarWindow {
         addPanel.setVisible(visible);
         frame.add(addPanel);
     }
+    // Method to set the visibility of the panel for functions
     public void setFunctionPanelVis(boolean visible, JPanel panel){
         functionsPanel = new FunctionsPanel();
 
@@ -73,6 +79,7 @@ public class CalendarWindow {
         frame.add(functionsPanel);
     }
 
+    // Method to set the visibility of the panel for viewing events
     public void setViewPanel(boolean visible, JPanel panel){
         viewPanel = new ViewPanel();
 

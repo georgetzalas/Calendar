@@ -27,10 +27,13 @@ public class AddPanel extends JPanel {
         createBackButton();
         add(backButtonPanel, BorderLayout.SOUTH);
 
+        //Create a Calendar object to manage the date
         calendar = Calendar.getInstance();
 
+        //Create top panel containing the buttons for the month change
         JPanel topPanel = new JPanel(new FlowLayout());
 
+        //Button for the previous month
         prevButton = new JButton("Previous");
         prevButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -39,21 +42,26 @@ public class AddPanel extends JPanel {
         });
         topPanel.add(prevButton);
 
+        //Create JComboBoxes for selecting year and month
         yearComboBox = new JComboBox<>();
         monthComboBox = new JComboBox<>();
 
+        //Add options for years
         for (int i = 1900; i <= 2100; i++) {
             yearComboBox.addItem(String.valueOf(i));
         }
 
+        //Add options for months
         String[] months = new DateFormatSymbols().getMonths();
         for (int i = 0; i < months.length - 1; i++) {
             monthComboBox.addItem(months[i]);
         }
 
+        //Set initial options in Comboboxes based on current date
         yearComboBox.setSelectedItem(String.valueOf(calendar.get(Calendar.YEAR)));
         monthComboBox.setSelectedItem(new DateFormatSymbols().getMonths()[calendar.get(Calendar.MONTH)]);
 
+        //Listeners to change options in Comboboxes
         yearComboBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 updateCalendar();
@@ -69,6 +77,7 @@ public class AddPanel extends JPanel {
         topPanel.add(yearComboBox);
         topPanel.add(monthComboBox);
 
+        //Button for next month
         nextButton = new JButton("Next");
         nextButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -76,12 +85,14 @@ public class AddPanel extends JPanel {
             }
         });
         topPanel.add(nextButton);
-
+        //Add the top panel to the main panel 
         add(topPanel, BorderLayout.NORTH);
 
+        //Create a panel containing the dates of the month
         calendarPanel = new JPanel(new GridLayout(0, 7));
         add(calendarPanel, BorderLayout.CENTER);
 
+        //Create a text field to display events
         eventsTextArea = new JTextArea(10, 20);
         eventsTextArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(eventsTextArea);
@@ -93,7 +104,7 @@ public class AddPanel extends JPanel {
     }
 
     private void createBackButton() {
-        // topPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        
         backButtonPanel = new JPanel();
 
         backButton = new JButton("Back");
@@ -102,22 +113,27 @@ public class AddPanel extends JPanel {
         backButtonPanel.add(backButton);
     }
 
+    //Method to update the calendar
     private void updateCalendar() {
+        //Set the year in the Calendar based on the user's choice
         calendar.set(Calendar.YEAR, Integer.parseInt((String) yearComboBox.getSelectedItem()));
-
+        //Set the month in the Calendar object based on the user's choice
         for (int i = 0; i < new DateFormatSymbols().getMonths().length - 1; i++) {
             if (monthComboBox.getSelectedItem().equals(new DateFormatSymbols().getMonths()[i])) {
                 calendar.set(Calendar.MONTH, i);
                 break;
             }
         }
-
+         //Set the first day of the month
         calendar.set(Calendar.DAY_OF_MONTH, 1);
 
+        //Cleaning the panel of the days of the week
         calendarPanel.removeAll();
 
+        //Determine the days of the week
         String[] daysOfWeek = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
 
+        //Add labels for the days of the week
         for (String day : daysOfWeek) {
             JLabel label = new JLabel(day, JLabel.CENTER);
             calendarPanel.add(label);
@@ -126,10 +142,12 @@ public class AddPanel extends JPanel {
         int firstDayOfMonth = calendar.get(Calendar.DAY_OF_WEEK);
         int daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
 
+        //Add blank cells for days preceding the first day of the month
         for (int i = 1; i < firstDayOfMonth; i++) {
             calendarPanel.add(new JLabel(""));
         }
 
+        //Add buttons with the days of the month
         for (i = 1; i <= daysInMonth; i++) {
             JButton button = new JButton(String.valueOf(i));
             button.addActionListener(new ActionListener() {
@@ -142,14 +160,17 @@ public class AddPanel extends JPanel {
             calendarPanel.add(button);
         }
 
+        //Redesign of the main panel
         revalidate();
         repaint();
     }
 
+    //Method to display the previous month
     private void previousMonth() {
         int month = calendar.get(Calendar.MONTH);
         int year = calendar.get(Calendar.YEAR);
 
+        //If the current month is January, we have to change the year 
         if (month == 0) {
             year--;
             month = 11;
@@ -157,14 +178,17 @@ public class AddPanel extends JPanel {
             month--;
         }
 
+        //Set the new options in the combo boxes
         yearComboBox.setSelectedItem(String.valueOf(year));
         monthComboBox.setSelectedItem(new DateFormatSymbols().getMonths()[month]);
     }
 
+    //Method for displaying the next month
     private void nextMonth() {
         int month = calendar.get(Calendar.MONTH);
         int year = calendar.get(Calendar.YEAR);
 
+        //If the current month is December, we need to change the year
         if (month == 11) {
             year++;
             month = 0;
@@ -172,6 +196,7 @@ public class AddPanel extends JPanel {
             month++;
         }
 
+        //Set the new options in the combo boxes
         yearComboBox.setSelectedItem(String.valueOf(year));
         monthComboBox.setSelectedItem(new DateFormatSymbols().getMonths()[month]);
     }
@@ -395,61 +420,7 @@ public class AddPanel extends JPanel {
                         frame.dispose();
                     }
                 });
-                // ...
-
-                /*saveButton.addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        try {
-                            // Save the selected options
-                            String newTitle = titleTextField.getText();
-                            String newDescription = descriptionTextField.getText();
-
-                            int newStartDay = (int) startDayComboBox.getSelectedItem();
-                            String newStartMonth = (String) startMonthComboBox.getSelectedItem();
-                            int newStartYear = (int) startYearComboBox.getSelectedItem();
-                            int newStartHour = (int) startHourComboBox.getSelectedItem();
-                            int newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
-
-                            // Check if the selected start day and month combination is valid
-                            if (newStartDay > gr.hua.dit.oop2.eventManagement.errorMonth(getMonthNumber(newStartMonth),
-                                    newStartYear)) {
-                                throw new IllegalArgumentException("Invalid combination of start day and month.");
-                            }
-
-                            int newduration = (int) durationComboBox.getSelectedItem();
-                            LocalDateTime APP = gr.hua.dit.oop2.eventManagement.plusDure(newStartDay,
-                                    getMonthNumber(newStartMonth), newStartYear, newStartHour, newStartMinutes,
-                                    newduration);
-                            Integer endday = APP.getDayOfMonth();
-                            Integer endmonth = APP.getMonthValue();
-                            Integer endyear = APP.getYear();
-                            Integer endhour = APP.getHour();
-                            Integer endminute = APP.getMinute();
-                            gr.hua.dit.oop2.Appointements ev = new Appointements(newTitle, newDescription,
-                                    newStartDay, getMonthNumber(newStartMonth),
-                                    newStartYear, newStartHour, newStartMinutes, endday, endmonth, endyear, endhour,
-                                    endminute,
-                                    newduration);
-                            // Save the new object to the public static list event
-
-                            System.out.println("Add 2");
-                            events.add(ev);
-
-                            // Create the new object
-                            System.out.println("Store 2");
-                            gr.hua.dit.oop2.Calendar.store.storeIcs();
-                            frame.dispose();
-                        } catch (Exception ex) {
-                            // Handle the exception (e.g., display an error message)
-                            ex.printStackTrace(); // Print the stack trace for debugging
-                            JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error",
-                                    JOptionPane.ERROR_MESSAGE);
-                        }
-                    }
-                });
-                */
-                // ...
-
+                
                 // if the user choose the end-date option
             } else if (userChoice == 1) {
                 // add the end-date panels to the frame
