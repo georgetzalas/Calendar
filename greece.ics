@@ -1,1019 +1,467 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Office Holidays Ltd.//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Greece Holidays
-X-WR-CALDESC:Public Holidays in Greece. Provided by http://www.officeholidays.com
-REFRESH-INTERVAL;VALUE=DURATION:PT48H
-X-PUBLISHED-TTL:PT48H
-X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+PRODID:-//Michael Angstadt//biweekly 0.6.7//EN
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-01-01GR415regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:New Year's Day is a public holiday in all countries that observe the Gregorian calendar, with the exception of Israel\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/international-new-years-day
-DTSTART;VALUE=DATE:20230101
-DTEND;VALUE=DATE:20230102
-DTSTAMP:20230101T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: New Year's Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:48058e6d-97e3-4fb1-9b87-210e640d1eb0
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: New Year's Day
+DESCRIPTION:New Year's Day is a public holiday in all countries that observ
+ e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
+ provided by www.officeholidays.com
+DTSTART:20221231T220000Z
+DTEND:20230101T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-01-06GR3709regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river Jordan.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/feast-of-the-theophany
-DTSTART;VALUE=DATE:20230106
-DTEND;VALUE=DATE:20230107
-DTSTAMP:20230106T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230304T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Epiphany
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:1ee25bcb-fcc9-4be0-a4c3-cefa5a22040e
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Epiphany
+DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
+ Jordan.\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20230105T220000Z
+DTEND:20230106T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-02-27GR38regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Great Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/ash-monday
-DTSTART;VALUE=DATE:20230227
-DTEND;VALUE=DATE:20230228
-DTSTAMP:20230227T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Clean Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:32b39df9-9a5d-4793-8398-01c67dacffe4
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Clean Monday
+DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
+ at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
+ ion provided by www.officeholidays.com
+DTSTART:20230226T220000Z
+DTEND:20230227T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-03-25GR348regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Greece's Independence Day is actually a holiday that has blended over time with an older festival - the feast of the Annunciation\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/greece-independence-day
-DTSTART;VALUE=DATE:20230325
-DTEND;VALUE=DATE:20230326
-DTSTAMP:20230325T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Greek Independence Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:9e502415-6f9e-496e-8c0a-166af5fe4cfe
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Greek Independence Day
+DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
+ d over time with an older festival - the feast of the Annunciation\n\n\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20230324T220000Z
+DTEND:20230325T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-04-14GR630regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Church\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-good-friday
-DTSTART;VALUE=DATE:20230414
-DTEND;VALUE=DATE:20230415
-DTSTAMP:20230414T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Good Friday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:d477e07b-6b1b-40bb-91e1-9f98d0489b1f
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Good Friday
+DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
+ rch\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20230413T210000Z
+DTEND:20230414T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-04-15GR2806regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox Easter.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-holy-saturday
-DTSTART;VALUE=DATE:20230415
-DTEND;VALUE=DATE:20230416
-DTSTAMP:20230415T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20221110T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Great Saturday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:8128e6d3-d889-48cd-bc75-56dc2e9847c1
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Great Saturday
+DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
+ aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
+ days.com
+DTSTART:20230414T210000Z
+DTEND:20230415T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-04-16GR629regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Easter is the most significant religious holiday for the world's roughly 300 million Orthodox Christians. In the bible, it is the day when Mary Magdalene found that an empty tomb in the cave in which Jesus has been placed after his crucifixion.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-easter-day
-DTSTART;VALUE=DATE:20230416
-DTEND;VALUE=DATE:20230417
-DTSTAMP:20230416T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20220420T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Easter Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:d9ae3b2b-047e-4e67-b784-34d7c830bc8c
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Easter Day
+DESCRIPTION:Easter is the most significant religious holiday for the world'
+ s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
+ en Mary Magdalene found that an empty tomb in the cave in which Jesus has 
+ been placed after his crucifixion.\n\n\n\nInformation provided by www.offi
+ ceholidays.com
+DTSTART:20230415T210000Z
+DTEND:20230416T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-04-17GR2811regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The Orthodox church uses the Julian calendar for the calculation of Easter, which can often mean that Orthodox Easter falls later than Easter observed elsewhere\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-easter-monday
-DTSTART;VALUE=DATE:20230417
-DTEND;VALUE=DATE:20230418
-DTSTAMP:20230417T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230414T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Easter Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:95691ddf-d2f3-48ce-8a8b-bbcb9336ab00
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Easter Monday
+DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
+ n of Easter\, which can often mean that Orthodox Easter falls later than E
+ aster observed elsewhere\n\n\n\nInformation provided by www.officeholidays
+ .com
+DTSTART:20230416T210000Z
+DTEND:20230417T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-05-01GR475regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:While officially Labour Day, the first day of May in Greece is associated with the custom of Protomagia, a celebration of the awakening of nature after a long period of winter.\n\nInternational Workers' Day\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/labour-day
-DTSTART;VALUE=DATE:20230501
-DTEND;VALUE=DATE:20230502
-DTSTAMP:20230501T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Protomagia
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:69af93e6-3522-4729-93cb-3bdd3046788a
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Protomagia
+DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
+ associated with the custom of Protomagia\, a celebration of the awakening 
+ of nature after a long period of winter.\n\nInternational Workers' Day\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20230430T210000Z
+DTEND:20230501T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-06-05GR632regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Orthodox Pentecost Monday, also known as Holy Spirit Monday, is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-pentecost-monday
-DTSTART;VALUE=DATE:20230605
-DTEND;VALUE=DATE:20230606
-DTSTAMP:20230605T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20220811T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Holy Spirit Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:5e166627-c976-4598-8155-9af7d6a48067
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Holy Spirit Monday
+DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
+ is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
+ nInformation provided by www.officeholidays.com
+DTSTART:20230604T210000Z
+DTEND:20230605T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-08-15GR42regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The Feast of the Assumption is the principal feast of the Blessed Virgin, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/assumption-day
-DTSTART;VALUE=DATE:20230815
-DTEND;VALUE=DATE:20230816
-DTSTAMP:20230815T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210815T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Dormition of the Virgin Mary
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:d265c88d-b074-499d-b078-5ea90737d12e
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Dormition of the Virgin Mary
+DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
+ ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
+ \n\nInformation provided by www.officeholidays.com
+DTSTART:20230814T210000Z
+DTEND:20230815T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-10-28GR349regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Also known as 'World War ΙΙ National Holiday', this holiday celebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi day\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/greece-national-day
-DTSTART;VALUE=DATE:20231028
-DTEND;VALUE=DATE:20231029
-DTSTAMP:20231028T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: National Anniversary Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:8741312e-e235-47af-b213-b304c48ae6c9
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: National Anniversary Day
+DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
+ lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
+ day\n\nInformation provided by www.officeholidays.com
+DTSTART:20231027T210000Z
+DTEND:20231028T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-12-25GR181regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to tradition took place on December 25th 1 BC\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/christmas-day
-DTSTART;VALUE=DATE:20231225
-DTEND;VALUE=DATE:20231226
-DTSTAMP:20231225T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Christmas Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:b7916e00-07b6-49a3-96fa-41a7dc19b932
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Christmas Day
+DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
+ radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
+ ww.officeholidays.com
+DTSTART:20231224T220000Z
+DTEND:20231225T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2023-12-26GR957regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/synaxis-of-the-mother-of-god
-DTSTART;VALUE=DATE:20231226
-DTEND;VALUE=DATE:20231227
-DTSTAMP:20231226T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Synaxis of the Mother of God
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:6f100024-4f1d-40e7-ab8c-c1469957542e
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Synaxis of the Mother of God
+DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
+ to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20231225T220000Z
+DTEND:20231226T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-01-01GR415regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:New Year's Day is a public holiday in all countries that observe the Gregorian calendar, with the exception of Israel\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/international-new-years-day
-DTSTART;VALUE=DATE:20240101
-DTEND;VALUE=DATE:20240102
-DTSTAMP:20240101T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: New Year's Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:70695d1b-f443-4518-9246-c8ebaa244e5c
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: New Year's Day
+DESCRIPTION:New Year's Day is a public holiday in all countries that observ
+ e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
+ provided by www.officeholidays.com
+DTSTART:20231231T220000Z
+DTEND:20240101T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-01-06GR3709regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river Jordan.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/feast-of-the-theophany
-DTSTART;VALUE=DATE:20240106
-DTEND;VALUE=DATE:20240107
-DTSTAMP:20240106T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230304T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Epiphany
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:b1175e5d-4228-45c3-a507-713d66fb60a6
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Epiphany
+DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
+ Jordan.\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20240105T220000Z
+DTEND:20240106T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-03-18GR38regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Great Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/ash-monday
-DTSTART;VALUE=DATE:20240318
-DTEND;VALUE=DATE:20240319
-DTSTAMP:20240318T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Clean Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:1abeaae4-4cbf-456e-92a6-2755db0b1bdb
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Clean Monday
+DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
+ at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
+ ion provided by www.officeholidays.com
+DTSTART:20240317T220000Z
+DTEND:20240318T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-03-25GR348regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Greece's Independence Day is actually a holiday that has blended over time with an older festival - the feast of the Annunciation\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/greece-independence-day
-DTSTART;VALUE=DATE:20240325
-DTEND;VALUE=DATE:20240326
-DTSTAMP:20240325T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Greek Independence Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:3799ca02-691b-4057-8117-ba57efc35610
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Greek Independence Day
+DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
+ d over time with an older festival - the feast of the Annunciation\n\n\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20240324T220000Z
+DTEND:20240325T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-05-01GR475regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:While officially Labour Day, the first day of May in Greece is associated with the custom of Protomagia, a celebration of the awakening of nature after a long period of winter.\n\nInternational Workers' Day\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/labour-day
-DTSTART;VALUE=DATE:20240501
-DTEND;VALUE=DATE:20240502
-DTSTAMP:20240501T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Protomagia
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:36377529-efbe-4ba0-820f-ab86ff67ed37
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Protomagia
+DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
+ associated with the custom of Protomagia\, a celebration of the awakening 
+ of nature after a long period of winter.\n\nInternational Workers' Day\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20240430T210000Z
+DTEND:20240501T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-05-03GR630regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Church\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-good-friday
-DTSTART;VALUE=DATE:20240503
-DTEND;VALUE=DATE:20240504
-DTSTAMP:20240503T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Good Friday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:8078f851-81d9-481a-9f9a-889d53ebfcdb
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Good Friday
+DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
+ rch\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20240502T210000Z
+DTEND:20240503T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-05-04GR2806regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox Easter.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-holy-saturday
-DTSTART;VALUE=DATE:20240504
-DTEND;VALUE=DATE:20240505
-DTSTAMP:20240504T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20221110T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Great Saturday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:1bce07d0-d5b7-464a-a015-781439e14eff
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Great Saturday
+DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
+ aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
+ days.com
+DTSTART:20240503T210000Z
+DTEND:20240504T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-05-05GR629regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Easter is the most significant religious holiday for the world's roughly 300 million Orthodox Christians. In the bible, it is the day when Mary Magdalene found that an empty tomb in the cave in which Jesus has been placed after his crucifixion.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-easter-day
-DTSTART;VALUE=DATE:20240505
-DTEND;VALUE=DATE:20240506
-DTSTAMP:20240505T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20220420T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Easter Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:6fcab6af-9ffc-4ef5-9402-fc510eb6b6af
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Easter Day
+DESCRIPTION:Easter is the most significant religious holiday for the world'
+ s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
+ en Mary Magdalene found that an empty tomb in the cave in which Jesus has 
+ been placed after his crucifixion.\n\n\n\nInformation provided by www.offi
+ ceholidays.com
+DTSTART:20240504T210000Z
+DTEND:20240505T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-05-06GR2811regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The Orthodox church uses the Julian calendar for the calculation of Easter, which can often mean that Orthodox Easter falls later than Easter observed elsewhere\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-easter-monday
-DTSTART;VALUE=DATE:20240506
-DTEND;VALUE=DATE:20240507
-DTSTAMP:20240506T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230414T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Easter Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:f95833d6-65aa-421e-949b-a3e47ce2705f
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Easter Monday
+DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
+ n of Easter\, which can often mean that Orthodox Easter falls later than E
+ aster observed elsewhere\n\n\n\nInformation provided by www.officeholidays
+ .com
+DTSTART:20240505T210000Z
+DTEND:20240506T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-06-24GR632regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Orthodox Pentecost Monday, also known as Holy Spirit Monday, is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-pentecost-monday
-DTSTART;VALUE=DATE:20240624
-DTEND;VALUE=DATE:20240625
-DTSTAMP:20240624T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Holy Spirit Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:7d9ad827-da2f-4264-b232-ffda3873dafe
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Holy Spirit Monday
+DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
+ is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
+ nInformation provided by www.officeholidays.com
+DTSTART:20240623T210000Z
+DTEND:20240624T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-08-15GR42regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The Feast of the Assumption is the principal feast of the Blessed Virgin, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/assumption-day
-DTSTART;VALUE=DATE:20240815
-DTEND;VALUE=DATE:20240816
-DTSTAMP:20240815T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210815T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Dormition of the Virgin Mary
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:3bbdd0a5-ec3b-496c-a5f3-5de556acc391
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Dormition of the Virgin Mary
+DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
+ ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
+ \n\nInformation provided by www.officeholidays.com
+DTSTART:20240814T210000Z
+DTEND:20240815T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-10-28GR349regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Also known as 'World War ΙΙ National Holiday', this holiday celebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi day\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/greece-national-day
-DTSTART;VALUE=DATE:20241028
-DTEND;VALUE=DATE:20241029
-DTSTAMP:20241028T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: National Anniversary Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:63aa99d1-9e36-42d2-8ddb-86189fbce60a
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: National Anniversary Day
+DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
+ lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
+ day\n\nInformation provided by www.officeholidays.com
+DTSTART:20241027T220000Z
+DTEND:20241028T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-12-25GR181regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to tradition took place on December 25th 1 BC\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/christmas-day
-DTSTART;VALUE=DATE:20241225
-DTEND;VALUE=DATE:20241226
-DTSTAMP:20241225T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Christmas Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:32a7f7b7-255c-442c-96aa-bea1572af44c
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Christmas Day
+DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
+ radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
+ ww.officeholidays.com
+DTSTART:20241224T220000Z
+DTEND:20241225T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2024-12-26GR957regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/synaxis-of-the-mother-of-god
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
-DTSTAMP:20241226T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20210707T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Synaxis of the Mother of God
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:2d92682d-bd5a-44ff-b7ec-c288c33d8837
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Synaxis of the Mother of God
+DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
+ to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20241225T220000Z
+DTEND:20241226T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-01-01GR415regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:New Year's Day is a public holiday in all countries that observe the Gregorian calendar, with the exception of Israel\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/international-new-years-day
-DTSTART;VALUE=DATE:20250101
-DTEND;VALUE=DATE:20250102
-DTSTAMP:20250101T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: New Year's Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:577bd948-c130-41d6-8db3-5ab0e56f9225
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: New Year's Day
+DESCRIPTION:New Year's Day is a public holiday in all countries that observ
+ e the Gregorian calendar\, with the exception of Israel\n\n\n\nInformation 
+ provided by www.officeholidays.com
+DTSTART:20241231T220000Z
+DTEND:20250101T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-01-06GR3709regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river Jordan.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/feast-of-the-theophany
-DTSTART;VALUE=DATE:20250106
-DTEND;VALUE=DATE:20250107
-DTSTAMP:20250106T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Epiphany
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:850b43db-5fc8-4800-ab0b-c06c9345d29c
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Epiphany
+DESCRIPTION:Commemorates Christ's baptism by John the Baptist in the river 
+ Jordan.\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20250105T220000Z
+DTEND:20250106T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-03-03GR38regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Great Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/ash-monday
-DTSTART;VALUE=DATE:20250303
-DTEND;VALUE=DATE:20250304
-DTSTAMP:20250303T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Clean Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:b7583965-da30-4b0a-a761-bc60b7c2acc1
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Clean Monday
+DESCRIPTION:Also known as Ash Monday. Clean Monday begins the season of Gre
+ at Lent in Eastern Orthodox Churches\n\nOrthodox Shrove Monday\n\nInformat
+ ion provided by www.officeholidays.com
+DTSTART:20250302T220000Z
+DTEND:20250303T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-03-25GR348regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Greece's Independence Day is actually a holiday that has blended over time with an older festival - the feast of the Annunciation\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/greece-independence-day
-DTSTART;VALUE=DATE:20250325
-DTEND;VALUE=DATE:20250326
-DTSTAMP:20250325T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Greek Independence Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:1496bd99-ba2b-464e-83d7-571018e844e3
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Greek Independence Day
+DESCRIPTION:Greece's Independence Day is actually a holiday that has blende
+ d over time with an older festival - the feast of the Annunciation\n\n\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20250324T220000Z
+DTEND:20250325T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-04-18GR630regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Church\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-good-friday
-DTSTART;VALUE=DATE:20250418
-DTEND;VALUE=DATE:20250419
-DTSTAMP:20250418T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Good Friday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:3d43097c-24a8-4130-8020-1222181746a1
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Good Friday
+DESCRIPTION:Easter is the principal festival of Greece and the Orthodox Chu
+ rch\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20250417T210000Z
+DTEND:20250418T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-04-19GR2806regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox Easter.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-holy-saturday
-DTSTART;VALUE=DATE:20250419
-DTEND;VALUE=DATE:20250420
-DTSTAMP:20250419T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Great Saturday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:8209828c-983f-47ea-b79a-d2f7dbb3a02d
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Great Saturday
+DESCRIPTION:Orthodox Holy Saturday takes place on the Day before Orthodox E
+ aster.\n\nOrthodox Holy Saturday\n\nInformation provided by www.officeholi
+ days.com
+DTSTART:20250418T210000Z
+DTEND:20250419T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-04-20GR629regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Easter is the most significant religious holiday for the world's roughly 300 million Orthodox Christians. In the bible, it is the day when Mary Magdalene found that an empty tomb in the cave in which Jesus has been placed after his crucifixion.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-easter-day
-DTSTART;VALUE=DATE:20250420
-DTEND;VALUE=DATE:20250421
-DTSTAMP:20250420T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Easter Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:bba50150-bf86-4aea-b51c-88b72bbdcd2e
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Easter Day
+DESCRIPTION:Easter is the most significant religious holiday for the world'
+ s roughly 300 million Orthodox Christians. In the bible\, it is the day wh
+ en Mary Magdalene found that an empty tomb in the cave in which Jesus has 
+ been placed after his crucifixion.\n\n\n\nInformation provided by www.offi
+ ceholidays.com
+DTSTART:20250419T210000Z
+DTEND:20250420T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-04-21GR2811regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The Orthodox church uses the Julian calendar for the calculation of Easter, which can often mean that Orthodox Easter falls later than Easter observed elsewhere\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-easter-monday
-DTSTART;VALUE=DATE:20250421
-DTEND;VALUE=DATE:20250422
-DTSTAMP:20250421T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Orthodox Easter Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:f94a89fd-9d0f-4c7e-925b-9a35b09bc4af
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Orthodox Easter Monday
+DESCRIPTION:The Orthodox church uses the Julian calendar for the calculatio
+ n of Easter\, which can often mean that Orthodox Easter falls later than E
+ aster observed elsewhere\n\n\n\nInformation provided by www.officeholidays
+ .com
+DTSTART:20250420T210000Z
+DTEND:20250421T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-05-01GR475regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:While officially Labour Day, the first day of May in Greece is associated with the custom of Protomagia, a celebration of the awakening of nature after a long period of winter.\n\nInternational Workers' Day\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/labour-day
-DTSTART;VALUE=DATE:20250501
-DTEND;VALUE=DATE:20250502
-DTSTAMP:20250501T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Protomagia
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:acfa84b1-5aab-42ab-8320-e1be720a80bd
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Protomagia
+DESCRIPTION:While officially Labour Day\, the first day of May in Greece is 
+ associated with the custom of Protomagia\, a celebration of the awakening 
+ of nature after a long period of winter.\n\nInternational Workers' Day\n\n
+ Information provided by www.officeholidays.com
+DTSTART:20250430T210000Z
+DTEND:20250501T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-06-09GR632regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Orthodox Pentecost Monday, also known as Holy Spirit Monday, is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/orthodox-pentecost-monday
-DTSTART;VALUE=DATE:20250609
-DTEND;VALUE=DATE:20250610
-DTSTAMP:20250609T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Holy Spirit Monday
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:dd50945c-b821-4cc8-a23a-0ae135d83d10
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Holy Spirit Monday
+DESCRIPTION:Orthodox Pentecost Monday\, also known as Holy Spirit Monday\, 
+ is observed fifty days (approx. seven weeks) after Orthodox Easter.\n\n\n\
+ nInformation provided by www.officeholidays.com
+DTSTART:20250608T210000Z
+DTEND:20250609T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-08-15GR42regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The Feast of the Assumption is the principal feast of the Blessed Virgin, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/assumption-day
-DTSTART;VALUE=DATE:20250815
-DTEND;VALUE=DATE:20250816
-DTSTAMP:20250815T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Dormition of the Virgin Mary
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:d1fcfb6b-ebbe-40b4-b978-d98a93a53c0e
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Dormition of the Virgin Mary
+DESCRIPTION:The Feast of the Assumption is the principal feast of the Bless
+ ed Virgin\, the mother of Jesus Christ\n\nThe Falling Asleep of the Virgin
+ \n\nInformation provided by www.officeholidays.com
+DTSTART:20250814T210000Z
+DTEND:20250815T210000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-10-28GR349regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Also known as 'World War ΙΙ National Holiday', this holiday celebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi day\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/greece-national-day
-DTSTART;VALUE=DATE:20251028
-DTEND;VALUE=DATE:20251029
-DTSTAMP:20251028T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: National Anniversary Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:b79cd76b-2d92-4da0-9912-8b852eeb4d5f
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: National Anniversary Day
+DESCRIPTION:Also known as 'World War ΙΙ National Holiday'\, this holiday ce
+ lebrates Greece's refusal to yield to the Axis powers in 1940.\n\nThe Ochi 
+ day\n\nInformation provided by www.officeholidays.com
+DTSTART:20251027T220000Z
+DTEND:20251028T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-12-25GR181regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to tradition took place on December 25th 1 BC\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/christmas-day
-DTSTART;VALUE=DATE:20251225
-DTEND;VALUE=DATE:20251226
-DTSTAMP:20251225T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Christmas Day
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:8e2ddcf1-bd2a-48b2-a827-f342424cd349
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Christmas Day
+DESCRIPTION:Christmas celebrates the Nativity of Jesus which according to t
+ radition took place on December 25th 1 BC\n\n\n\nInformation provided by w
+ ww.officeholidays.com
+DTSTART:20251224T220000Z
+DTEND:20251225T220000Z
 END:VEVENT
 BEGIN:VEVENT
-CLASS:PUBLIC
-UID:2025-12-26GR957regcountry@www.officeholidays.com
-CREATED:20231115T080000Z
-DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
-URL:https://www.officeholidays.com/holidays/greece/synaxis-of-the-mother-of-god
-DTSTART;VALUE=DATE:20251226
-DTEND;VALUE=DATE:20251227
-DTSTAMP:20251226T000000Z
-LOCATION:Greece
-PRIORITY:5
-LAST-MODIFIED:20230724T000000Z
-SEQUENCE:1
-SUMMARY;LANGUAGE=en-us:Greece: Synaxis of the Mother of God
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-X-MICROSOFT-CDO-IMPORTANCE:1
-X-MICROSOFT-DISALLOW-COUNTER:FALSE
-X-MS-OLK-ALLOWEXTERNCHECK:TRUE
-X-MS-OLK-AUTOFILLLOCATION:FALSE
-X-MICROSOFT-CDO-ALLDAYEVENT:TRUE
-X-MICROSOFT-MSNCALENDAR-ALLDAYEVENT:TRUE
-X-MS-OLK-CONFTYPE:0
+UID:970531bd-c9dc-4269-9b96-03c633918456
+DTSTAMP:20240129T190724Z
+SUMMARY:Greece: Synaxis of the Mother of God
+DESCRIPTION:The second day of Christmas in the Orthodox Church is dedicated 
+ to the Virgin Mary\n\n\n\nInformation provided by www.officeholidays.com
+DTSTART:20251225T220000Z
+DTEND:20251226T220000Z
 END:VEVENT
+BEGIN:VEVENT
+UID:259a57ae-34d9-4638-b70c-65b1eb0c8774
+DTSTAMP:20240129T190724Z
+SUMMARY:Dur
+DESCRIPTION:Dur
+DTSTART:20240130T140200Z
+DURATION:PT12M
+END:VEVENT
+BEGIN:VEVENT
+UID:537c5d73-63bd-4cfa-973f-dfd602592502
+DTSTAMP:20240129T190724Z
+SUMMARY:32
+DESCRIPTION:32
+DTSTART:20240131T140300Z
+DURATION:PT6M
+END:VEVENT
+BEGIN:VEVENT
+UID:8b9ac0b0-9fe6-499e-b7fd-ac23dc67de3f
+DTSTAMP:20240129T190724Z
+SUMMARY:bbbb        
+DESCRIPTION:bbbb   
+DTSTART:20240129T230200Z
+DTEND:20240131T010200Z
+END:VEVENT
+BEGIN:VTODO
+UID:23b14543-a075-4f13-8cda-b794db92f9dc
+DTSTAMP:20240129T190724Z
+SUMMARY:Task            
+DESCRIPTION:Task         
+DUE:20240130T000200Z
+STATUS:IN-PROCESS
+END:VTODO
+BEGIN:VTODO
+UID:c8bc866a-33f6-401c-a80e-13c492b479ca
+DTSTAMP:20240129T190724Z
+SUMMARY:31t            
+DESCRIPTION:31t                 
+DUE:20240131T010300Z
+STATUS:NEEDS-ACTION
+END:VTODO
 END:VCALENDAR

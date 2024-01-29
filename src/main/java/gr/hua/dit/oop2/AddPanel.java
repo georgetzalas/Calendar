@@ -359,7 +359,6 @@ public class AddPanel extends JPanel {
 
                 addPanel.add(durationPanel);
                 // Create the actions of the save button
-                // THIS WAS COMMENTED
                 saveButton = new JButton("Save");
                 saveButton.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {

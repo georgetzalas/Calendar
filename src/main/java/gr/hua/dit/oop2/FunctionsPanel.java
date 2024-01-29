@@ -9,24 +9,30 @@ import java.util.Calendar;
 import java.text.DateFormatSymbols;
 import java.time.LocalDateTime;
 
-public class FunctionsPanel extends JPanel{
+public class FunctionsPanel extends JPanel {
     private ArrayList<Event> events = gr.hua.dit.oop2.Calendar.events;
     private JComboBox<String> yearComboBox, monthComboBox;
-    private JButton prevButton, nextButton,backButton;
+    private JButton prevButton, nextButton, backButton;
     private JPanel calendarPanel, topPanel, backButtonPanel;
     private JTextArea eventsTextArea;
     private Calendar calendar;
     String[] responces = { "Duration", "End-date" };
-    String[] options = {"COMPLETED","CANCELLED","IN-PROCESS","NEEDS-ACTION"};
+    String[] options = { "COMPLETED", "CANCELLED", "IN-PROCESS", "NEEDS-ACTION" };
 
-    public FunctionsPanel(){
+    private int userChoice;
+    private int newduration;
+    private Appointements appointmentsEvent;
+    private JComboBox<Integer> durationComboBox;
+    private JComboBox statusComboBox;
+    private Task taskevent;
+    public FunctionsPanel() {
         Event a = new Event("Test", "Test Desc", 1, 2, 2023, 1, 3, 5, 10, 2025, 5, 1);
         events.add(a);
         setLayout(new BorderLayout());
-        
+
         createBackButton();
-        add(backButtonPanel,BorderLayout.SOUTH);
-        
+        add(backButtonPanel, BorderLayout.SOUTH);
+
         calendar = Calendar.getInstance();
 
         JPanel topPanel = new JPanel(new FlowLayout());
@@ -88,12 +94,12 @@ public class FunctionsPanel extends JPanel{
         add(scrollPane, BorderLayout.EAST);
 
         updateCalendar();
-        
+
         setVisible(false);
     }
 
-    private void createBackButton(){
-        //topPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+    private void createBackButton() {
+        // topPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         backButtonPanel = new JPanel();
 
         backButton = new JButton("Back");
@@ -116,7 +122,7 @@ public class FunctionsPanel extends JPanel{
 
         calendarPanel.removeAll();
 
-        String[] daysOfWeek = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        String[] daysOfWeek = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
 
         for (String day : daysOfWeek) {
             JLabel label = new JLabel(day, JLabel.CENTER);
@@ -173,43 +179,47 @@ public class FunctionsPanel extends JPanel{
         yearComboBox.setSelectedItem(String.valueOf(year));
         monthComboBox.setSelectedItem(new DateFormatSymbols().getMonths()[month]);
     }
-    //private String eventsText;
+
+    // private String eventsText;
     private void displayEvents(int day) {
-        //eventsText = "Events for " + monthComboBox.getSelectedItem() + " " + day + ", " + yearComboBox.getSelectedItem() + ":\n";
-        
+        // eventsText = "Events for " + monthComboBox.getSelectedItem() + " " + day + ",
+        // " + yearComboBox.getSelectedItem() + ":\n";
+
         String selectedMonth = (String) monthComboBox.getSelectedItem();
         int month = getMonthNumber(selectedMonth);
         int year = Integer.parseInt((String) yearComboBox.getSelectedItem());
-        ArrayList<Event> eventsForDay = getEventsForDay(day, month,year);
-         
+        ArrayList<Event> eventsForDay = getEventsForDay(day, month, year);
+
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.setLayout(new BoxLayout(buttonsPanel, BoxLayout.Y_AXIS));
-        JLabel eventTextLabel = new JLabel("Events for " + monthComboBox.getSelectedItem() + " " + day + ", " + yearComboBox.getSelectedItem() + ":");
+        JLabel eventTextLabel = new JLabel("Events for " + monthComboBox.getSelectedItem() + " " + day + ", "
+                + yearComboBox.getSelectedItem() + ":");
         buttonsPanel.add(eventTextLabel);
 
         if (eventsForDay.isEmpty()) {
             buttonsPanel.add(new JLabel("No events for this day."));
-            //eventsText +="No events for this day.";
+            // eventsText +="No events for this day.";
         } else {
-            //eventsText +=""; 
+            // eventsText +="";
             for (Event event : eventsForDay) {
-                //System.out.print(event.toString());
-                JButton eventButton = new JButton(event.getTitle()); 
+                // System.out.print(event.toString());
+                JButton eventButton = new JButton(event.getTitle());
                 eventButton.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        EditEvents(event); 
+                        EditEvents(event);
                     }
                 });
                 buttonsPanel.add(eventButton);
-                //eventsPanel.add(eventButton);
-                //eventsText += " ";
-                //eventsText += event.getTitle() + "\n";             
-                //eventsTextArea.setText(eventsText);
+                // eventsPanel.add(eventButton);
+                // eventsText += " ";
+                // eventsText += event.getTitle() + "\n";
+                // eventsTextArea.setText(eventsText);
             }
         }
-        
-        //events += "Here we will see the events of this day!\nPlease wait until we fix it :)";
-        //eventsTextArea.setText("GEorge"); 
+
+        // events += "Here we will see the events of this day!\nPlease wait until we fix
+        // it :)";
+        // eventsTextArea.setText("GEorge");
         for (Component component : getComponents()) {
             if (component instanceof JScrollPane) {
                 remove(component);
@@ -222,320 +232,401 @@ public class FunctionsPanel extends JPanel{
         repaint();
 
     }
-    
 
-    private ArrayList<Event> getEventsForDay(int day,int month,int year) {
+    private ArrayList<Event> getEventsForDay(int day, int month, int year) {
         ArrayList<Event> eventsForDay = new ArrayList<>();
         for (Event event : events) {
-            System.out.println(event.getTitle());
-            
-            if(event.getClass().equals(Task.class)){
-                if (event.getEndDay() == day && event.getEndMonth() == month && event.getEndYear() == year) {    
+            if (event.getClass().equals(Task.class)) {
+                if (event.getEndDay() == day && event.getEndMonth() == month && event.getEndYear() == year) {
                     eventsForDay.add(event);
-                }else{
+                } else {
                     eventsTextArea.setText("");
                 }
-            }else{
-                if (event.getStartDay() == day && event.getStartMonth() == month && event.getStartYear() == year) {    
+            } else {
+                if (event.getStartDay() == day && event.getStartMonth() == month && event.getStartYear() == year) {
                     eventsForDay.add(event);
-                }else{
+                } else {
                     eventsTextArea.setText("");
                 }
             }
 
-
-
-       }
+        }
 
         return eventsForDay;
     }
 
     private void EditEvents(Event event) {
         JFrame frame = new JFrame("Edit Events");
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
-        frame.setSize(800, 700); 
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(800, 700);
         frame.setResizable(false);
-    
-        //JLabel titleLabel = new JLabel("Title: " + event.getTitle());
-        //JLabel descriptionLabel = new JLabel("Description: " + event.getDescription())
-        
-            JPanel editPanel = new JPanel();
-            
-            editPanel.setLayout(new BoxLayout(editPanel, BoxLayout.Y_AXIS));
 
-            JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel titleLabel = new JLabel("Title:");
-            JTextField titleTextField = new JTextField(event.getTitle());
-            titleTextField.setMaximumSize(new Dimension(Integer.MAX_VALUE, titleTextField.getPreferredSize().height));
-            titlePanel.add(titleLabel);
-            titlePanel.add(titleTextField);
+        // JLabel titleLabel = new JLabel("Title: " + event.getTitle());
+        // JLabel descriptionLabel = new JLabel("Description: " +
+        // event.getDescription())
 
-            JPanel descriptionPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel descriptionLabel = new JLabel("Description:");
-            JTextField descriptionTextField = new JTextField(event.getDescription());
-            descriptionTextField.setAutoscrolls(false);
-            descriptionTextField.setMaximumSize(new Dimension(Integer.MAX_VALUE, descriptionTextField.getPreferredSize().height));
-            descriptionPanel.add(descriptionLabel);
-            descriptionPanel.add(descriptionTextField);
-        
-            JPanel startDatePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel startDayLabel = new JLabel("Start Day:");
-            //JComboBox<Integer> startDayComboBox = new JComboBox<>();
-            //for (int i = 1; i <= 31; i++) {
-                //startDayComboBox.addItem(i);
-            //}
-            JComboBox<Integer> startDayComboBox = new JComboBox<>(new DefaultComboBoxModel<>(
+        JPanel editPanel = new JPanel();
+
+        editPanel.setLayout(new BoxLayout(editPanel, BoxLayout.Y_AXIS));
+
+        JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel titleLabel = new JLabel("Title:");
+        JTextField titleTextField = new JTextField(event.getTitle());
+        titleTextField.setMaximumSize(new Dimension(Integer.MAX_VALUE, titleTextField.getPreferredSize().height));
+        titlePanel.add(titleLabel);
+        titlePanel.add(titleTextField);
+
+        JPanel descriptionPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel descriptionLabel = new JLabel("Description:");
+        JTextField descriptionTextField = new JTextField(event.getDescription());
+        descriptionTextField.setAutoscrolls(false);
+        descriptionTextField
+                .setMaximumSize(new Dimension(Integer.MAX_VALUE, descriptionTextField.getPreferredSize().height));
+        descriptionPanel.add(descriptionLabel);
+        descriptionPanel.add(descriptionTextField);
+
+        JPanel startDatePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel startDayLabel = new JLabel("Start Day:");
+        // JComboBox<Integer> startDayComboBox = new JComboBox<>();
+        // for (int i = 1; i <= 31; i++) {
+        // startDayComboBox.addItem(i);
+        // }
+        JComboBox<Integer> startDayComboBox = new JComboBox<>(new DefaultComboBoxModel<>(
                 generateNumberArray(1, calendar.getActualMaximum(Calendar.DAY_OF_MONTH))));
-            startDayComboBox.setSelectedItem(event.getStartDay());
-            startDatePanel.add(startDayLabel);
-            startDatePanel.add(startDayComboBox);
-            
-            JPanel startMonthPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel startMonthLabel = new JLabel("Start Month:");
-            JComboBox<String> startMonthComboBox = new JComboBox<>();
-            String[] months = new DateFormatSymbols().getMonths();
-            for (int i = 0; i < months.length - 1; i++) {
-                startMonthComboBox.addItem(months[i]);
-            }
-            startMonthComboBox.setSelectedItem(new DateFormatSymbols().getMonths());
-            startMonthComboBox.setSelectedItem(getMonthName(event.getStartMonth()));
-            startMonthPanel.add(startMonthLabel);
-            startMonthPanel.add(startMonthComboBox);
-        
-            JPanel startYearPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel startYearLabel = new JLabel("Start Year:");
-            JComboBox<Integer> startYearComboBox = new JComboBox<>();
-            for (int i = 1900; i <= 2100; i++) {
-                startYearComboBox.addItem(i);
-            }
-            startYearComboBox.setSelectedItem(event.getStartYear());
-            startYearPanel.add(startYearLabel);
-            startYearPanel.add(startYearComboBox);
-            
-            JPanel startHourPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel startHourLabel = new JLabel("Start Hour:");
-            JComboBox<Integer> startHourComboBox = new JComboBox<>();
-            for (int i = 0; i <= 23; i++) {
-                startHourComboBox.addItem(i);
-            }
-            startHourComboBox.setSelectedItem(event.getStartHour());
-            startHourPanel.add(startHourLabel);
-            startHourPanel.add(startHourComboBox);
-            
-            JPanel startMinutesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel startMinutesLabel = new JLabel("Start Minutes:");
-            JComboBox<Integer> startMinutesComboBox = new JComboBox<>();
-            for (int i = 0; i <= 59; i++) {
-                startMinutesComboBox.addItem(i);
-            }
-            startMinutesComboBox.setSelectedItem(event.getStartMinute());
-            startMinutesPanel.add(startMinutesLabel);
-            startMinutesPanel.add(startMinutesComboBox);
-            
-            Font largeFont = new Font("Arial", Font.PLAIN, 16); 
-            titleLabel.setFont(largeFont);
-            descriptionLabel.setFont(largeFont);
+        startDayComboBox.setSelectedItem(event.getStartDay());
+        startDatePanel.add(startDayLabel);
+        startDatePanel.add(startDayComboBox);
 
-            Font dateFont = new Font("Arial", Font.PLAIN, 14); 
-            startDayLabel.setFont(dateFont);
-            startMonthLabel.setFont(dateFont);
-            startYearLabel.setFont(dateFont);
-            startHourLabel.setFont(dateFont);
-            startMinutesLabel.setFont(dateFont);
-
-            JPanel endDatePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel endDayLabel = new JLabel("End Day:");
-            JComboBox<Integer> endDayComboBox = new JComboBox<>();
-            for (int i = 1; i <= 31; i++) {
-                endDayComboBox.addItem(i);
-            }
-            //JComboBox<Integer> endDayComboBox = new JComboBox<>(new DefaultComboBoxModel<>(
-                //generateNumberArray(1, calendar.getActualMaximum(Calendar.DAY_OF_MONTH))));
-            endDayComboBox.setSelectedItem(event.getEndDay());
-            endDatePanel.add(endDayLabel);
-            endDatePanel.add(endDayComboBox);
-            
-            JPanel endMonthPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel endMonthLabel = new JLabel("End Month:");
-            JComboBox<String> endMonthComboBox = new JComboBox<>();
-            String[] months1 = new DateFormatSymbols().getMonths();
-            for (int i = 0; i < months1.length - 1; i++) {
-                endMonthComboBox.addItem(months1[i]);
-            }
-            endMonthComboBox.setSelectedItem(new DateFormatSymbols().getMonths());
-            endMonthComboBox.setSelectedItem(getMonthName(event.getEndMonth()));
-            endMonthPanel.add(endMonthLabel);
-            endMonthPanel.add(endMonthComboBox);
-        
-            JPanel endYearPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel endYearLabel = new JLabel("End Year:");
-            JComboBox<Integer> endYearComboBox = new JComboBox<>();
-            for (int i = 1900; i <= 2100; i++) {
-                endYearComboBox.addItem(i);
-            }
-            endYearComboBox.setSelectedItem(event.getEndYear());
-            endYearPanel.add(endYearLabel);
-            endYearPanel.add(endYearComboBox);
-            
-            JPanel endHourPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel endHourLabel = new JLabel("End Hour:");
-            JComboBox<Integer> endHourComboBox = new JComboBox<>();
-            for (int i = 0; i <= 23; i++) {
-                endHourComboBox.addItem(i);
-            }
-            endHourComboBox.setSelectedItem(event.getEndHour());
-            endHourPanel.add(endHourLabel);
-            endHourPanel.add(endHourComboBox);
-            
-            JPanel endMinutesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel endMinutesLabel = new JLabel("End Minutes:");
-            JComboBox<Integer> endMinutesComboBox = new JComboBox<>();
-            for (int i = 0; i <= 59; i++) {
-                endMinutesComboBox.addItem(i);
-            }
-            endMinutesComboBox.setSelectedItem(event.getEndMinute());
-            endMinutesPanel.add(endMinutesLabel);
-            endMinutesPanel.add(endMinutesComboBox);
-
-            /*JPanel durationPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            JLabel durationLabel = new JLabel("Duration:");
-            JComboBox<Integer> durationComboBox = new JComboBox<>();
-            for(int i=1; i<=20000; i++){
-                durationComboBox.addItem(i);
-            }
-            durationComboBox.setSelectedItem(event.getDuration());
-            durationPanel.add(durationLabel);
-            durationPanel.add(durationComboBox);*/
-
-            Font dateFont1 = new Font("Arial", Font.PLAIN, 14); // Customize font properties
-            endDayLabel.setFont(dateFont1);
-            endMonthLabel.setFont(dateFont1);
-            endYearLabel.setFont(dateFont1);
-            endHourLabel.setFont(dateFont1);
-            endMinutesLabel.setFont(dateFont1);
-            //durationLabel.setFont(dateFont1);
-
-            JButton saveButton = new JButton("Save");
-saveButton.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent e) {
-        try {
-            // Get the selected options and save them to variables
-            String newTitle = titleTextField.getText();
-            String newDescription = descriptionTextField.getText();
-            int newStartDay = (int) startDayComboBox.getSelectedItem();
-            String newStartMonth = (String) startMonthComboBox.getSelectedItem();
-            int newStartYear = (int) startYearComboBox.getSelectedItem();
-            int newStartHour = (int) startHourComboBox.getSelectedItem();
-            int newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
-            int newEndDay = (int) endDayComboBox.getSelectedItem();
-            String newEndMonth = (String) endMonthComboBox.getSelectedItem();
-            int newEndYear = (int) endYearComboBox.getSelectedItem();
-            int newEndHour = (int) endHourComboBox.getSelectedItem();
-            int newEndMinutes = (int) endMinutesComboBox.getSelectedItem();
-
-            // Perform date comparison
-            long compEndDate2 = gr.hua.dit.oop2.eventManagement.compareDates(newEndYear, getMonthNumber(newEndMonth), newEndDay, newEndHour, newEndMinutes);
-            long compStartDate = gr.hua.dit.oop2.eventManagement.compareDates(newStartYear, getMonthNumber(newStartMonth), newStartDay, newStartHour, newStartMinutes);
-
-            // Make the comparison
-            if (compStartDate < compEndDate2) {
-                // Update the event object with the new values
-                event.setTitle(newTitle);
-                event.setDescription(newDescription);
-                event.setStartDay(newStartDay);
-                event.setStartMonth(getMonthNumber(newStartMonth));
-                event.setStartYear(newStartYear);
-                event.setStartHour(newStartHour);
-                event.setStartMinute(newStartMinutes);
-                event.setEndDay(newEndDay);
-                event.setEndMonth(getMonthNumber(newEndMonth));
-                event.setEndYear(newEndYear);
-                event.setEndHour(newEndHour);
-                event.setEndMinute(newEndMinutes);
-
-                // Store the updated event
-                gr.hua.dit.oop2.Calendar.store.storeIcs();
-                frame.dispose();
-            } else {
-                // Display an error message if the date comparison fails
-                JOptionPane.showMessageDialog(null, "The end-date is before the start-date!", "ERROR", JOptionPane.ERROR_MESSAGE);
-            }
-        } catch (Exception ex) {
-            // Handle exceptions if necessary
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        JPanel startMonthPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel startMonthLabel = new JLabel("Start Month:");
+        JComboBox<String> startMonthComboBox = new JComboBox<>();
+        String[] months = new DateFormatSymbols().getMonths();
+        for (int i = 0; i < months.length - 1; i++) {
+            startMonthComboBox.addItem(months[i]);
         }
-    }
-});
+        startMonthComboBox.setSelectedItem(new DateFormatSymbols().getMonths());
+        startMonthComboBox.setSelectedItem(getMonthName(event.getStartMonth()));
+        startMonthPanel.add(startMonthLabel);
+        startMonthPanel.add(startMonthComboBox);
 
+        JPanel startYearPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel startYearLabel = new JLabel("Start Year:");
+        JComboBox<Integer> startYearComboBox = new JComboBox<>();
+        for (int i = 1900; i <= 2100; i++) {
+            startYearComboBox.addItem(i);
+        }
+        startYearComboBox.setSelectedItem(event.getStartYear());
+        startYearPanel.add(startYearLabel);
+        startYearPanel.add(startYearComboBox);
 
-            editPanel.add(titlePanel);
-            editPanel.add(descriptionPanel);
+        JPanel startHourPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel startHourLabel = new JLabel("Start Hour:");
+        JComboBox<Integer> startHourComboBox = new JComboBox<>();
+        for (int i = 0; i <= 23; i++) {
+            startHourComboBox.addItem(i);
+        }
+        startHourComboBox.setSelectedItem(event.getStartHour());
+        startHourPanel.add(startHourLabel);
+        startHourPanel.add(startHourComboBox);
 
-            if (event.getClass().equals(Appointements.class)) {
-                Appointements appointmentsEvent = (Appointements) event;
+        JPanel startMinutesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel startMinutesLabel = new JLabel("Start Minutes:");
+        JComboBox<Integer> startMinutesComboBox = new JComboBox<>();
+        for (int i = 0; i <= 59; i++) {
+            startMinutesComboBox.addItem(i);
+        }
+        startMinutesComboBox.setSelectedItem(event.getStartMinute());
+        startMinutesPanel.add(startMinutesLabel);
+        startMinutesPanel.add(startMinutesComboBox);
 
-                editPanel.add(startDatePanel);
-                editPanel.add(startMonthPanel);
-                editPanel.add(startYearPanel);
-                editPanel.add(startHourPanel);
-                editPanel.add(startMinutesPanel);
+        Font largeFont = new Font("Arial", Font.PLAIN, 16);
+        titleLabel.setFont(largeFont);
+        descriptionLabel.setFont(largeFont);
 
-                //if he chooses duration
-                int userChoice = JOptionPane.showOptionDialog(null, "What do you want to edit","Give us your choice!", JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE, null, responces, null);
-                if (userChoice == 0) { // Assuming YES_OPTION corresponds to 0
-                    JPanel durationPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-                    JLabel durationLabel = new JLabel("Duration:");
-                    JComboBox<Integer> durationComboBox = new JComboBox<>();
-                    for(int i=1; i<=20000; i++){
-                        durationComboBox.addItem(i);
-                    }
-                    durationComboBox.setSelectedItem(appointmentsEvent.getDuration());
-                    durationLabel.setFont(dateFont1);
-                    durationPanel.add(durationLabel);
-                    durationPanel.add(durationComboBox);
-                    int newduration = (int) durationComboBox.getSelectedItem();
-                    appointmentsEvent.setDuration(newduration);
+        Font dateFont = new Font("Arial", Font.PLAIN, 14);
+        startDayLabel.setFont(dateFont);
+        startMonthLabel.setFont(dateFont);
+        startYearLabel.setFont(dateFont);
+        startHourLabel.setFont(dateFont);
+        startMinutesLabel.setFont(dateFont);
 
-                    editPanel.add(durationPanel);
-            
-                } else if (userChoice == 1) {
+        JPanel endDatePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel endDayLabel = new JLabel("End Day:");
+        JComboBox<Integer> endDayComboBox = new JComboBox<>();
+        for (int i = 1; i <= 31; i++) {
+            endDayComboBox.addItem(i);
+        }
+        // JComboBox<Integer> endDayComboBox = new JComboBox<>(new
+        // DefaultComboBoxModel<>(
+        // generateNumberArray(1, calendar.getActualMaximum(Calendar.DAY_OF_MONTH))));
+        endDayComboBox.setSelectedItem(event.getEndDay());
+        endDatePanel.add(endDayLabel);
+        endDatePanel.add(endDayComboBox);
 
-                    editPanel.add(endDatePanel);
-                    editPanel.add(endMonthPanel);
-                    editPanel.add(endYearPanel);
-                    editPanel.add(endHourPanel);
-                    editPanel.add(endMinutesPanel);
-                //editPanel.add(Box.createVerticalStrut(1));
+        JPanel endMonthPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel endMonthLabel = new JLabel("End Month:");
+        JComboBox<String> endMonthComboBox = new JComboBox<>();
+        String[] months1 = new DateFormatSymbols().getMonths();
+        for (int i = 0; i < months1.length - 1; i++) {
+            endMonthComboBox.addItem(months1[i]);
+        }
+        endMonthComboBox.setSelectedItem(new DateFormatSymbols().getMonths());
+        endMonthComboBox.setSelectedItem(getMonthName(event.getEndMonth()));
+        endMonthPanel.add(endMonthLabel);
+        endMonthPanel.add(endMonthComboBox);
+
+        JPanel endYearPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel endYearLabel = new JLabel("End Year:");
+        JComboBox<Integer> endYearComboBox = new JComboBox<>();
+        for (int i = 1900; i <= 2100; i++) {
+            endYearComboBox.addItem(i);
+        }
+        endYearComboBox.setSelectedItem(event.getEndYear());
+        endYearPanel.add(endYearLabel);
+        endYearPanel.add(endYearComboBox);
+
+        JPanel endHourPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel endHourLabel = new JLabel("End Hour:");
+        JComboBox<Integer> endHourComboBox = new JComboBox<>();
+        for (int i = 0; i <= 23; i++) {
+            endHourComboBox.addItem(i);
+        }
+        endHourComboBox.setSelectedItem(event.getEndHour());
+        endHourPanel.add(endHourLabel);
+        endHourPanel.add(endHourComboBox);
+
+        JPanel endMinutesPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JLabel endMinutesLabel = new JLabel("End Minutes:");
+        JComboBox<Integer> endMinutesComboBox = new JComboBox<>();
+        for (int i = 0; i <= 59; i++) {
+            endMinutesComboBox.addItem(i);
+        }
+        endMinutesComboBox.setSelectedItem(event.getEndMinute());
+        endMinutesPanel.add(endMinutesLabel);
+        endMinutesPanel.add(endMinutesComboBox);
+
+        /*
+         * JPanel durationPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+         * JLabel durationLabel = new JLabel("Duration:");
+         * JComboBox<Integer> durationComboBox = new JComboBox<>();
+         * for(int i=1; i<=20000; i++){
+         * durationComboBox.addItem(i);
+         * }
+         * durationComboBox.setSelectedItem(event.getDuration());
+         * durationPanel.add(durationLabel);
+         * durationPanel.add(durationComboBox);
+         */
+
+        Font dateFont1 = new Font("Arial", Font.PLAIN, 14); // Customize font properties
+        endDayLabel.setFont(dateFont1);
+        endMonthLabel.setFont(dateFont1);
+        endYearLabel.setFont(dateFont1);
+        endHourLabel.setFont(dateFont1);
+        endMinutesLabel.setFont(dateFont1);
+        // durationLabel.setFont(dateFont1);
+        editPanel.add(titlePanel);
+        editPanel.add(descriptionPanel);
+
+        if (event.getClass().equals(Appointements.class)) {
+            appointmentsEvent = (Appointements) event;
+
+            editPanel.add(startDatePanel);
+            editPanel.add(startMonthPanel);
+            editPanel.add(startYearPanel);
+            editPanel.add(startHourPanel);
+            editPanel.add(startMinutesPanel);
+
+            // if he chooses duration
+            userChoice = JOptionPane.showOptionDialog(null, "What do you want to edit", "Give us your choice!",
+                    JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, responces, null);
+            if (userChoice == 0) { // Assuming YES_OPTION corresponds to 0
+                JPanel durationPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+                JLabel durationLabel = new JLabel("Duration:");
+                durationComboBox = new JComboBox<>();
+                for (int i = 1; i <= 20000; i++) {
+                    durationComboBox.addItem(i);
                 }
-            }
-            if (event.getClass().equals(Task.class)) {
-                Task taskevent = (Task) event;
+                durationComboBox.setSelectedItem(appointmentsEvent.getDuration());
+                durationLabel.setFont(dateFont1);
+                durationPanel.add(durationLabel);
+                durationPanel.add(durationComboBox);
 
-                JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-                JLabel statusLabel = new JLabel("Status:");
-                JComboBox statusComboBox = new JComboBox<>(options);
-                statusComboBox.setSelectedItem(taskevent.getCompleteTask());
-                statusLabel.setFont(dateFont1);
-                statusPanel.add(statusLabel);
-                statusPanel.add(statusComboBox);
-                String newstatus = (String) statusComboBox.getSelectedItem();
-                taskevent.setCompleteTask(newstatus);
+                editPanel.add(durationPanel);
 
-                editPanel.add(statusPanel);
+            } else if (userChoice == 1) {
 
                 editPanel.add(endDatePanel);
                 editPanel.add(endMonthPanel);
                 editPanel.add(endYearPanel);
                 editPanel.add(endHourPanel);
                 editPanel.add(endMinutesPanel);
+                // editPanel.add(Box.createVerticalStrut(1));
             }
-
-            editPanel.add(saveButton);        
-        
-            frame.add(editPanel);
-            frame.setVisible(true);
         }
+        if (event.getClass().equals(Task.class)) {
+            taskevent = (Task) event;
+
+            JPanel statusPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+            JLabel statusLabel = new JLabel("Status:");
+            statusComboBox = new JComboBox<>(options);
+            statusComboBox.setSelectedItem(taskevent.getCompleteTask());
+            statusLabel.setFont(dateFont1);
+            statusPanel.add(statusLabel);
+            statusPanel.add(statusComboBox);
+
+            editPanel.add(statusPanel);
+
+            editPanel.add(endDatePanel);
+            editPanel.add(endMonthPanel);
+            editPanel.add(endYearPanel);
+            editPanel.add(endHourPanel);
+            editPanel.add(endMinutesPanel);
+        }
+
+        JButton saveButton = new JButton("Save");
+        saveButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // try {
+                // Get the selected options and save them to variables
+                String newTitle = titleTextField.getText();
+                String newDescription = descriptionTextField.getText();
+
+                int newStartDay = 0;
+                String newStartMonth = null;
+                int newStartYear = 0;
+                int newStartHour = 0;
+                int newStartMinutes = 0;
+
+                int newEndDay = 0;
+                String newEndMonth = null;
+                int newEndYear = 0;
+                int newEndHour = 0;
+                int newEndMinutes = 0;
+
+                if (event.getClass().equals(Appointements.class) && userChoice == 0) {
+                    // Duration
+
+                    newStartDay = (int) startDayComboBox.getSelectedItem();
+                    newStartMonth = (String) startMonthComboBox.getSelectedItem();
+                    newStartYear = (int) startYearComboBox.getSelectedItem();
+                    newStartHour = (int) startHourComboBox.getSelectedItem();
+                    newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
+                    newduration = (int) durationComboBox.getSelectedItem();
+                    LocalDateTime APP = gr.hua.dit.oop2.eventManagement.plusDure(newStartDay,
+                            getMonthNumber(newStartMonth), newStartYear, newStartHour, newStartMinutes,
+                            newduration);
+
+                    newEndDay = APP.getDayOfMonth();
+                    newEndMonth = (String) endMonthComboBox.getSelectedItem();
+                    newEndYear = APP.getYear();
+                    newEndHour = APP.getHour();
+                    newEndMinutes = APP.getMinute();
+                    long compEndDate2 = gr.hua.dit.oop2.eventManagement.compareDates(newEndYear,
+                            getMonthNumber(newEndMonth), newEndDay, newEndHour, newEndMinutes);
+                    long compStartDate = gr.hua.dit.oop2.eventManagement.compareDates(newStartYear,
+                            getMonthNumber(newStartMonth), newStartDay, newStartHour, newStartMinutes);
+
+                    // Make the comparison
+                    if (compStartDate < compEndDate2) {
+                        // Update the event object with the new values
+                        appointmentsEvent.setTitle(newTitle);
+                        appointmentsEvent.setDescription(newDescription);
+                        appointmentsEvent.setStartDay(newStartDay);
+                        appointmentsEvent.setStartMonth(getMonthNumber(newStartMonth));
+                        appointmentsEvent.setStartYear(newStartYear);
+                        appointmentsEvent.setStartHour(newStartHour);
+                        appointmentsEvent.setStartMinute(newStartMinutes);
+                        appointmentsEvent.setEndDay(newEndDay);
+                        appointmentsEvent.setEndMonth(getMonthNumber(newEndMonth));
+                        appointmentsEvent.setEndYear(newEndYear);
+                        appointmentsEvent.setEndHour(newEndHour);
+                        appointmentsEvent.setEndMinute(newEndMinutes);
+                        appointmentsEvent.setDuration(newduration);
+
+                    } else {
+                        // Display an error message if the date comparison fails
+                        JOptionPane.showMessageDialog(null, "The end-date is before the start-date!", "ERROR",
+                                JOptionPane.ERROR_MESSAGE);
+                    }
+                } else if (event.getClass().equals(Appointements.class) && userChoice == 1) {
+                    // END DAY
+                    newStartDay = (int) startDayComboBox.getSelectedItem();
+                    newStartMonth = (String) startMonthComboBox.getSelectedItem();
+                    newStartYear = (int) startYearComboBox.getSelectedItem();
+                    newStartHour = (int) startHourComboBox.getSelectedItem();
+                    newStartMinutes = (int) startMinutesComboBox.getSelectedItem();
+
+                    newEndDay = (int) endDayComboBox.getSelectedItem();
+                    newEndMonth = (String) endMonthComboBox.getSelectedItem();
+                    newEndYear = (int) endYearComboBox.getSelectedItem();
+                    newEndHour = (int) endHourComboBox.getSelectedItem();
+                    newEndMinutes = (int) endMinutesComboBox.getSelectedItem();
+
+                    long compEndDate2 = gr.hua.dit.oop2.eventManagement.compareDates(newEndYear,
+                            getMonthNumber(newEndMonth), newEndDay, newEndHour, newEndMinutes);
+                    long compStartDate = gr.hua.dit.oop2.eventManagement.compareDates(newStartYear,
+                            getMonthNumber(newStartMonth), newStartDay, newStartHour, newStartMinutes);
+
+                    // Make the comparison
+                    if (compStartDate < compEndDate2) {
+                        // Update the event object with the new values
+                        event.setTitle(newTitle);
+                        event.setDescription(newDescription);
+                        event.setStartDay(newStartDay);
+                        event.setStartMonth(getMonthNumber(newStartMonth));
+                        event.setStartYear(newStartYear);
+                        event.setStartHour(newStartHour);
+                        event.setStartMinute(newStartMinutes);
+                        event.setEndDay(newEndDay);
+                        event.setEndMonth(getMonthNumber(newEndMonth));
+                        event.setEndYear(newEndYear);
+                        event.setEndHour(newEndHour);
+                        event.setEndMinute(newEndMinutes);
+
+                    } else {
+                        // Display an error message if the date comparison fails
+                        JOptionPane.showMessageDialog(null, "The end-date is before the start-date!", "ERROR",
+                                JOptionPane.ERROR_MESSAGE);
+                    }
+                } else {
+                    // TASK
+                    newEndDay = (int) endDayComboBox.getSelectedItem();
+                    newEndMonth = (String) endMonthComboBox.getSelectedItem();
+                    newEndYear = (int) endYearComboBox.getSelectedItem();
+                    newEndHour = (int) endHourComboBox.getSelectedItem();
+                    newEndMinutes = (int) endMinutesComboBox.getSelectedItem();
+                    String newstatus = (String) statusComboBox.getSelectedItem();
+
+                    taskevent.setTitle(newTitle);
+                    taskevent.setDescription(newDescription);
+                    taskevent.setEndDay(newEndDay);
+                    taskevent.setEndMonth(getMonthNumber(newEndMonth));
+                    taskevent.setEndYear(newEndYear);
+                    taskevent.setEndHour(newEndHour);
+                    taskevent.setEndMinute(newEndMinutes);
+                    taskevent.setCompleteTask(newstatus);
+                }
+
+                /*
+                 * } catch (Exception ex) {
+                 * // Handle exceptions if necessary
+                 * ex.printStackTrace();
+                 * JOptionPane.showMessageDialog(null, "An error occurred: " + ex.getMessage(),
+                 * "Error",
+                 * JOptionPane.ERROR_MESSAGE);
+                 * }
+                 */
+                // Store the updated event
+                frame.dispose();
+                gr.hua.dit.oop2.Calendar.store.storeIcs();
+            }
+        });
+
+        editPanel.add(saveButton);
+
+        frame.add(editPanel);
+        frame.setVisible(true);
+    }
 
     // Helper method to get the month number from its name
     private int getMonthNumber(String monthName) {
@@ -556,50 +647,54 @@ saveButton.addActionListener(new ActionListener() {
         }
         return ""; // Return empty string if the month number is out of range
     }
+
     private static Integer[] generateNumberArray(int start, int end) {
         Integer[] array = new Integer[end - start + 1];
         for (int i = start; i <= end; i++) {
-        array[i - start] = i;
+            array[i - start] = i;
         }
         return array;
     }
-    
-        /*editPanel.add(titleLabel);
-        editPanel.add(titleTextField);
-        editPanel.add(descriptionLabel);
-        editPanel.add(descriptionTextField);
-    
-        JButton saveButton = new JButton("Save");
-        saveButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                
-                String newTitle = titleTextField.getText();
-                String newDescription = descriptionTextField.getText();
-    
-                event.setTitle(newTitle);
-                event.setDescription(newDescription);
-    
-                frame.dispose();
-            }
-        });
-        editPanel.add(saveButton);
 
-        //panel.add(titleLabel);
-        //panel.add(descriptionLabel);
-
-        frame.add(editPanel);
-        frame.setVisible(true);
-    }
-    private int getMonthNumber(String selectedMonth) {
-        String[] months = new DateFormatSymbols().getMonths();
-        for (int i = 0; i < months.length; i++) {
-            if (months[i].equals(selectedMonth)) {
-                
-                return i + 1;
-            }
-        }
-        // Return -1 if the selected month is not found (handle as needed in your code).
-        return -1;
-    }*/
+    /*
+     * editPanel.add(titleLabel);
+     * editPanel.add(titleTextField);
+     * editPanel.add(descriptionLabel);
+     * editPanel.add(descriptionTextField);
+     * 
+     * JButton saveButton = new JButton("Save");
+     * saveButton.addActionListener(new ActionListener() {
+     * public void actionPerformed(ActionEvent e) {
+     * 
+     * String newTitle = titleTextField.getText();
+     * String newDescription = descriptionTextField.getText();
+     * 
+     * event.setTitle(newTitle);
+     * event.setDescription(newDescription);
+     * 
+     * frame.dispose();
+     * }
+     * });
+     * editPanel.add(saveButton);
+     * 
+     * //panel.add(titleLabel);
+     * //panel.add(descriptionLabel);
+     * 
+     * frame.add(editPanel);
+     * frame.setVisible(true);
+     * }
+     * private int getMonthNumber(String selectedMonth) {
+     * String[] months = new DateFormatSymbols().getMonths();
+     * for (int i = 0; i < months.length; i++) {
+     * if (months[i].equals(selectedMonth)) {
+     * 
+     * return i + 1;
+     * }
+     * }
+     * // Return -1 if the selected month is not found (handle as needed in your
+     * code).
+     * return -1;
+     * }
+     */
 
 }
